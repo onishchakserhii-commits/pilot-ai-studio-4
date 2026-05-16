@@ -4,10 +4,10 @@ import { useTranslation } from '@/components/LanguageContext';
 import { Navigation } from '@/components/Navigation';
 import { Chatbot } from '@/components/Chatbot';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Smartphone, Zap, Bot, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Clock, Users } from 'lucide-react';
+import { Smartphone, Zap, Bot, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Clock, Users, Check } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -131,24 +131,24 @@ export default function Home() {
       {/* Before / After Section */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
             <div>
-              <h3 className="text-2xl font-headline mb-8 opacity-60">Avant Pilot AI</h3>
+              <h3 className="text-2xl font-headline mb-8 opacity-60 uppercase tracking-widest text-sm font-bold">Avant Pilot AI</h3>
               <ul className="space-y-4">
-                {['Clients губляться', 'Site старий або його немає', 'Заявки хаотичні', 'Власник відповідає вручну', 'Немає авто-запису'].map((item, i) => (
+                {['Clients perdu', 'Site inexistant ou obsolète', 'Gestion chaotique', 'Réponses manuelles lentes', 'Pas de réservation auto'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-lg opacity-80">
-                    <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white/20 text-white/50 text-xs">✕</span>
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white/20 text-white/50 text-xs shrink-0">✕</span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-headline mb-8 text-accent">Après Pilot AI</h3>
+              <h3 className="text-2xl font-headline mb-8 text-accent uppercase tracking-widest text-sm font-bold">Après Pilot AI</h3>
               <ul className="space-y-4">
-                {['Клієнт швидко розуміє послугу', 'Кнопка дзвінка або запису', 'Заявка автоматично в CRM', 'AI відповідає на часті питання', 'Клієнт отримує нагадування'].map((item, i) => (
+                {['Clarté immédiate', 'Conversion simplifiée', 'Automatisation CRM', 'IA active 24/7', 'Rappels automatiques'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-lg">
-                    <CheckCircle className="w-6 h-6 text-accent" />
+                    <CheckCircle className="w-6 h-6 text-accent shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -158,8 +158,154 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-headline font-bold mb-6">{t.pricing.title}</h2>
+            <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10 mb-8">
+              <p className="text-lg md:text-xl font-medium text-foreground mb-4">{t.pricing.subtitle}</p>
+              <div className="flex flex-col md:flex-row gap-8 text-left">
+                <div>
+                  <h4 className="font-bold text-accent mb-2">{t.pricing.whyTitle}</h4>
+                  <p className="text-muted-foreground text-sm">{t.pricing.whyDesc}</p>
+                </div>
+                <div className="md:border-l md:pl-8 flex items-center">
+                  <p className="text-muted-foreground text-sm font-medium italic">
+                    {t.pricing.footer}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Plan 1 */}
+            <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
+              <CardHeader>
+                <CardTitle className="font-headline">{t.pricing.starter.title}</CardTitle>
+                <CardDescription>{t.pricing.starter.desc}</CardDescription>
+                <div className="pt-4">
+                  <span className="text-4xl font-bold text-foreground">CHF {t.pricing.starter.price}</span>
+                  <span className="text-muted-foreground ml-2 text-sm">+</span>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <ul className="space-y-3">
+                  {t.pricing.starter.features.map((f: string, i: number) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-accent" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full rounded-full" asChild>
+                  <Link href="#audit">{t.pricing.starter.cta}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Plan 2 */}
+            <Card className="flex flex-col relative overflow-hidden border-2 border-accent shadow-xl scale-105 z-10">
+               <div className="absolute top-0 right-0 bg-accent text-white px-3 py-1 text-xs font-bold rounded-bl-lg">POPULAR</div>
+              <CardHeader>
+                <CardTitle className="font-headline">{t.pricing.business.title}</CardTitle>
+                <CardDescription>{t.pricing.business.desc}</CardDescription>
+                <div className="pt-4">
+                  <span className="text-4xl font-bold text-foreground">CHF {t.pricing.business.price}</span>
+                  <span className="text-muted-foreground ml-2 text-sm">+</span>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <ul className="space-y-3">
+                  {t.pricing.business.features.map((f: string, i: number) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-accent" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full rounded-full bg-accent hover:bg-accent/90" asChild>
+                  <Link href="#audit">{t.pricing.business.cta}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Plan 3 */}
+            <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
+              <CardHeader>
+                <CardTitle className="font-headline">{t.pricing.premium.title}</CardTitle>
+                <CardDescription>{t.pricing.premium.desc}</CardDescription>
+                <div className="pt-4">
+                  <span className="text-4xl font-bold text-foreground">CHF {t.pricing.premium.price}</span>
+                  <span className="text-muted-foreground ml-2 text-sm">+</span>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <ul className="space-y-3">
+                  {t.pricing.premium.features.map((f: string, i: number) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <Check className="w-4 h-4 text-accent" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full rounded-full" asChild>
+                  <Link href="#audit">{t.pricing.premium.cta}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+             <Card className="bg-muted/30 border-none">
+               <CardHeader className="pb-2">
+                 <CardTitle className="text-lg font-headline">{t.pricing.audit.title}</CardTitle>
+                 <div className="text-xl font-bold text-accent">Gratuit</div>
+               </CardHeader>
+               <CardContent>
+                 <p className="text-xs text-muted-foreground">{t.pricing.audit.desc}</p>
+                 <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
+                    <Link href="#audit">Recevoir l'audit <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                 </Button>
+               </CardContent>
+             </Card>
+             <Card className="bg-muted/30 border-none">
+               <CardHeader className="pb-2">
+                 <CardTitle className="text-lg font-headline">{t.pricing.n8n.title}</CardTitle>
+                 <div className="text-xl font-bold">CHF {t.pricing.n8n.price}+</div>
+               </CardHeader>
+               <CardContent>
+                 <p className="text-xs text-muted-foreground">{t.pricing.n8n.desc}</p>
+                 <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
+                    <Link href="#audit">Automatiser mon business <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                 </Button>
+               </CardContent>
+             </Card>
+             <Card className="bg-muted/30 border-none">
+               <CardHeader className="pb-2">
+                 <CardTitle className="text-lg font-headline">{t.pricing.bot.title}</CardTitle>
+                 <div className="text-xl font-bold">CHF {t.pricing.bot.price}+</div>
+               </CardHeader>
+               <CardContent>
+                 <p className="text-xs text-muted-foreground">{t.pricing.bot.desc}</p>
+                 <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
+                    <Link href="#audit">Ajouter un assistant IA <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                 </Button>
+               </CardContent>
+             </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Free Audit Form Section */}
-      <section id="audit" className="py-24">
+      <section id="audit" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -244,7 +390,7 @@ export default function Home() {
                 </div>
                 <span className="font-headline font-bold text-xl tracking-tight">Pilot AI <span className="text-accent">Studio</span></span>
               </Link>
-              <p className="text-muted-foreground max-w-sm">
+              <p className="text-muted-foreground max-sm">
                 {t.footer.desc}
               </p>
             </div>

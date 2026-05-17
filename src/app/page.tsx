@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Smartphone, Zap, Bot, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Clock, Users, Check } from 'lucide-react';
+import { Smartphone, Zap, Bot, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Clock, Users, Check, Scissors, Hammer, Wrench } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useFirestore } from '@/firebase';
@@ -91,30 +91,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Target Audience Section */}
-      <section className="py-24 bg-white/50">
+      {/* Target Audience Section / Packs par type de business */}
+      <section className="py-24 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline mb-4">{t.categories.title}</h2>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-headline font-bold text-foreground mb-4">{t.packs.title}</h2>
+            <p className="text-muted-foreground text-lg">{t.packs.subtitle}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(t.categories).filter(([k]) => k !== 'title').map(([key, item]: any) => (
-              <Card key={key} className="border-none shadow-sm hover:shadow-md transition-shadow bg-background/50 backdrop-blur">
-                <CardHeader>
-                  <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <span className="text-xs font-bold uppercase text-destructive/80 mb-1 block">Problème</span>
-                    <p className="text-sm text-muted-foreground">{item.problem}</p>
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold uppercase text-accent mb-1 block">Solution Pilot</span>
-                    <p className="text-sm text-foreground font-medium">{item.solution}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Salon de beauté Card */}
+            <Card className="border-none shadow-lg bg-background/80 hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-2xl bg-pink-500/10 text-pink-500 flex items-center justify-center mb-4">
+                  <Scissors className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-2xl font-headline font-bold">{t.packs.beauty.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {t.packs.beauty.features.map((feat: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <CheckCircle className="w-4 h-4 text-pink-500 shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="pt-4 border-t border-muted/50">
+                <Button variant="outline" className="w-full rounded-full border-pink-500/20 text-pink-600 hover:bg-pink-500 hover:text-white" asChild>
+                  <Link href="#audit">{t.hero.ctaPrimary}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Artisans / Rénovation Card */}
+            <Card className="border-none shadow-lg bg-background/80 hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4">
+                  <Hammer className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-2xl font-headline font-bold">{t.packs.artisans.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {t.packs.artisans.features.map((feat: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <CheckCircle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="pt-4 border-t border-muted/50">
+                <Button variant="outline" className="w-full rounded-full border-amber-500/20 text-amber-600 hover:bg-amber-500 hover:text-white" asChild>
+                  <Link href="#audit">{t.hero.ctaPrimary}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Garages Card */}
+            <Card className="border-none shadow-lg bg-background/80 hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+              <CardHeader className="pb-4">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4">
+                  <Wrench className="w-6 h-6" />
+                </div>
+                <CardTitle className="text-2xl font-headline font-bold">{t.packs.garages.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  {t.packs.garages.features.map((feat: string, i: number) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                      <CheckCircle className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <CardFooter className="pt-4 border-t border-muted/50">
+                <Button variant="outline" className="w-full rounded-full border-blue-500/20 text-blue-600 hover:bg-blue-500 hover:text-white" asChild>
+                  <Link href="#audit">{t.hero.ctaPrimary}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </section>
@@ -178,32 +236,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Before / After Section */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
-            <div>
-              <h3 className="text-2xl font-headline mb-8 opacity-60 uppercase tracking-widest text-sm font-bold">Avant Pilot AI</h3>
-              <ul className="space-y-4">
-                {['Clients perdu', 'Site inexistant ou obsolète', 'Gestion chaotique', 'Réponses manuelles lentes', 'Pas de réservation auto'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-lg opacity-80">
-                    <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white/20 text-white/50 text-xs shrink-0">✕</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+      {/* Before / After & Simple Automation Section */}
+      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-headline font-bold mb-4 text-white">{t.improvements.title}</h2>
+            <p className="text-primary-foreground/75 text-lg">{t.improvements.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Before/After list */}
+            <div className="space-y-6">
+              {t.improvements.cases.map((c: any, i: number) => (
+                <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-4 text-left">
+                  <div className="flex items-start gap-3">
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-destructive/20 text-white text-xs shrink-0 mt-0.5">✕</span>
+                    <div>
+                      <span className="text-xs uppercase font-bold text-destructive-foreground/75 tracking-wider">Avant</span>
+                      <p className="text-primary-foreground/90 font-medium">{c.before}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 border-t border-white/5 pt-4">
+                    <span className="w-6 h-6 flex items-center justify-center rounded-full bg-accent/20 text-accent text-xs shrink-0 mt-0.5">✓</span>
+                    <div>
+                      <span className="text-xs uppercase font-bold text-accent tracking-wider">Après avec Pilot AI</span>
+                      <p className="text-white font-semibold">{c.after}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div>
-              <h3 className="text-2xl font-headline mb-8 text-accent uppercase tracking-widest text-sm font-bold">Après Pilot AI</h3>
-              <ul className="space-y-4">
-                {['Clarté immédiate', 'Conversion simplifiée', 'Automatisation CRM', 'IA active 24/7', 'Rappels automatiques'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-lg">
-                    <CheckCircle className="w-6 h-6 text-accent shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+
+            {/* Simple Automation Explanation */}
+            <Card className="bg-white/10 border-white/20 text-white backdrop-blur shadow-2xl overflow-hidden relative border-none">
+              <div className="absolute top-0 right-0 bg-accent text-primary font-headline font-bold text-xs px-3 py-1.5 rounded-bl-xl tracking-wider">COMMENT ÇA MARCHE</div>
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-headline font-bold text-white flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-accent animate-pulse" />
+                  {t.improvements.automation.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6 text-left">
+                <p className="text-white/80 leading-relaxed">
+                  {t.improvements.automation.desc}
+                </p>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-accent/20 text-accent flex items-center justify-center shrink-0">
+                    <Bot className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-sm">Zéro jargon. Résultat concret.</h5>
+                    <p className="text-xs text-white/60">Vous n'avez rien à configurer. Nous gérons tout de A à Z.</p>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full bg-accent text-primary hover:bg-accent/90 rounded-full font-bold" asChild>
+                  <Link href="#audit">{t.hero.ctaPrimary}</Link>
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </section>
@@ -347,6 +440,35 @@ export default function Home() {
                  </Button>
                </CardContent>
              </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section id="process" className="py-24 bg-white/80 backdrop-blur-sm relative border-t border-b border-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-headline font-bold text-foreground mb-4">{t.steps.title}</h2>
+            <p className="text-muted-foreground text-lg">{t.steps.subtitle}</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+            {t.steps.items.map((step: any, i: number) => (
+              <div key={i} className="flex flex-col items-center text-center relative group">
+                {/* Visual Step number */}
+                <div className="w-14 h-14 rounded-full bg-primary/5 text-primary border-2 border-primary/10 group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300 flex items-center justify-center text-xl font-bold font-headline mb-6 shrink-0 relative z-10">
+                  {step.num}
+                </div>
+                
+                <h4 className="font-headline font-bold text-lg mb-2 text-foreground">{step.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-[200px]">{step.desc}</p>
+                
+                {/* Arrow helper for large screens */}
+                {i < 4 && (
+                  <div className="hidden md:block absolute top-7 left-[calc(50%+28px)] w-[calc(100%-56px)] h-0.5 bg-muted group-hover:bg-accent/20 transition-colors z-0" />
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

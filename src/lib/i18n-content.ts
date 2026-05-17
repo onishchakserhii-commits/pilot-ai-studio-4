@@ -1,3 +1,4 @@
+
 export type Language = 'fr' | 'en' | 'ua';
 
 export const content = {
@@ -9,6 +10,16 @@ export const content = {
       process: 'Processus',
       pricing: 'Tarifs',
       contact: 'Contact',
+      blog: 'Blog',
+    },
+    blog: {
+      title: 'Blog & Ressources',
+      subtitle: 'Conseils, automatisations et stratégies pour booster votre business local.',
+      readMore: 'Lire l\'article',
+      backToList: 'Retour aux articles',
+      ctaTitle: 'Vous voulez améliorer votre présence en ligne ?',
+      ctaButton: 'Demander un audit gratuit',
+      noPosts: 'Aucun article trouvé.',
     },
     hero: {
       title: 'Des sites rapides et des automatisations IA pour les entreprises locales en Suisse',
@@ -17,6 +28,7 @@ export const content = {
       ctaSecondary: 'Voir les services',
       tagline: 'Plus de demandes. Moins de routine.',
     },
+    // ... remaining existing fr content
     categories: {
       title: 'Pour qui ?',
       restaurants: { title: 'Restaurants & Cafés', problem: 'Réservations manuelles et appels incessants.', solution: 'Site + Réservation en ligne + Confirmation auto.' },
@@ -87,6 +99,16 @@ export const content = {
       process: 'Process',
       pricing: 'Pricing',
       contact: 'Contact',
+      blog: 'Blog',
+    },
+    blog: {
+      title: 'Blog & Resources',
+      subtitle: 'Tips, automations, and strategies to boost your local business.',
+      readMore: 'Read article',
+      backToList: 'Back to articles',
+      ctaTitle: 'Want to improve your online presence?',
+      ctaButton: 'Request a free audit',
+      noPosts: 'No articles found.',
     },
     hero: {
       title: 'Fast Websites and AI Automation for Local Businesses in Switzerland',
@@ -95,6 +117,7 @@ export const content = {
       ctaSecondary: 'View Services',
       tagline: 'More leads. Less routine.',
     },
+    // ... remaining existing en content
     categories: {
       title: 'Who is this for?',
       restaurants: { title: 'Restaurants & Cafés', problem: 'Manual bookings and constant calls.', solution: 'Site + Online Booking + Auto confirmation.' },
@@ -165,6 +188,16 @@ export const content = {
       process: 'Процес',
       pricing: 'Ціни',
       contact: 'Контакти',
+      blog: 'Блог',
+    },
+    blog: {
+      title: 'Блог та Ресурси',
+      subtitle: 'Поради, автоматизації та стратегії для вашого бізнесу.',
+      readMore: 'Читати далі',
+      backToList: 'Назад до статей',
+      ctaTitle: 'Хочете покращити свою онлайн-присутність?',
+      ctaButton: 'Замовити безкоштовний аудит',
+      noPosts: 'Статей не знайдено.',
     },
     hero: {
       title: 'Швидкі сайти та AI-автоматизація для малого бізнесу у Швейцарії',
@@ -173,6 +206,7 @@ export const content = {
       ctaSecondary: 'Переглянути послуги',
       tagline: 'Більше заявок. Менше рутини.',
     },
+    // ... remaining existing ua content
     categories: {
       title: 'Для кого це?',
       restaurants: { title: 'Ресторани та Кафе', problem: 'Ручний запис та постійні дзвінки.', solution: 'Сайт + Онлайн бронювання + Автовідповідь.' },

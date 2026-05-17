@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from 'next/link';
@@ -19,16 +20,16 @@ export function Navigation() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="#services" className="hover:text-accent transition-colors">{t.nav.services}</Link>
-          <Link href="#process" className="hover:text-accent transition-colors">{t.nav.process}</Link>
-          <Link href="#pricing" className="hover:text-accent transition-colors">{t.nav.pricing}</Link>
-          <Link href="#contact" className="hover:text-accent transition-colors">{t.nav.contact}</Link>
+          <Link href="/#services" className="hover:text-accent transition-colors">{t.nav.services}</Link>
+          <Link href="/blog" className="hover:text-accent transition-colors">{t.nav.blog}</Link>
+          <Link href="/#pricing" className="hover:text-accent transition-colors">{t.nav.pricing}</Link>
+          <Link href="/#audit" className="hover:text-accent transition-colors">{t.nav.audit}</Link>
         </div>
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
           <Button asChild variant="default" className="hidden sm:flex">
-            <Link href="#audit">{t.nav.audit}</Link>
+            <Link href="/#audit">{t.nav.audit}</Link>
           </Button>
         </div>
       </div>

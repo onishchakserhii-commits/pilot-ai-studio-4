@@ -24,6 +24,22 @@
         "socialPost": { "type": "string" }
       },
       "required": ["title", "slug", "content", "language", "status", "createdAt"]
+    },
+    "Lead": {
+      "title": "Lead",
+      "description": "A contact request or audit request from a potential client.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "businessName": { "type": "string" },
+        "website": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string", "enum": ["new", "contacted", "closed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "createdAt"]
     }
   },
   "auth": {
@@ -33,6 +49,10 @@
     "blogPosts": {
       "schema": "#/entities/BlogPost",
       "description": "Collection of blog articles."
+    },
+    "leads": {
+      "schema": "#/entities/Lead",
+      "description": "Collection of incoming leads and audit requests."
     }
   }
 }

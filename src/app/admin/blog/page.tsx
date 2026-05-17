@@ -13,6 +13,8 @@ import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import { Eye, Check, Trash2, Send } from 'lucide-react';
 import Link from 'next/link';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError, type SecurityRuleContext } from '@/firebase/errors';
 
 export default function BlogAdmin() {
   const { t } = useTranslation();
@@ -31,16 +33,34 @@ export default function BlogAdmin() {
   const handleStatusChange = (postId: string, newStatus: string) => {
     if (!db) return;
     const postRef = doc(db, 'blogPosts', postId);
-    updateDoc(postRef, { 
+    const updateData = { 
       status: newStatus,
       updatedAt: new Date().toISOString(),
       ...(newStatus === 'published' ? { publishedAt: new Date().toISOString() } : {})
-    });
+    };
+
+    updateDoc(postRef, updateData)
+      .catch(async (serverError) => {
+        const permissionError = new FirestorePermissionError({
+          path: postRef.path,
+          operation: 'update',
+          requestResourceData: updateData,
+        } satisfies SecurityRuleContext);
+        errorEmitter.emit('permission-error', permissionError);
+      });
   };
 
   const handleDelete = (postId: string) => {
     if (!db || !confirm('Are you sure?')) return;
-    deleteDoc(doc(db, 'blogPosts', postId));
+    const postRef = doc(db, 'blogPosts', postId);
+    deleteDoc(postRef)
+      .catch(async (serverError) => {
+        const permissionError = new FirestorePermissionError({
+          path: postRef.path,
+          operation: 'delete',
+        } satisfies SecurityRuleContext);
+        errorEmitter.emit('permission-error', permissionError);
+      });
   };
 
   return (

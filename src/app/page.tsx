@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useTranslation } from '@/components/LanguageContext';
@@ -9,9 +10,58 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Smartphone, Zap, Bot, TrendingUp, CheckCircle, ArrowRight, ShieldCheck, Clock, Users, Check } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
+import { useFirestore } from '@/firebase';
+import { collection, addDoc } from 'firebase/firestore';
+import { useToast } from '@/hooks/use-toast';
+import { errorEmitter } from '@/firebase/error-emitter';
+import { FirestorePermissionError, type SecurityRuleContext } from '@/firebase/errors';
 
 export default function Home() {
   const { t } = useTranslation();
+  const db = useFirestore();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleAuditSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!db || isSubmitting) return;
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      businessName: formData.get('business') as string,
+      website: formData.get('link') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string,
+      status: 'new',
+      createdAt: new Date().toISOString(),
+    };
+
+    setIsSubmitting(true);
+
+    const leadsRef = collection(db, 'leads');
+    addDoc(leadsRef, data)
+      .then(() => {
+        toast({
+          title: "Merci !",
+          description: "Votre demande d'audit a été bien reçue. Nous vous contacterons bientôt.",
+        });
+        (e.target as HTMLFormElement).reset();
+      })
+      .catch(async (serverError) => {
+        const permissionError = new FirestorePermissionError({
+          path: leadsRef.path,
+          operation: 'create',
+          requestResourceData: data,
+        } satisfies SecurityRuleContext);
+        errorEmitter.emit('permission-error', permissionError);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+  };
 
   return (
     <div className="min-h-screen hero-gradient">
@@ -180,7 +230,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Plan 1 */}
             <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
               <CardHeader>
                 <CardTitle className="font-headline">{t.pricing.starter.title}</CardTitle>
@@ -207,7 +256,6 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            {/* Plan 2 */}
             <Card className="flex flex-col relative overflow-hidden border-2 border-accent shadow-xl scale-105 z-10">
                <div className="absolute top-0 right-0 bg-accent text-white px-3 py-1 text-xs font-bold rounded-bl-lg">POPULAR</div>
               <CardHeader>
@@ -235,7 +283,6 @@ export default function Home() {
               </CardFooter>
             </Card>
 
-            {/* Plan 3 */}
             <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
               <CardHeader>
                 <CardTitle className="font-headline">{t.pricing.premium.title}</CardTitle>
@@ -313,34 +360,34 @@ export default function Home() {
               <p className="text-muted-foreground text-lg">{t.audit.subtitle}</p>
             </div>
             <Card className="p-8 shadow-2xl border-primary/5">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleAuditSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t.audit.form.name}</label>
-                  <Input placeholder="John Doe" />
+                  <Input name="name" required placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t.audit.form.business}</label>
-                  <Input placeholder="Mon Petit Café" />
+                  <Input name="business" placeholder="Mon Petit Café" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t.audit.form.link}</label>
-                  <Input placeholder="www.mon-site.ch" />
+                  <Input name="link" placeholder="www.mon-site.ch" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">{t.audit.form.email}</label>
-                  <Input type="email" placeholder="john@example.com" />
+                  <Input name="email" type="email" required placeholder="john@example.com" />
                 </div>
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium">{t.audit.form.phone}</label>
-                  <Input placeholder="+41 7x xxx xx xx" />
+                  <Input name="phone" placeholder="+41 7x xxx xx xx" />
                 </div>
                 <div className="space-y-2 md:col-span-2">
                   <label className="text-sm font-medium">{t.audit.form.message}</label>
-                  <Textarea placeholder="..." className="min-h-[100px]" />
+                  <Textarea name="message" placeholder="..." className="min-h-[100px]" />
                 </div>
                 <div className="md:col-span-2 text-center pt-4">
-                  <Button size="lg" className="w-full sm:w-auto px-12 h-14 rounded-full text-lg font-headline">
-                    {t.audit.form.submit}
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto px-12 h-14 rounded-full text-lg font-headline">
+                    {isSubmitting ? 'Envoi...' : t.audit.form.submit}
                   </Button>
                 </div>
               </form>
@@ -400,6 +447,7 @@ export default function Home() {
                 <li><Link href="#services" className="hover:text-accent">{t.nav.services}</Link></li>
                 <li><Link href="#pricing" className="hover:text-accent">{t.nav.pricing}</Link></li>
                 <li><Link href="#audit" className="hover:text-accent">{t.nav.audit}</Link></li>
+                <li><Link href="/blog" className="hover:text-accent">{t.nav.blog}</Link></li>
               </ul>
             </div>
             <div>

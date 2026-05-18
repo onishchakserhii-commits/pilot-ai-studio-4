@@ -11,8 +11,8 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState<Language>('fr');
+export const LanguageProvider: React.FC<{ children: React.ReactNode, initialLang?: Language }> = ({ children, initialLang = 'fr' }) => {
+  const [lang, setLang] = useState<Language>(initialLang);
 
   useEffect(() => {
     const saved = localStorage.getItem('pilot-lang') as Language;
@@ -24,6 +24,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const handleSetLang = (newLang: Language) => {
     setLang(newLang);
     localStorage.setItem('pilot-lang', newLang);
+    document.cookie = `pilot-lang=${newLang}; path=/; max-age=31536000`;
   };
 
   return (

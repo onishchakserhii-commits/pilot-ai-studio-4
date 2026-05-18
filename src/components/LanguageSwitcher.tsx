@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslation } from './LanguageContext';
+import { useRouter } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,14 +10,21 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+import { Language } from '@/lib/i18n-content';
 
 export function LanguageSwitcher() {
   const { lang, setLang } = useTranslation();
+  const router = useRouter();
 
   const labels = {
     fr: '🇫🇷 FR',
     en: '🇬🇧 EN',
     ua: '🇺🇦 UA'
+  };
+
+  const handleLangChange = (newLang: Language) => {
+    setLang(newLang);
+    router.refresh();
   };
 
   return (
@@ -28,9 +36,9 @@ export function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setLang('fr')}>Français</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLang('en')}>English</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setLang('ua')}>Українська</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleLangChange('fr')}>Français</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleLangChange('en')}>English</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleLangChange('ua')}>Українська</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

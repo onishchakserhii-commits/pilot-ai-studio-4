@@ -1,21 +1,28 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import './globals.css';
 import { LanguageProvider } from '@/components/LanguageContext';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
+import { Language } from '@/lib/i18n-content';
 
 export const metadata: Metadata = {
   title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
-  description: 'Швидкі сайти та AI-автоматизація для малого бізнесу у Швейцарії. Ми допомагаємо ресторанам, салонам, майстрам і локальному бізнесу отримувати більше заявок.',
+  description: 'Sites web rapides, IA et automatisations simples pour les petites entreprises en Suisse romande.',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const savedLang = cookieStore.get('pilot-lang')?.value as Language | undefined;
+  const validLangs: Language[] = ['fr', 'en', 'ua'];
+  const initialLang: Language = savedLang && validLangs.includes(savedLang) ? savedLang : 'fr';
+
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={initialLang} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -23,7 +30,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <FirebaseClientProvider>
-          <LanguageProvider>
+          <LanguageProvider initialLang={initialLang}>
             {children}
             <Toaster />
           </LanguageProvider>

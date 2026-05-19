@@ -18,7 +18,7 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const savedLang = cookieStore.get('pilot-lang')?.value as Language | undefined;
-  const validLangs: Language[] = ['fr', 'en', 'ua'];
+  const validLangs: Language[] = ['fr', 'en', 'ua', 'it', 'de'];
   const initialLang: Language = savedLang && validLangs.includes(savedLang) ? savedLang : 'fr';
 
   return (

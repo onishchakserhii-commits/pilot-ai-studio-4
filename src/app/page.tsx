@@ -15,7 +15,7 @@ import { FooterSection } from '@/components/sections/FooterSection';
 export default async function Home() {
   const cookieStore = await cookies();
   const savedLang = cookieStore.get('pilot-lang')?.value as Language | undefined;
-  const validLangs: Language[] = ['fr', 'en', 'ua'];
+  const validLangs: Language[] = ['fr', 'en', 'ua', 'it', 'de'];
   const lang: Language = savedLang && validLangs.includes(savedLang) ? savedLang : 'fr';
   const t = content[lang];
 

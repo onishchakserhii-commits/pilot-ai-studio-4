@@ -10,7 +10,7 @@ import { collection, query, where, orderBy } from 'firebase/firestore';
 import Link from 'next/link';
 import { useMemo } from 'react';
 import { format } from 'date-fns';
-import { fr, enUS, uk } from 'date-fns/locale';
+import { fr, enUS, uk, it, de } from 'date-fns/locale';
 
 export default function BlogListing() {
   const { t, lang } = useTranslation();
@@ -28,7 +28,7 @@ export default function BlogListing() {
 
   const { data: posts, loading } = useCollection(blogQuery);
 
-  const dateLocale = lang === 'ua' ? uk : lang === 'en' ? enUS : fr;
+  const dateLocale = lang === 'ua' ? uk : lang === 'en' ? enUS : lang === 'it' ? it : lang === 'de' ? de : fr;
 
   return (
     <div className="min-h-screen hero-gradient">

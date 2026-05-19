@@ -12,7 +12,7 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 import { format } from 'date-fns';
-import { fr, enUS, uk } from 'date-fns/locale';
+import { fr, enUS, uk, it, de } from 'date-fns/locale';
 
 export default function BlogPostDetail() {
   const { slug } = useParams();
@@ -32,7 +32,7 @@ export default function BlogPostDetail() {
   const { data: posts, loading } = useCollection(postQuery);
   const post = posts?.[0] as any;
 
-  const dateLocale = lang === 'ua' ? uk : lang === 'en' ? enUS : fr;
+  const dateLocale = lang === 'ua' ? uk : lang === 'en' ? enUS : lang === 'it' ? it : lang === 'de' ? de : fr;
 
   if (loading) {
     return (
@@ -108,6 +108,10 @@ export default function BlogPostDetail() {
               ? 'Nous analysons votre présence en ligne pour trouver des solutions simples et concrètes.' 
               : lang === 'ua'
               ? 'Ми проаналізуємо вашу присутність онлайн, щоб знайти прості та конкретні рішення.'
+              : lang === 'it'
+              ? 'Analizziamo la tua presenza online per trovare soluzioni semplici e concrete.'
+              : lang === 'de'
+              ? 'Wir analysieren Ihre Online-Präsenz, um einfache und konkrete Lösungen zu finden.'
               : 'We analyze your online presence to find simple and concrete solutions.'}
           </p>
           <Button size="lg" className="rounded-full px-8 h-12 text-lg" asChild>

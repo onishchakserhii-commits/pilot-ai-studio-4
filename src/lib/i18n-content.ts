@@ -132,6 +132,13 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio aide les petites entreprises locales à utiliser le web, l’intelligence artificielle et l’automatisation sans complexité inutile.',
+    },
+    chatbot: {
+      greeting: 'Bonjour ! Je suis l\'assistant Pilot AI. Comment puis-je aider votre business aujourd\'hui ?',
+      ctaAudit: 'Recevoir mon audit gratuit',
+      ctaContact: 'Laisser mes coordonnées',
+      error: 'Désolé, une erreur est survenue.',
+      placeholder: 'Votre question...',
     }
   },
   en: {
@@ -265,6 +272,13 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio helps local small businesses use web, AI, and automation without unnecessary complexity.',
+    },
+    chatbot: {
+      greeting: 'Hello! I am the Pilot AI assistant. How can I help your business today?',
+      ctaAudit: 'Request my free audit',
+      ctaContact: 'Leave my contact info',
+      error: 'Sorry, an error occurred.',
+      placeholder: 'Your question...',
     }
   },
   ua: {
@@ -398,6 +412,13 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio допомагає малому бізнесу використовувати веб-технології, AI та автоматизацію без зайвої складності.',
+    },
+    chatbot: {
+      greeting: 'Вітаю! Я асистент Pilot AI. Як я можу допомогти вашому бізнесу сьогодні?',
+      ctaAudit: 'Отримати безкоштовний аудит',
+      ctaContact: 'Залишити контактні дані',
+      error: 'Вибачте, виникла помилка.',
+      placeholder: 'Ваше запитання...',
     }
   },
   it: {
@@ -530,6 +551,13 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio aiuta le piccole imprese locali a usare il web, l\'intelligenza artificiale e l\'automazione senza complessità inutile.',
+    },
+    chatbot: {
+      greeting: 'Buongiorno! Sono l\'assistente Pilot AI. Come posso aiutare la tua attività oggi?',
+      ctaAudit: 'Richiedi il mio audit gratuito',
+      ctaContact: 'Lascia i miei dati di contatto',
+      error: 'Spiacenti, si è verificato un errore.',
+      placeholder: 'La tua domanda...',
     }
   },
   de: {
@@ -662,6 +690,13 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio hilft kleinen lokalen Unternehmen, das Web, künstliche Intelligenz und Automatisierung ohne unnötige Komplexität zu nutzen.',
+    },
+    chatbot: {
+      greeting: 'Hallo! Ich bin der Pilot AI Assistent. Wie kann ich Ihrem Unternehmen heute helfen?',
+      ctaAudit: 'Gratis Audit erhalten',
+      ctaContact: 'Kontaktdaten hinterlassen',
+      error: 'Entschuldigung, es ist ein Fehler aufgetreten.',
+      placeholder: 'Ihre Frage...',
     }
   }
 };

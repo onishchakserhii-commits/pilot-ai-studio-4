@@ -1,27 +1,36 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from './LanguageContext';
 import { aiChatbotForClientInquiries } from '@/ai/flows/ai-chatbot-for-client-inquiries';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { MessageSquare, X, Send, Bot, User } from 'lucide-react';
+import { MessageSquare, X, Send, Bot } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type Message = {
   role: 'user' | 'bot';
   text: string;
+  action?: {
+    type: 'free_audit' | 'request_contact_info' | 'none';
+    details?: string;
+  };
 };
 
 export function Chatbot() {
+  const { t, lang } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    { role: 'bot', text: 'Bonjour ! Je suis l\'assistant Pilot AI. Comment puis-je aider votre business aujourd\'hui ?' }
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setMessages([
+      { role: 'bot', text: t.chatbot.greeting }
+    ]);
+  }, [lang, t]);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
@@ -33,15 +42,27 @@ export function Chatbot() {
 
     try {
       const response = await aiChatbotForClientInquiries({ message: userMsg });
-      setMessages(prev => [...prev, { role: 'bot', text: response.textResponse }]);
-      if (response.suggestedAction.type !== 'none' && response.suggestedAction.details) {
-         setMessages(prev => [...prev, { role: 'bot', text: response.suggestedAction.details! }]);
-      }
+      setMessages(prev => [
+        ...prev, 
+        { 
+          role: 'bot', 
+          text: response.textResponse,
+          action: response.suggestedAction.type !== 'none' ? response.suggestedAction : undefined
+        }
+      ]);
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'bot', text: 'Désolé, une erreur est survenue.' }]);
+      setMessages(prev => [...prev, { role: 'bot', text: t.chatbot.error }]);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleActionClick = (actionType: 'free_audit' | 'request_contact_info' | 'none') => {
+    const auditSection = document.getElementById('audit');
+    if (auditSection) {
+      auditSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
   };
 
   return (
@@ -70,13 +91,25 @@ export function Chatbot() {
             <ScrollArea className="h-full pr-4">
               <div className="space-y-4">
                 {messages.map((m, i) => (
-                  <div key={i} className={cn("flex", m.role === 'user' ? "justify-end" : "justify-start")}>
+                  <div key={i} className={cn("flex flex-col gap-2", m.role === 'user' ? "items-end" : "items-start")}>
                     <div className={cn(
                       "max-w-[85%] p-3 rounded-2xl text-sm",
                       m.role === 'user' ? "bg-accent text-white rounded-br-none" : "bg-muted text-foreground rounded-bl-none"
                     )}>
                       {m.text}
                     </div>
+                    {m.action && m.action.type !== 'none' && (
+                      <div className="mb-2 pl-2">
+                        <Button 
+                          size="sm" 
+                          variant="outline"
+                          className="bg-accent/10 hover:bg-accent/20 text-accent hover:text-accent font-semibold text-xs border border-accent/20 rounded-full py-1 h-auto px-4 shadow-sm"
+                          onClick={() => handleActionClick(m.action!.type)}
+                        >
+                          {m.action.type === 'free_audit' ? t.chatbot.ctaAudit : t.chatbot.ctaContact}
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 ))}
                 {isLoading && (
@@ -101,7 +134,7 @@ export function Chatbot() {
               <Input 
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Votre question..."
+                placeholder={t.chatbot.placeholder}
                 className="flex-1"
               />
               <Button type="submit" size="icon" disabled={isLoading}>

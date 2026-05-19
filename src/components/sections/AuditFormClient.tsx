@@ -87,7 +87,7 @@ export function AuditFormClient({ t }: Props) {
         <Textarea name="message" placeholder="..." className="min-h-[100px]" />
       </div>
       <div className="md:col-span-2 text-center pt-4">
-        <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto px-12 h-14 rounded-full text-lg font-headline">
+        <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto px-12 h-auto min-h-14 py-3 rounded-full text-lg font-headline whitespace-normal text-center">
           {isSubmitting ? 'Envoi...' : t.audit.form.submit}
         </Button>
       </div>

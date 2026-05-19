@@ -16,7 +16,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode, initialLang
 
   useEffect(() => {
     const saved = localStorage.getItem('pilot-lang') as Language;
-    if (saved && (saved === 'fr' || saved === 'en' || saved === 'ua')) {
+    if (saved && (saved === 'fr' || saved === 'en' || saved === 'ua' || saved === 'it' || saved === 'de')) {
       setLang(saved);
     }
   }, []);

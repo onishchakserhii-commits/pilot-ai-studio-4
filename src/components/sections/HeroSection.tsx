@@ -21,11 +21,11 @@ export function HeroSection({ t }: Props) {
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-7 duration-1000">
           {t.hero.subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
-          <Button size="lg" className="h-12 px-8 text-base rounded-full" asChild>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
+          <Button size="lg" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center max-w-full sm:max-w-md" asChild>
             <Link href="#audit">{t.hero.ctaPrimary}</Link>
           </Button>
-          <Button size="lg" variant="outline" className="h-12 px-8 text-base rounded-full" asChild>
+          <Button size="lg" variant="outline" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center" asChild>
             <Link href="#services">{t.hero.ctaSecondary}</Link>
           </Button>
         </div>

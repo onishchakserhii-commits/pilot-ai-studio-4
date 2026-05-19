@@ -65,7 +65,7 @@ export function ImprovementsSection({ t }: Props) {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-accent text-primary hover:bg-accent/90 rounded-full font-bold" asChild>
+              <Button className="w-full h-auto min-h-11 py-3 bg-accent text-primary hover:bg-accent/90 rounded-full font-bold whitespace-normal text-center" asChild>
                 <Link href="#audit">{t.hero.ctaPrimary}</Link>
               </Button>
             </CardFooter>

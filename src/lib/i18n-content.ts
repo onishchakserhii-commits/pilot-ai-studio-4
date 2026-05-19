@@ -1,4 +1,4 @@
-export type Language = 'fr' | 'en' | 'ua';
+export type Language = 'fr' | 'en' | 'ua' | 'it' | 'de';
 
 export const content = {
   fr: {
@@ -46,9 +46,10 @@ export const content = {
       title: "Exemples de ce que nous améliorons",
       subtitle: "Des résultats concrets pour simplifier votre quotidien et attirer des clients.",
       cases: [
-        { before: "Pas de bouton de réservation visible", after: "Bouton de réservation direct et visible sur tous les écrans" },
-        { before: "Les clients écrivent partout (WhatsApp, Instagram, appels)", after: "Toutes les demandes centralisées automatiquement (CRM / Google Sheet / Email)" },
-        { before: "Pas de statistiques de visite (Google Analytics)", after: "Tableau de bord clair avec les sources de vos appels et messages" }
+        { before: "Les clients écrivent sur WhatsApp, Insta, SMS. 2h/jour perdues à fixer des RDV manuellement.", after: "Un lien unique synchronisé avec Google Agenda. Confirmation & rappels WhatsApp 100% automatisés." },
+        { before: "Appels manqués pendant votre service ou le soir. Les prospects partent chez vos concurrents.", after: "Assistant IA 24/7 qui répond aux questions fréquentes (tarifs, horaires) et capture les coordonnées." },
+        { before: "Site web lent (6+ sec sur mobile) et fiche Google Maps invisible dans votre région.", after: "Site Next.js ultra-rapide (<1 sec) et fiche Google Business optimisée pour générer des appels directs." },
+        { before: "Demandes de devis perdues dans les e-mails. Lenteur à répondre et relances clients oubliées.", after: "Formulaire intelligent connecté à votre CRM/Google Sheets. Alertes immédiates et relances automatiques." }
       ],
       automation: {
         title: "Automatisation simple pour gagner du temps",
@@ -175,9 +176,10 @@ export const content = {
       title: "Examples of what we improve",
       subtitle: "Concrete results to simplify your daily work and attract clients.",
       cases: [
-        { before: "No booking button visible", after: "Direct and visible booking button on all screens" },
-        { before: "Clients message everywhere (WhatsApp, Instagram, calls)", after: "All inquiries automatically centralized (CRM / Google Sheets / Email)" },
-        { before: "No website statistics (Google Analytics)", after: "Clear dashboard showing where your calls and inquiries come from" }
+        { before: "Clients message on WhatsApp, Insta, SMS. 2 hours/day wasted coordinating appointments manually.", after: "A single booking link synced with Google Calendar. 100% automated confirmations & WhatsApp reminders." },
+        { before: "Missed calls during busy hours or evenings. Potential clients go to competitors who reply faster.", after: "24/7 AI Assistant answering common questions (prices, hours) instantly and capturing lead details." },
+        { before: "Slow website (6+ sec load on mobile) and invisible Google Maps profile in local searches.", after: "Ultra-fast Next.js site (<1 sec load) and optimized Google Profile driving direct calls." },
+        { before: "Quote requests lost in email inbox. Slow response times and forgotten customer follow-ups.", after: "Smart forms connected to your CRM/Google Sheets. Instant notifications and automated follow-ups." }
       ],
       automation: {
         title: "Simple automation to save time",
@@ -304,9 +306,10 @@ export const content = {
       title: "Приклади того, що ми покращуємо",
       subtitle: "Конкретні результати для спрощення вашої щоденної роботи та залучення клієнтів.",
       cases: [
-        { before: "Немає видимої кнопки бронювання", after: "Пряма та помітна кнопка бронювання на всіх пристроях" },
-        { before: "Клієнти пишуть всюди (WhatsApp, Instagram, телефонують)", after: "Всі заявки автоматично збираються в одному місці (CRM / Google Sheets / Email)" },
-        { before: "Немає статистики відвідувань сайту (Google Analytics)", after: "Проста та зрозуміла аналітика джерел дзвінків та звернень" }
+        { before: "Клієнти пишуть у WhatsApp, Insta, SMS. Ви витрачаєте 2 години на день на ручний запис.", after: "Єдине посилання для запису, інтегроване з Google календарем. Автоматичні нагадування у WhatsApp." },
+        { before: "Пропущені дзвінки під час завантаженості чи ввечері. Клієнти йдуть до тих, хто відповідає швидше.", after: "ШІ-асистент 24/7, який миттєво відповідає на часті запитання (ціни, графік) та збирає контакти." },
+        { before: "Повільний сайт (6+ секунд на мобільному) та відсутність вашої компанії на картах Google.", after: "Ультрашвидкий сайт на Next.js (завантаження <1 сек) та оптимізований профіль Google Maps." },
+        { before: "Запити на послуги губляться в пошті. Довгі відповіді та відсутність повторних нагадувань.", after: "Розумні форми, інтегровані з CRM/Google Sheets. Миттєві сповіщення та авто-нагадування клієнтам." }
       ],
       automation: {
         title: "Проста автоматизація для економії часу",
@@ -386,6 +389,264 @@ export const content = {
     },
     footer: {
       desc: 'Pilot AI Studio допомагає малому бізнесу використовувати веб-технології, AI та автоматизацію без зайвої складності.',
+    }
+  },
+  it: {
+    nav: {
+      home: 'Home',
+      services: 'Servizi',
+      audit: 'Audit Gratuito',
+      process: 'Processo',
+      pricing: 'Prezzi',
+      contact: 'Contatti',
+      blog: 'Blog',
+    },
+    blog: {
+      title: 'Blog & Risorse',
+      subtitle: 'Consigli, automazioni e strategie per far crescere la tua attività locale.',
+      readMore: 'Leggi l\'articolo',
+      backToList: 'Torna agli articoli',
+      ctaTitle: 'Vuoi migliorare la tua presenza online?',
+      ctaButton: 'Richiedi un audit gratuito',
+      noPosts: 'Nessun articolo trovato.',
+    },
+    hero: {
+      title: 'Siti web veloci, IA e automazioni semplici per le piccole imprese nella Svizzera francofona.',
+      subtitle: 'Aiutiamo ristoranti, saloni, artigiani, officine e servizi locali a ricevere più richieste, semplificare le prenotazioni e automatizzare le attività ripetitive — senza complessità tecnica.',
+      ctaPrimary: 'Audit gratuito della tua presenza online',
+      ctaSecondary: 'Scopri le soluzioni',
+      tagline: 'Più richieste. Meno routine.',
+    },
+    categories: {
+      title: 'Per chi è?',
+      restaurants: { title: 'Ristoranti & Caffè', problem: 'Prenotazioni manuali e telefonate continue.', solution: 'Sito + Prenotazione online + Conferma automatica.' },
+      salons: { title: 'Saloni di Bellezza', problem: 'I clienti scrivono ovunque, agenda cartacea.', solution: 'Sito + Promemoria WhatsApp + CRM.' },
+      artisans: { title: 'Artigiani & Ristrutturazioni', problem: 'Nessuna visibilità, preventivi persi.', solution: 'Sito professionale + Galleria + Modulo intelligente.' },
+      garages: { title: 'Officine / Autofficine', problem: 'Appuntamenti caotici al telefono.', solution: 'Sito mobile + Agenda + Gestione clienti.' },
+    },
+    services: {
+      title: 'I Nostri Servizi',
+      web: { title: 'Creazione Sito Web Rapido', desc: 'Siti moderni, mobile-first, ottimizzati per la conversione.' },
+      ai: { title: 'Chatbot IA', desc: 'Assistente 24/7 che risponde alle domande e cattura lead.' },
+      automation: { title: 'Automazione n8n', desc: 'Connetti i tuoi strumenti per eliminare i compiti ripetitivi.' },
+      audit: { title: 'Audit Local Business', desc: 'Analisi completa della tua presenza online per trovare opportunità rapide.' },
+    },
+    improvements: {
+      title: "Esempi di ciò che miglioriamo",
+      subtitle: "Risultati concreti per semplificare il tuo lavoro quotidiano e attrarre clienti.",
+      cases: [
+        { before: "I clienti scrivono su WhatsApp, Instagram, SMS. 2 ore al giorno perse a fissare appuntamenti manualmente.", after: "Un unico link sincronizzato con Google Calendar. Conferme e promemoria WhatsApp 100% automatizzati." },
+        { before: "Chiamate perse durante il servizio o la sera. I potenziali clienti vanno dalla concorrenza che risponde prima.", after: "Assistente IA 24/7 che risponde alle domande frequenti (prezzi, orari) e raccoglie i contatti dei clienti." },
+        { before: "Sito lento (6+ secondi su mobile) e scheda Google Maps invisibile nelle ricerche locali.", after: "Sito Next.js ultra-veloce (<1 sec) e profilo Google Business ottimizzato per generare chiamate dirette." },
+        { before: "Richieste di preventivo perse nelle email. Risposte lente e follow-up dimenticati.", after: "Moduli intelligenti collegati al tuo CRM/Google Sheets. Notifiche immediate e follow-up automatici." }
+      ],
+      automation: {
+        title: "Automazione semplice per risparmiare tempo",
+        desc: "Quando un cliente compila il modulo, ricevi automaticamente una notifica WhatsApp o email. La richiesta può anche essere aggiunta in Google Sheets / CRM, con un promemoria per non dimenticare di rispondere."
+      }
+    },
+    packs: {
+      title: "Soluzioni pronte per la tua attività",
+      subtitle: "Configurazioni adattate alle reali esigenze delle PMI locali.",
+      beauty: {
+        title: "Per saloni di bellezza",
+        features: ["Sito mobile veloce", "Galleria di lavori", "Listino prezzi", "Pulsante prenotazione online", "Promemoria appuntamenti WhatsApp", "Richiesta automatica di recensioni Google"]
+      },
+      artisans: {
+        title: "Per artigiani & ristrutturazioni",
+        features: ["Sito vetrina professionale", "Galleria progetti Prima/Dopo", "Modulo richiesta preventivo intelligente", "Notifica immediata delle richieste", "Tracciamento e follow-up dei lead"]
+      },
+      garages: {
+        title: "Per officine & autofficine",
+        features: ["Prenotazione appuntamenti online", "Modulo segnalazione problemi auto", "Promemoria automatico revisioni", "Scheda cliente semplice integrata", "Pulsanti Google Maps & Telefono diretto"]
+      }
+    },
+    steps: {
+      title: "Come funziona?",
+      subtitle: "Un processo semplice e rapido, dall'audit al lancio.",
+      items: [
+        { num: "1", title: "Audit gratuito", desc: "Analizziamo il tuo sito attuale, la scheda Google Business Profile e l'esperienza mobile." },
+        { num: "2", title: "Proposta chiara", desc: "Ricevi una raccomandazione concreta e semplice, senza gergo tecnico." },
+        { num: "3", title: "Creazione & Miglioramento", desc: "Costruiamo il tuo sito, i tuoi moduli e configuriamo le automazioni essenziali." },
+        { num: "4", title: "Lancio", desc: "Il tuo nuovo sistema pronto all'uso viene messo online. Tutto funziona da subito." },
+        { num: "5", title: "Supporto & Aggiustamenti", desc: "Restiamo al tuo fianco per effettuare le modifiche in base ai primi feedback." }
+      ]
+    },
+    pricing: {
+      title: 'Offerte & Prezzi',
+      subtitle: 'Prezzi di lancio per le prime collaborazioni locali nella Svizzera francofona.',
+      whyTitle: 'Perché?',
+      whyDesc: 'Le nostre offerte sono pensate per le piccole imprese che vogliono iniziare semplicemente, senza budget eccessivo.',
+      footer: 'Ogni progetto è adattato alla tua attività: sito web, modulo, WhatsApp, Google, IA, automazione o CRM.',
+      starter: {
+        title: 'Starter Website',
+        price: '490',
+        desc: 'Per una prima presenza professionale online.',
+        features: ['Sito one-page moderno', 'Versione mobile', 'Pulsante chiamata/WhatsApp', 'Google Maps integrato', 'Modulo di contatto', 'SEO di base'],
+        cta: 'Richiedi Starter'
+      },
+      business: {
+        title: 'Business Website',
+        price: '890',
+        desc: 'Per un\'attività locale che vuole ricevere più richieste.',
+        features: ['Sito da 3 a 5 pagine', 'Design professionale', 'Ottimizzazione conversione', 'Google Analytics', 'Struttura SEO locale', 'Google Business Profile'],
+        cta: 'Richiedi Business'
+      },
+      premium: {
+        title: 'AI Premium',
+        price: '1’490',
+        desc: 'Per un\'azienda che vuole un sito moderno con IA e automazione.',
+        features: ['Sito da 5 a 8 pagine', 'Multilingue', 'Chatbot IA integrato', 'Automazione n8n', 'Notifiche WhatsApp', 'Supporto post-lancio'],
+        cta: 'Richiedi AI Premium'
+      },
+      audit: { title: 'Local Business Audit', price: '0', desc: 'Analisi rapida della tua presenza online.' },
+      n8n: { title: 'Automazione n8n', price: '390', desc: 'Per automatizzare i compiti ripetitivi.' },
+      bot: { title: 'AI Chatbot', price: '590', desc: 'Un assistente IA semplice per i tuoi clienti.' }
+    },
+    audit: {
+      title: 'Audit gratuito della tua presenza online',
+      subtitle: 'Analizziamo il tuo sito, la scheda Google e il percorso del cliente da mobile per trovare miglioramenti semplici.',
+      form: {
+        name: 'Nome',
+        business: 'Nome dell\'azienda',
+        link: 'Sito / Google Maps',
+        email: 'Email',
+        phone: 'WhatsApp / Telefono',
+        message: 'Messaggio (Facoltativo)',
+        submit: 'Ricevi il mio audit gratuito',
+      }
+    },
+    footer: {
+      desc: 'Pilot AI Studio aiuta le piccole imprese locali a usare il web, l\'intelligenza artificiale e l\'automazione senza complessità inutile.',
+    }
+  },
+  de: {
+    nav: {
+      home: 'Startseite',
+      services: 'Leistungen',
+      audit: 'Gratis Audit',
+      process: 'Ablauf',
+      pricing: 'Preise',
+      contact: 'Kontakt',
+      blog: 'Blog',
+    },
+    blog: {
+      title: 'Blog & Ressourcen',
+      subtitle: 'Tipps, Automatisierungen und Strategien für Ihr lokales Unternehmen.',
+      readMore: 'Artikel lesen',
+      backToList: 'Zurück zur Übersicht',
+      ctaTitle: 'Möchten Sie Ihre Online-Präsenz verbessern?',
+      ctaButton: 'Gratis Audit anfordern',
+      noPosts: 'Keine Artikel gefunden.',
+    },
+    hero: {
+      title: 'Schnelle Websites, KI und einfache Automatisierungen für Kleinunternehmen in der Westschweiz.',
+      subtitle: 'Wir helfen Restaurants, Salons, Handwerkern, Garagen und lokalen Dienstleistern, mehr Anfragen zu erhalten, Buchungen zu vereinfachen und wiederkehrende Aufgaben zu automatisieren — ohne technische Komplexität.',
+      ctaPrimary: 'Kostenloses Audit Ihrer Online-Präsenz',
+      ctaSecondary: 'Lösungen ansehen',
+      tagline: 'Mehr Anfragen. Weniger Routine.',
+    },
+    categories: {
+      title: 'Für wen ist das?',
+      restaurants: { title: 'Restaurants & Cafés', problem: 'Manuelle Reservierungen und ständige Anrufe.', solution: 'Website + Online-Buchung + Auto-Bestätigung.' },
+      salons: { title: 'Schönheitssalons', problem: 'Kunden schreiben überall, Papierpläne.', solution: 'Website + WhatsApp-Erinnerungen + CRM.' },
+      artisans: { title: 'Handwerker & Renovierung', problem: 'Keine Sichtbarkeit, verlorene Angebote.', solution: 'Profi-Website + Galerie + Smart-Formular.' },
+      garages: { title: 'Garagen / Werkstätten', problem: 'Chaotische Terminvereinbarungen per Telefon.', solution: 'Mobile Website + Kalender + Kundenverwaltung.' },
+    },
+    services: {
+      title: 'Unsere Leistungen',
+      web: { title: 'Schnelle Website-Erstellung', desc: 'Moderne, mobile-first Websites, optimiert für Conversions.' },
+      ai: { title: 'KI-Chatbot', desc: '24/7-Assistent, der Fragen beantwortet und Leads erfasst.' },
+      automation: { title: 'n8n-Automatisierung', desc: 'Verbinden Sie Ihre Tools, um Routineaufgaben zu eliminieren.' },
+      audit: { title: 'Local Business Audit', desc: 'Vollständige Analyse Ihrer Online-Präsenz für schnelle Gewinne.' },
+    },
+    improvements: {
+      title: "Beispiele für das, was wir verbessern",
+      subtitle: "Konkrete Ergebnisse, um Ihren Alltag zu vereinfachen und Kunden zu gewinnen.",
+      cases: [
+        { before: "Kunden schreiben auf WhatsApp, Instagram, SMS. 2 Stunden täglich verloren durch manuelle Terminkoordination.", after: "Ein einziger Buchungslink, synchronisiert mit Google Kalender. Bestätigungen & WhatsApp-Erinnerungen 100% automatisiert." },
+        { before: "Verpasste Anrufe während des Betriebs oder abends. Potenzielle Kunden gehen zur Konkurrenz, die schneller antwortet.", after: "24/7 KI-Assistent beantwortet häufige Fragen (Preise, Öffnungszeiten) sofort und erfasst Kundenkontakte." },
+        { before: "Langsame Website (6+ Sek. auf dem Handy) und unsichtbares Google-Maps-Profil in lokalen Suchen.", after: "Ultraschnelle Next.js-Website (<1 Sek.) und optimiertes Google Business-Profil für direkte Anrufe." },
+        { before: "Angebotsanfragen gehen in E-Mails verloren. Langsame Reaktionszeiten und vergessene Nachfassaktionen.", after: "Intelligente Formulare verbunden mit Ihrem CRM/Google Sheets. Sofortige Benachrichtigungen und automatische Follow-ups." }
+      ],
+      automation: {
+        title: "Einfache Automatisierung zum Zeitsparen",
+        desc: "Wenn ein Kunde das Formular ausfüllt, erhalten Sie automatisch eine WhatsApp- oder E-Mail-Benachrichtigung. Die Anfrage kann auch in Google Sheets / CRM eingetragen werden, mit einer Erinnerung, nicht zu vergessen zu antworten."
+      }
+    },
+    packs: {
+      title: "Fertige Lösungen für Ihr Unternehmen",
+      subtitle: "Konfigurationen angepasst an die realen Bedürfnisse lokaler KMU.",
+      beauty: {
+        title: "Für Schönheitssalons",
+        features: ["Schnelle mobile Website", "Arbeitsbeispiel-Galerie", "Preisliste", "Online-Buchungsschaltfläche", "WhatsApp-Terminerinnerungen", "Automatische Google-Bewertungsanfragen"]
+      },
+      artisans: {
+        title: "Für Handwerker & Renovierung",
+        features: ["Professionelle Visitenkarten-Website", "Vorher/Nachher-Projektgalerie", "Intelligentes Angebotsformular", "Sofortige Benachrichtigung bei Anfragen", "Lead-Tracking und Nachfassung"]
+      },
+      garages: {
+        title: "Für Garagen & Werkstätten",
+        features: ["Online-Terminbuchung", "Fahrzeugproblem-Meldeformular", "Automatische Service-Erinnerungen", "Einfache integrierte Kundenkarte", "Direkte Google Maps & Telefonschaltflächen"]
+      }
+    },
+    steps: {
+      title: "Wie läuft das ab?",
+      subtitle: "Ein einfacher und schneller Ablauf, vom Audit bis zum Launch.",
+      items: [
+        { num: "1", title: "Gratis Audit", desc: "Wir analysieren Ihre aktuelle Website, Ihr Google Business-Profil und das mobile Nutzererlebnis." },
+        { num: "2", title: "Klarer Vorschlag", desc: "Sie erhalten eine konkrete, einfache Empfehlung ohne technischen Fachjargon." },
+        { num: "3", title: "Erstellung & Verbesserung", desc: "Wir bauen Ihre Website, erstellen Formulare und konfigurieren die wichtigsten Automatisierungen." },
+        { num: "4", title: "Launch", desc: "Ihr neues, sofort einsatzbereites System geht online. Alles funktioniert auf Anhieb." },
+        { num: "5", title: "Begleitung & Anpassung", desc: "Wir bleiben an Ihrer Seite, um Anpassungen basierend auf Ihren ersten Rückmeldungen vorzunehmen." }
+      ]
+    },
+    pricing: {
+      title: 'Angebote & Preise',
+      subtitle: 'Einführungspreise für die ersten lokalen Partnerschaften in der Westschweiz.',
+      whyTitle: 'Warum?',
+      whyDesc: 'Unsere Angebote sind für Kleinunternehmen gedacht, die einfach und ohne übermässiges Budget starten möchten.',
+      footer: 'Jedes Projekt wird an Ihr Unternehmen angepasst: Website, Formular, WhatsApp, Google, KI, Automatisierung oder CRM.',
+      starter: {
+        title: 'Starter Website',
+        price: '490',
+        desc: 'Für eine erste professionelle Online-Präsenz.',
+        features: ['Moderne One-Page-Website', 'Mobile Version', 'Anruf-/WhatsApp-Schaltfläche', 'Google Maps integriert', 'Kontaktformular', 'Basis-SEO'],
+        cta: 'Starter anfragen'
+      },
+      business: {
+        title: 'Business Website',
+        price: '890',
+        desc: 'Für ein lokales Unternehmen, das mehr Anfragen erhalten möchte.',
+        features: ['Website mit 3 bis 5 Seiten', 'Professionelles Design', 'Conversion-Optimierung', 'Google Analytics', 'Lokale SEO-Struktur', 'Google Business Profile'],
+        cta: 'Business anfragen'
+      },
+      premium: {
+        title: 'AI Premium',
+        price: '1’490',
+        desc: 'Für Unternehmen, die eine moderne Website mit KI und Automatisierung möchten.',
+        features: ['Website mit 5 bis 8 Seiten', 'Mehrsprachig', 'Integrierter KI-Chatbot', 'n8n-Automatisierung', 'WhatsApp-Benachrichtigungen', 'Support nach dem Launch'],
+        cta: 'AI Premium anfragen'
+      },
+      audit: { title: 'Local Business Audit', price: '0', desc: 'Schnelle Analyse Ihrer Online-Präsenz.' },
+      n8n: { title: 'n8n-Automatisierung', price: '390', desc: 'Zur Automatisierung wiederkehrender Aufgaben.' },
+      bot: { title: 'KI-Chatbot', price: '590', desc: 'Ein einfacher KI-Assistent für Ihre Kunden.' }
+    },
+    audit: {
+      title: 'Kostenloser Audit Ihrer Online-Präsenz',
+      subtitle: 'Wir analysieren Ihre Website, Ihr Google-Profil und die mobile Customer Journey, um einfache Verbesserungen zu finden.',
+      form: {
+        name: 'Name',
+        business: 'Unternehmensname',
+        link: 'Website / Google Maps Link',
+        email: 'E-Mail',
+        phone: 'WhatsApp / Telefon',
+        message: 'Nachricht (Optional)',
+        submit: 'Gratis Audit erhalten',
+      }
+    },
+    footer: {
+      desc: 'Pilot AI Studio hilft kleinen lokalen Unternehmen, das Web, künstliche Intelligenz und Automatisierung ohne unnötige Komplexität zu nutzen.',
     }
   }
 };

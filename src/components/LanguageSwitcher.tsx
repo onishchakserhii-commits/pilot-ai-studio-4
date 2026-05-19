@@ -19,7 +19,9 @@ export function LanguageSwitcher() {
   const labels = {
     fr: '🇫🇷 FR',
     en: '🇬🇧 EN',
-    ua: '🇺🇦 UA'
+    ua: '🇺🇦 UA',
+    it: '🇮🇹 IT',
+    de: '🇩🇪 DE'
   };
 
   const handleLangChange = (newLang: Language) => {
@@ -39,6 +41,8 @@ export function LanguageSwitcher() {
         <DropdownMenuItem onClick={() => handleLangChange('fr')}>Français</DropdownMenuItem>
         <DropdownMenuItem onClick={() => handleLangChange('en')}>English</DropdownMenuItem>
         <DropdownMenuItem onClick={() => handleLangChange('ua')}>Українська</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleLangChange('it')}>Italiano</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleLangChange('de')}>Deutsch</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

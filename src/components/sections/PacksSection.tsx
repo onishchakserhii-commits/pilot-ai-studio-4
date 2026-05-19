@@ -36,7 +36,7 @@ export function PacksSection({ t }: Props) {
               </ul>
             </CardContent>
             <CardFooter className="pt-4 border-t border-muted/50">
-              <Button variant="outline" className="w-full rounded-full border-pink-500/20 text-pink-600 hover:bg-pink-500 hover:text-white" asChild>
+              <Button variant="outline" className="w-full h-auto min-h-10 py-3 rounded-full border-pink-500/20 text-pink-600 hover:bg-pink-500 hover:text-white whitespace-normal text-center" asChild>
                 <Link href="#audit">{t.hero.ctaPrimary}</Link>
               </Button>
             </CardFooter>
@@ -61,7 +61,7 @@ export function PacksSection({ t }: Props) {
               </ul>
             </CardContent>
             <CardFooter className="pt-4 border-t border-muted/50">
-              <Button variant="outline" className="w-full rounded-full border-amber-500/20 text-amber-600 hover:bg-amber-500 hover:text-white" asChild>
+              <Button variant="outline" className="w-full h-auto min-h-10 py-3 rounded-full border-amber-500/20 text-amber-600 hover:bg-amber-500 hover:text-white whitespace-normal text-center" asChild>
                 <Link href="#audit">{t.hero.ctaPrimary}</Link>
               </Button>
             </CardFooter>
@@ -86,7 +86,7 @@ export function PacksSection({ t }: Props) {
               </ul>
             </CardContent>
             <CardFooter className="pt-4 border-t border-muted/50">
-              <Button variant="outline" className="w-full rounded-full border-blue-500/20 text-blue-600 hover:bg-blue-500 hover:text-white" asChild>
+              <Button variant="outline" className="w-full h-auto min-h-10 py-3 rounded-full border-blue-500/20 text-blue-600 hover:bg-blue-500 hover:text-white whitespace-normal text-center" asChild>
                 <Link href="#audit">{t.hero.ctaPrimary}</Link>
               </Button>
             </CardFooter>

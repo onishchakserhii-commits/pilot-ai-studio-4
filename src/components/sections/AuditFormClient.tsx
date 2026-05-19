@@ -42,8 +42,8 @@ export function AuditFormClient({ t }: Props) {
     addDoc(leadsRef, data)
       .then(() => {
         toast({
-          title: "Merci !",
-          description: "Votre demande d'audit a été bien reçue. Nous vous contacterons bientôt.",
+          title: t.audit.form.successTitle,
+          description: t.audit.form.successDesc,
         });
         (e.target as HTMLFormElement).reset();
       })
@@ -88,7 +88,7 @@ export function AuditFormClient({ t }: Props) {
       </div>
       <div className="md:col-span-2 text-center pt-4">
         <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto px-12 h-auto min-h-14 py-3 rounded-full text-lg font-headline whitespace-normal text-center">
-          {isSubmitting ? 'Envoi...' : t.audit.form.submit}
+          {isSubmitting ? t.audit.form.sending : t.audit.form.submit}
         </Button>
       </div>
     </form>

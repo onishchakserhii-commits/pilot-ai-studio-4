@@ -125,6 +125,9 @@ export const content = {
         phone: 'WhatsApp / Téléphone',
         message: 'Message (Optionnel)',
         submit: 'Recevoir mon audit gratuit',
+        sending: 'Envoi...',
+        successTitle: 'Merci !',
+        successDesc: "Votre demande d'audit a été bien reçue. Nous vous contacterons bientôt.",
       }
     },
     footer: {
@@ -255,6 +258,9 @@ export const content = {
         phone: 'WhatsApp / Phone',
         message: 'Message (Optional)',
         submit: 'Get My Free Audit',
+        sending: 'Sending...',
+        successTitle: 'Thank you!',
+        successDesc: 'Your audit request has been received. We will contact you soon.',
       }
     },
     footer: {
@@ -385,6 +391,9 @@ export const content = {
         phone: 'WhatsApp / Телефон',
         message: 'Повідомлення (Опціонально)',
         submit: 'Отримати аудит безкоштовно',
+        sending: 'Надсилання...',
+        successTitle: 'Дякуємо!',
+        successDesc: 'Ваш запит на аудит успішно отримано. Ми зв’яжемося з вами найближчим часом.',
       }
     },
     footer: {
@@ -514,6 +523,9 @@ export const content = {
         phone: 'WhatsApp / Telefono',
         message: 'Messaggio (Facoltativo)',
         submit: 'Ricevi il mio audit gratuito',
+        sending: 'Invio...',
+        successTitle: 'Grazie!',
+        successDesc: 'La tua richiesta di audit è stata ricevuta. Ti contatteremo presto.',
       }
     },
     footer: {
@@ -643,6 +655,9 @@ export const content = {
         phone: 'WhatsApp / Telefon',
         message: 'Nachricht (Optional)',
         submit: 'Gratis Audit erhalten',
+        sending: 'Wird gesendet...',
+        successTitle: 'Vielen Dank!',
+        successDesc: 'Ihre Audit-Anfrage wurde empfangen. Wir werden uns bald bei Ihnen melden.',
       }
     },
     footer: {

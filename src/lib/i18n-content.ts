@@ -37,10 +37,37 @@ export const content = {
     },
     services: {
       title: 'Nos Services',
-      web: { title: 'Création Site Web Rapide', desc: 'Sites modernes, mobile-first, optimisés pour la conversion.' },
-      ai: { title: 'Chatbot IA', desc: 'Assistant 24/7 qui répond aux questions et capture des leads.' },
-      automation: { title: 'Automatisation n8n', desc: 'Connectez vos outils pour éliminer les tâches répétitives.' },
-      audit: { title: 'Audit Local Business', desc: 'Analyse complète de votre présence en ligne pour trouver des gains rapides.' },
+      categories: {
+        web: {
+          title: 'Sites Web Modernes',
+          items: [
+            { title: 'Landing Pages', desc: 'Pages de destination ultra-rapides conçues pour maximiser vos conversions.' },
+            { title: 'Sites Vitrines', desc: 'Présentez votre activité et vos réalisations de manière professionnelle.' },
+            { title: 'Design Mobile-First', desc: 'Une navigation fluide et rapide adaptée à tous les écrans de smartphones.' },
+            { title: 'SEO Local de Base', desc: 'Structure technique optimisée pour être visible dans votre région.' }
+          ]
+        },
+        automation: {
+          title: 'Automatisation & IA',
+          items: [
+            { title: 'Assistant IA personnalisé', desc: 'Assistant connecté à vos informations, documents et FAQ pour aider vos clients et votre équipe.' },
+            { title: 'Chat IA pour site web', desc: 'Un chatbot moderne qui répond aux visiteurs et capture les demandes 24h/24.' },
+            { title: 'Réservations intelligentes', desc: 'Confirmations automatiques, rappels WhatsApp et synchronisation Google Agenda.' },
+            { title: 'Automatisation n8n', desc: 'Connexion de vos outils pour éliminer les tâches répétitives.' },
+            { title: 'Intégration CRM simple', desc: 'Suivi et centralisation facile de toutes vos demandes clients.' }
+          ]
+        },
+        acquisition: {
+          title: 'Acquisition Clients',
+          items: [
+            { title: 'Optimisation Google Business', desc: 'Photos, référencement local Maps et posts automatiques pour attirer des appels.' },
+            { title: 'Formulaires intelligents', desc: 'Transformez les visiteurs en prospects avec des formulaires dynamiques et des CTAs WhatsApp.' },
+            { title: 'Création de contenu auto', desc: 'Publication automatique d\'articles SEO, de posts Instagram/Facebook et de newsletters.' },
+            { title: 'Tableau de bord & Analytics', desc: 'Visualisez vos demandes, réservations, appels et performances dans un espace simple.' },
+            { title: 'SEO Local Avancé', desc: 'Positionnement supérieur sur les mots-clés stratégiques de votre secteur.' }
+          ]
+        }
+      }
     },
     improvements: {
       title: "Exemples de ce que nous améliorons",
@@ -177,10 +204,37 @@ export const content = {
     },
     services: {
       title: 'Our Services',
-      web: { title: 'Fast Website Creation', desc: 'Modern, mobile-first websites optimized for conversion.' },
-      ai: { title: 'AI Chatbot', desc: '24/7 assistant answering questions and capturing leads.' },
-      automation: { title: 'n8n Automation', desc: 'Connect your tools to eliminate repetitive tasks.' },
-      audit: { title: 'Local Business Audit', desc: 'Complete online presence analysis for quick wins.' },
+      categories: {
+        web: {
+          title: 'Modern Websites',
+          items: [
+            { title: 'Landing Pages', desc: 'Ultra-fast landing pages designed to maximize your conversions.' },
+            { title: 'Showcase Websites', desc: 'Present your business and achievements in a professional way.' },
+            { title: 'Mobile-First Design', desc: 'Fluid and fast navigation tailored to all smartphone screens.' },
+            { title: 'Basic Local SEO', desc: 'Optimized technical structure to be visible in your local area.' }
+          ]
+        },
+        automation: {
+          title: 'Automation & AI',
+          items: [
+            { title: 'Custom AI Assistant', desc: 'AI assistant connected to your info, documents, and FAQ to help your clients and team.' },
+            { title: 'AI Chatbot for Website', desc: 'A modern chatbot that answers visitors and captures inquiries 24/7.' },
+            { title: 'Smart Bookings', desc: 'Automated confirmations, WhatsApp reminders, and Google Calendar sync.' },
+            { title: 'n8n Automation', desc: 'Connecting your tools to eliminate repetitive manual tasks.' },
+            { title: 'Simple CRM Integration', desc: 'Easy tracking and centralization of all your customer requests.' }
+          ]
+        },
+        acquisition: {
+          title: 'Client Acquisition',
+          items: [
+            { title: 'Google Business Profile', desc: 'Photos, local Maps SEO, and automated posts to attract calls.' },
+            { title: 'Smart Forms & CTAs', desc: 'Turn visitors into prospects with dynamic forms and WhatsApp call-to-actions.' },
+            { title: 'AI Content Automation', desc: 'Automated publishing of SEO articles, Instagram/Facebook posts, and newsletters.' },
+            { title: 'Dashboard & Analytics', desc: 'Visualize your requests, bookings, calls, and performance in a simple space.' },
+            { title: 'Advanced Local SEO', desc: 'Top rankings on strategic search keywords for your business sector.' }
+          ]
+        }
+      }
     },
     improvements: {
       title: "Examples of what we improve",
@@ -317,10 +371,37 @@ export const content = {
     },
     services: {
       title: 'Наші Послуги',
-      web: { title: 'Швидке Створення Сайту', desc: 'Сучасні, адаптовані під мобільні пристрої сайти.' },
-      ai: { title: 'AI-Чатбот', desc: 'Асистент 24/7, що відповідає клієнтам та збирає ліди.' },
-      automation: { title: 'Автоматизація n8n', desc: 'З\'єднайте ваші інструменти, щоб забути про рутину.' },
-      audit: { title: 'Аудит Локального Бізнесу', desc: 'Повний аналіз вашої присутності в мережі.' },
+      categories: {
+        web: {
+          title: 'Сучасні Сайти',
+          items: [
+            { title: 'Landing Pages', desc: 'Ультрашвидкі сторінки для максимальної конверсії ваших послуг.' },
+            { title: 'Сайти-візитки', desc: 'Професійне та елегантне представлення вашого бізнесу та послуг.' },
+            { title: 'Мобільна оптимізація', desc: 'Зручна навігація, адаптована під будь-які екрани смартфонів.' },
+            { title: 'Базове локальне SEO', desc: 'Оптимізована структура сайту для видимості у вашому місті.' }
+          ]
+        },
+        automation: {
+          title: 'Автоматизація та AI',
+          items: [
+            { title: 'Персональний AI-асистент', desc: 'ШІ-асистент, підключений до документів і FAQ для допомоги клієнтам та команді.' },
+            { title: 'AI-чатбот для сайту', desc: 'Сучасний чатбот, який відповідає відвідувачам та збирає заявки цілодобово.' },
+            { title: 'Розумне бронювання', desc: 'Автоматичні підтвердження, нагадування у WhatsApp та синхронізація з календарем.' },
+            { title: 'Автоматизація n8n', desc: 'Об\'єднання ваших інструментів для усунення рутинних ручних дій.' },
+            { title: 'Проста інтеграція CRM', desc: 'Зручний збір та відстеження всіх запитів клієнтів в одному місці.' }
+          ]
+        },
+        acquisition: {
+          title: 'Залучення Клієнтів',
+          items: [
+            { title: 'Оптимізація Google Business', desc: 'Фото, просування в картах Google та автопости для збільшення дзвінків.' },
+            { title: 'Розумні форми та CTAs', desc: 'Перетворення відвідувачів на лідів за допомогою динамічних форм та WhatsApp.' },
+            { title: 'Автоматичний контент', desc: 'Створення та автоматична публікація SEO-статей, постів у соцмережах та розсилок.' },
+            { title: 'Панель керування та аналітика', desc: 'Простий дашборд для відстеження дзвінків, заявок та бронювань у реальному часі.' },
+            { title: 'Просунуте локальне SEO', desc: 'Вихід на перші позиції в пошуку за ключовими запитами вашого бізнесу.' }
+          ]
+        }
+      }
     },
     improvements: {
       title: "Приклади того, що ми покращуємо",
@@ -456,10 +537,37 @@ export const content = {
     },
     services: {
       title: 'I Nostri Servizi',
-      web: { title: 'Creazione Sito Web Rapido', desc: 'Siti moderni, mobile-first, ottimizzati per la conversione.' },
-      ai: { title: 'Chatbot IA', desc: 'Assistente 24/7 che risponde alle domande e cattura lead.' },
-      automation: { title: 'Automazione n8n', desc: 'Connetti i tuoi strumenti per eliminare i compiti ripetitivi.' },
-      audit: { title: 'Audit Local Business', desc: 'Analisi completa della tua presenza online per trovare opportunità rapide.' },
+      categories: {
+        web: {
+          title: 'Siti Web Moderni',
+          items: [
+            { title: 'Landing Pages', desc: 'Pagine di destinazione ultra-rapide progettate per massimizzare le conversioni.' },
+            { title: 'Siti Vetrina', desc: 'Presenta la tua attività e i tuoi progetti in modo professionale.' },
+            { title: 'Design Mobile-First', desc: 'Navigazione fluida e rapida adatta a tutti gli schermi degli smartphone.' },
+            { title: 'SEO Locale di Base', desc: 'Struttura tecnica ottimizzata per essere visibile nella tua zona.' }
+          ]
+        },
+        automation: {
+          title: 'Automazione & IA',
+          items: [
+            { title: 'Assistente IA personalizzato', desc: 'Assistente connesso alle tue informazioni, documenti e FAQ per aiutare clienti e team.' },
+            { title: 'Chatbot IA per sito', desc: 'Un chatbot moderno che risponde ai visitatori e acquisisce lead 24 ore su 24.' },
+            { title: 'Prenotazioni intelligenti', desc: 'Conferme automatiche, promemoria WhatsApp e sincronizzazione Google Calendar.' },
+            { title: 'Automazione n8n', desc: 'Connessione dei tuoi strumenti per eliminare le attività ripetitive.' },
+            { title: 'CRM Semplice', desc: 'Monitoraggio e centralizzazione facile di tutte le richieste dei clienti.' }
+          ]
+        },
+        acquisition: {
+          title: 'Acquisizione Clienti',
+          items: [
+            { title: 'Ottimizzazione Google Business', desc: 'Foto, SEO locale Maps e post automatici per attirare chiamate.' },
+            { title: 'Moduli intelligenti', desc: 'Trasforma i visitatori in contatti qualificati con moduli dinamici e CTA WhatsApp.' },
+            { title: 'Contenuto automatico', desc: 'Generazione e pubblicazione automatica di articoli SEO, post social e newsletter.' },
+            { title: 'Dashboard & Analytics', desc: 'Visualizza le tue richieste, prenotazioni, chiamate e prestazioni in uno spazio semplice.' },
+            { title: 'SEO Locale Avanzato', desc: 'Posizionamento superiore sulle parole chiave strategiche del tuo settore.' }
+          ]
+        }
+      }
     },
     improvements: {
       title: "Esempi di ciò che miglioriamo",
@@ -595,10 +703,37 @@ export const content = {
     },
     services: {
       title: 'Unsere Leistungen',
-      web: { title: 'Schnelle Website-Erstellung', desc: 'Moderne, mobile-first Websites, optimiert für Conversions.' },
-      ai: { title: 'KI-Chatbot', desc: '24/7-Assistent, der Fragen beantwortet und Leads erfasst.' },
-      automation: { title: 'n8n-Automatisierung', desc: 'Verbinden Sie Ihre Tools, um Routineaufgaben zu eliminieren.' },
-      audit: { title: 'Local Business Audit', desc: 'Vollständige Analyse Ihrer Online-Präsenz für schnelle Gewinne.' },
+      categories: {
+        web: {
+          title: 'Moderne Websites',
+          items: [
+            { title: 'Landingpages', desc: 'Ultraschnelle Landingpages, um Ihre Conversions zu maximieren.' },
+            { title: 'Visitenkarten-Websites', desc: 'Präsentieren Sie Ihr Unternehmen und Ihre Projekte professionell.' },
+            { title: 'Mobile-First-Design', desc: 'Flüssige und schnelle Navigation für alle Smartphone-Bildschirme.' },
+            { title: 'Basis-Lokales SEO', desc: 'Optimierte technische Struktur für Sichtbarkeit in Ihrer Region.' }
+          ]
+        },
+        automation: {
+          title: 'Automatisierung & KI',
+          items: [
+            { title: 'Eigener KI-Assistent', desc: 'Mit Ihren Informationen und FAQs verbundener Assistent für Kunden und Team.' },
+            { title: 'KI-Chatbot für Website', desc: 'Ein moderner Chatbot, der rund um die Uhr Fragen beantwortet und Leads erfasst.' },
+            { title: 'Intelligente Buchungen', desc: 'Automatische Bestätigungen, WhatsApp-Erinnerungen und Google Calendar-Abgleich.' },
+            { title: 'n8n-Automatisierung', desc: 'Verbindung Ihrer Tools zur Eliminierung wiederkehrender Aufgaben.' },
+            { title: 'Einfaches CRM', desc: 'Einfache Verfolgung und Zentralisierung aller Kundenanfragen.' }
+          ]
+        },
+        acquisition: {
+          title: 'Kundengewinnung',
+          items: [
+            { title: 'Google Business Profile', desc: 'Fotos, lokales Maps-SEO und automatische Beiträge für mehr Anrufe.' },
+            { title: 'Intelligente Formulare', desc: 'Gewinnen Sie Leads mit dynamischen Formulare und WhatsApp-CTAs.' },
+            { title: 'Automatische Inhalte', desc: 'Automatische Erstellung und Veröffentlichung von SEO-Artikeln, Social-Media-Posts und Newslettern.' },
+            { title: 'Dashboard & Analysen', desc: 'Visualisieren Sie Anfragen, Buchungen, Anrufe und Leistung in einem einfachen Dashboard.' },
+            { title: 'Erweitertes Lokales SEO', desc: 'Spitzenplatzierungen bei den strategischen Suchbegriffen Ihrer Branche.' }
+          ]
+        }
+      }
     },
     improvements: {
       title: "Beispiele für das, was wir verbessern",

@@ -35,7 +35,7 @@ export function FooterSection({ t }: Props) {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>Suisse Romande</li>
               <li><a href="mailto:onishchakserhii@gmail.com" className="hover:text-accent transition-colors">onishchakserhii@gmail.com</a></li>
-              <li>WhatsApp: <a href="https://wa.me/41796186852" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">+41 79 618 68 52</a></li>
+              <li>WhatsApp: <a href="https://wa.me/41796186852" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
               <li>Telegram: <a href="https://t.me/PilotAiStudio" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">@PilotAiStudio</a></li>
             </ul>
           </div>

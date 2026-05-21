@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import './globals.css';
 import { LanguageProvider } from '@/components/LanguageContext';
+import CookieBanner from '@/components/CookieBanner';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Language } from '@/lib/i18n-content';
+import { ModelProvider } from '@/lib/ModelContext';
 
 export const metadata: Metadata = {
   title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
@@ -13,9 +15,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   const cookieStore = await cookies();
   const savedLang = cookieStore.get('pilot-lang')?.value as Language | undefined;
   const validLangs: Language[] = ['fr', 'en', 'ua', 'it', 'de'];
@@ -31,8 +31,11 @@ export default async function RootLayout({
       <body className="font-body antialiased">
         <FirebaseClientProvider>
           <LanguageProvider initialLang={initialLang}>
-            {children}
-            <Toaster />
+            <ModelProvider>
+              {children}
+              <Toaster />
+              <CookieBanner />
+            </ModelProvider>
           </LanguageProvider>
         </FirebaseClientProvider>
       </body>

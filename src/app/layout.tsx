@@ -7,6 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Language } from '@/lib/i18n-content';
 import { ModelProvider } from '@/lib/ModelContext';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
@@ -38,6 +39,7 @@ export default async function RootLayout({
             </ModelProvider>
           </LanguageProvider>
         </FirebaseClientProvider>
+        <Analytics />
       </body>
     </html>
   );

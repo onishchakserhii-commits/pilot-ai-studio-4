@@ -122,7 +122,7 @@ export default function BlogPostDetail() {
 
       <footer className="py-16 border-t mt-20">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Pilot AI Studio.
+          © {new Date().getFullYear()} Aivello.
         </div>
       </footer>
     </div>

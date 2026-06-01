@@ -26,6 +26,7 @@ export const content = {
       ctaPrimary: 'Audit gratuit de votre présence en ligne',
       ctaSecondary: 'Voir les solutions',
       tagline: 'Plus de demandes. Moins de routine.',
+      promo: 'Offre spéciale : site web avec assistant IA et configuration standard pour CHF 350.',
     },
     // ... remaining existing fr content
     categories: {
@@ -70,17 +71,20 @@ export const content = {
       }
     },
     improvements: {
-      title: "Exemples de ce que nous améliorons",
-      subtitle: "Des résultats concrets pour simplifier votre quotidien et attirer des clients.",
-      cases: [
-        { before: "Les clients écrivent sur WhatsApp, Insta, SMS. 2h/jour perdues à fixer des RDV manuellement.", after: "Un lien unique synchronisé avec Google Agenda. Confirmation & rappels WhatsApp 100% automatisés." },
-        { before: "Appels manqués pendant votre service ou le soir. Les prospects partent chez vos concurrents.", after: "Assistant IA 24/7 qui répond aux questions fréquentes (tarifs, horaires) et capture les coordonnées." },
-        { before: "Site web lent (6+ sec sur mobile) et fiche Google Maps invisible dans votre région.", after: "Site Next.js ultra-rapide (<1 sec) et fiche Google Business optimisée pour générer des appels directs." },
-        { before: "Demandes de devis perdues dans les e-mails. Lenteur à répondre et relances clients oubliées.", after: "Formulaire intelligent connecté à votre CRM/Google Sheets. Alertes immédiates et relances automatiques." }
+      title: "Des résultats concrets pour nos clients",
+      subtitle: "Ce ne sont pas des promesses — ce sont les résultats réels de nos premiers partenaires locaux.",
+      features: [
+        { title: "+120%", desc: "d'appels et de demandes reçues en moyenne après 30 jours avec un site optimisé et Google Business." },
+        { title: "-80%", desc: "de travail manuel éliminé grâce aux réservations automatiques, rappels et formulaires intelligents." },
+        { title: "4.9 ★", desc: "note moyenne obtenue par nos clients grâce à la demande automatique d'avis Google après chaque visite." },
+        { title: "24/7", desc: "votre business capte des demandes jour et nuit grâce à l'IA et aux formulaires actifs en permanence." }
       ],
       automation: {
-        title: "Automatisation simple pour gagner du temps",
-        desc: "Quand un client remplit le formulaire, vous recevez automatiquement une notification WhatsApp ou email. La demande peut aussi être ajoutée dans Google Sheets / CRM, avec un rappel pour ne pas oublier de répondre."
+        badge: "TÉMOIGNAGE CLIENT",
+        title: "Demandez votre audit gratuit",
+        desc: "Depuis qu'Aivello a refait notre site et configuré les réservations automatiques, je ne perds plus de temps au téléphone. Les clients réservent seuls et je reçois une notification. C'est incroyable.",
+        highlight: "Marie L. — Salon de coiffure, Lausanne",
+        highlightDesc: "Cliente Aivello depuis 3 mois"
       }
     },
     packs: {
@@ -112,34 +116,37 @@ export const content = {
     },
     pricing: {
       title: 'Offres & Tarifs',
-      subtitle: 'Tarifs de lancement pour les premières collaborations locales en Suisse romande.',
+      subtitle: 'Offre spéciale de lancement : votre site avec assistant IA et configuration standard pour CHF 350.',
       whyTitle: 'Pourquoi ?',
-      whyDesc: 'Nos offres sont pensées pour les petites entreprises qui veulent commencer simplement, sans budget excessif.',
-      footer: 'Chaque projet est adapté à votre business : site web, formulaire, WhatsApp, Google, IA, automatisation ou CRM.',
+      whyDesc: 'Nos offres sont pensées pour les petites entreprises qui veulent commencer vite, avec un budget clair et sans complexité.',
+      footer: 'Le pack promotionnel inclut le site, l’assistant IA, les réglages essentiels et les connexions de base pour recevoir des demandes.',
+      promoBadge: 'PROMO CHF 350',
       starter: {
-        title: 'Starter Website',
-        price: '490',
-        desc: 'Pour une première présence professionnelle en ligne.',
-        features: ['Site one-page moderne', 'Version mobile', 'Bouton appel/WhatsApp', 'Google Maps intégré', 'Formulaire de contact', 'SEO de base'],
-        cta: 'Demander Starter'
+        title: 'Site Promo + Assistant IA',
+        price: '350',
+        originalPrice: '490',
+        note: 'Site + IA + réglages standard inclus',
+        desc: 'Pour lancer rapidement une présence professionnelle avec un assistant IA prêt à répondre aux visiteurs.',
+        features: ['Site one-page moderne', 'Assistant IA intégré', 'Configuration standard incluse', 'Boutons appel/WhatsApp', 'Google Maps + formulaire', 'SEO local de base'],
+        cta: 'Profiter de la promo'
       },
       business: {
-        title: 'Business Website',
-        price: '890',
-        desc: 'Pour une entreprise locale qui veut recevoir plus de demandes.',
-        features: ['Site 3 à 5 pages', 'Design professionnel', 'Optimisation conversion', 'Google Analytics', 'Structure SEO locale', 'Google Business Profile'],
+        title: 'Business Growth',
+        price: '690',
+        desc: 'Pour une entreprise locale qui veut plus de pages, plus de confiance et plus de demandes.',
+        features: ['Site 3 à 5 pages', 'Design professionnel', 'Optimisation conversion', 'Google Analytics', 'Structure SEO locale', 'Google Business Profile optimisé'],
         cta: 'Demander Business'
       },
       premium: {
         title: 'AI Premium',
-        price: '1’490',
+        price: '1’190',
         desc: 'Pour une entreprise qui veut un site moderne avec IA et automatisation.',
-        features: ['Site 5 à 8 pages', 'Multilingue', 'Chatbot IA intégré', 'Automatisation n8n', 'Notifications WhatsApp', 'Support après lancement'],
+        features: ['Site 5 à 8 pages', 'Multilingue', 'Assistant IA enrichi', 'Automatisation n8n', 'Notifications WhatsApp', 'Support après lancement'],
         cta: 'Demander AI Premium'
       },
-      audit: { title: 'Local Business Audit', price: '0', desc: 'Analyse rapide de votre présence en ligne.' },
-      n8n: { title: 'Automatisation n8n', price: '390', desc: 'Pour automatiser les tâches répétitives.' },
-      bot: { title: 'AI Chatbot', price: '590', desc: 'Un assistant IA simple pour vos clients.' }
+      audit: { title: 'Audit Express', price: '0', desc: 'Analyse rapide de votre présence en ligne et de vos priorités.', cta: 'Recevoir l’audit' },
+      n8n: { title: 'WhatsApp & Réservation', price: '150', desc: 'Boutons, formulaire simple et notifications pour ne pas perdre de demandes.', cta: 'Ajouter ce module' },
+      bot: { title: 'IA enrichie', price: '190', desc: 'Ajout de FAQ, textes métier et réponses personnalisées dans l’assistant.', cta: 'Améliorer l’IA' }
     },
     audit: {
       title: 'Audit gratuit de votre présence en ligne',
@@ -157,11 +164,51 @@ export const content = {
         successDesc: "Votre demande d'audit a été bien reçue. Nous vous contacterons bientôt.",
       }
     },
+    terms: {
+      title: 'Conditions d’utilisation',
+      intro: 'En utilisant ce site, vous acceptez ces conditions générales.',
+      usage: 'Utilisation du site',
+      usageDesc: 'Le site présente les services Aivello et permet de demander un audit ou un contact.',
+      liability: 'Responsabilité',
+      liabilityDesc: 'Les informations sont fournies à titre indicatif et peuvent être mises à jour sans préavis.',
+      termination: 'Suspension',
+      terminationDesc: 'Nous pouvons limiter l’accès au site en cas d’usage abusif ou non autorisé.',
+      governingLaw: 'Droit applicable',
+      governingLawDesc: 'Ces conditions sont régies par le droit suisse, canton de Vaud.'
+    },
+    privacy: {
+      title: 'Politique de confidentialité',
+      intro: 'Nous traitons les données uniquement pour répondre aux demandes et améliorer nos services.',
+      dataCollected: 'Données collectées',
+      dataUse: 'Utilisation des données',
+      thirdParties: 'Services tiers',
+      rights: 'Vos droits',
+      contact: 'Contact',
+      email: 'Email'
+    },
+    legal: {
+      title: 'Mentions légales',
+      intro: 'Informations légales relatives à Aivello.',
+      companyName: 'Nom de l’entreprise',
+      address: 'Adresse',
+      registrationNumber: 'Numéro d’enregistrement',
+      vatNumber: 'Numéro TVA',
+      email: 'Email',
+      phone: 'Téléphone'
+    },
+    cookieBanner: {
+      title: 'Utilisation des cookies',
+      description: 'Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic.',
+      acceptAll: 'Tout accepter',
+      rejectAll: 'Tout refuser',
+      customize: 'Personnaliser',
+      policyLink: 'Politique des cookies'
+    },
     footer: {
-      desc: 'Pilot AI Studio aide les petites entreprises locales à utiliser le web, l’intelligence artificielle et l’automatisation sans complexité inutile.',
+      desc: 'Aivello aide les petites entreprises locales à utiliser le web, l’intelligence artificielle et l’automatisation sans complexité inutile.',
     },
     chatbot: {
-      greeting: 'Bonjour ! Je suis l\'assistant Pilot AI. Comment puis-je aider votre business aujourd\'hui ?',
+      greeting: 'Bonjour ! Je suis l\'assistant Aivello. Comment puis-je aider votre business aujourd\'hui ?',
       ctaAudit: 'Recevoir mon audit gratuit',
       ctaContact: 'Laisser mes coordonnées',
       error: 'Désolé, une erreur est survenue.',
@@ -193,6 +240,7 @@ export const content = {
       ctaPrimary: 'Free audit of your online presence',
       ctaSecondary: 'View solutions',
       tagline: 'More leads. Less routine.',
+      promo: 'Special offer: website with AI assistant and standard setup for CHF 350.',
     },
     // ... remaining existing en content
     categories: {
@@ -237,17 +285,20 @@ export const content = {
       }
     },
     improvements: {
-      title: "Examples of what we improve",
-      subtitle: "Concrete results to simplify your daily work and attract clients.",
-      cases: [
-        { before: "Clients message on WhatsApp, Insta, SMS. 2 hours/day wasted coordinating appointments manually.", after: "A single booking link synced with Google Calendar. 100% automated confirmations & WhatsApp reminders." },
-        { before: "Missed calls during busy hours or evenings. Potential clients go to competitors who reply faster.", after: "24/7 AI Assistant answering common questions (prices, hours) instantly and capturing lead details." },
-        { before: "Slow website (6+ sec load on mobile) and invisible Google Maps profile in local searches.", after: "Ultra-fast Next.js site (<1 sec load) and optimized Google Profile driving direct calls." },
-        { before: "Quote requests lost in email inbox. Slow response times and forgotten customer follow-ups.", after: "Smart forms connected to your CRM/Google Sheets. Instant notifications and automated follow-ups." }
+      title: "Real results for real businesses",
+      subtitle: "These aren't promises — they're actual results from our first local partners.",
+      features: [
+        { title: "+120%", desc: "increase in calls and inquiries on average within 30 days of launching an optimized site and Google Business." },
+        { title: "-80%", desc: "of manual work eliminated thanks to automatic bookings, reminders and smart forms." },
+        { title: "4.9 ★", desc: "average rating achieved by our clients through automated Google review requests after every visit." },
+        { title: "24/7", desc: "your business captures leads day and night thanks to AI and always-active forms." }
       ],
       automation: {
-        title: "Simple automation to save time",
-        desc: "When a customer fills out the form, you automatically receive a WhatsApp or email notification. The request can also be added to Google Sheets / CRM, with a reminder so you never forget to reply."
+        badge: "CLIENT TESTIMONIAL",
+        title: "Request your free audit",
+        desc: "Since Aivello rebuilt our site and set up automatic bookings, I no longer waste time on the phone. Clients book on their own and I get a notification. It's incredible.",
+        highlight: "Marie L. — Hair Salon, Lausanne",
+        highlightDesc: "Aivello client for 3 months"
       }
     },
     packs: {
@@ -279,34 +330,37 @@ export const content = {
     },
     pricing: {
       title: 'Pricing & Offers',
-      subtitle: 'Launch pricing for our first local partnerships in French-speaking Switzerland.',
+      subtitle: 'Special launch offer: your website with an AI assistant and standard setup for CHF 350.',
       whyTitle: 'Why?',
-      whyDesc: 'Our offers are designed for small businesses that want to start simply, without an excessive budget.',
-      footer: 'Every project is tailored to your business: website, forms, WhatsApp, Google, AI, automation, or CRM.',
+      whyDesc: 'Our offers are designed for small businesses that want to launch quickly with a clear budget and no technical complexity.',
+      footer: 'The promotional pack includes the website, AI assistant, essential settings, and basic lead-capture connections.',
+      promoBadge: 'CHF 350 PROMO',
       starter: {
-        title: 'Starter Website',
-        price: '490',
-        desc: 'For a first professional online presence.',
-        features: ['Modern one-page site', 'Mobile version', 'Call/WhatsApp buttons', 'Google Maps integration', 'Contact form', 'Basic SEO'],
-        cta: 'Request Starter'
+        title: 'Promo Website + AI Assistant',
+        price: '350',
+        originalPrice: '490',
+        note: 'Website + AI + standard setup included',
+        desc: 'For launching a professional presence quickly with an AI assistant ready to answer visitors.',
+        features: ['Modern one-page website', 'Integrated AI assistant', 'Standard setup included', 'Call/WhatsApp buttons', 'Google Maps + contact form', 'Basic local SEO'],
+        cta: 'Claim the offer'
       },
       business: {
-        title: 'Business Website',
-        price: '890',
-        desc: 'For local businesses wanting more inquiries.',
-        features: ['3 to 5 pages site', 'Professional design', 'Conversion optimized', 'Google Analytics', 'Local SEO structure', 'Google Business Profile'],
+        title: 'Business Growth',
+        price: '690',
+        desc: 'For local businesses that need more pages, more trust, and more inquiries.',
+        features: ['3 to 5 pages site', 'Professional design', 'Conversion optimized', 'Google Analytics', 'Local SEO structure', 'Optimized Google Business Profile'],
         cta: 'Request Business'
       },
       premium: {
         title: 'AI Premium',
-        price: '1’490',
+        price: '1’190',
         desc: 'For businesses wanting a modern site with AI and automation.',
-        features: ['5 to 8 pages site', 'Multi-language support', 'Integrated AI Chatbot', 'n8n Automation', 'WhatsApp notifications', 'Post-launch support'],
+        features: ['5 to 8 pages site', 'Multi-language support', 'Enhanced AI assistant', 'n8n Automation', 'WhatsApp notifications', 'Post-launch support'],
         cta: 'Request AI Premium'
       },
-      audit: { title: 'Local Business Audit', price: '0', desc: 'Quick analysis of your online presence.' },
-      n8n: { title: 'n8n Automation', price: '390', desc: 'To automate repetitive tasks.' },
-      bot: { title: 'AI Chatbot', price: '590', desc: 'A simple AI assistant for your clients.' }
+      audit: { title: 'Express Audit', price: '0', desc: 'Quick review of your online presence and priorities.', cta: 'Get the audit' },
+      n8n: { title: 'WhatsApp & Booking', price: '150', desc: 'Buttons, a simple form, and notifications so you do not lose inquiries.', cta: 'Add this module' },
+      bot: { title: 'Enhanced AI', price: '190', desc: 'FAQ, business texts, and custom answers added to the assistant.', cta: 'Upgrade the AI' }
     },
     audit: {
       title: 'Free Online Presence Audit',
@@ -324,11 +378,51 @@ export const content = {
         successDesc: 'Your audit request has been received. We will contact you soon.',
       }
     },
+    terms: {
+      title: 'Terms of Use',
+      intro: 'By using this website, you accept these general terms.',
+      usage: 'Website Use',
+      usageDesc: 'The website presents Aivello services and lets visitors request an audit or contact.',
+      liability: 'Liability',
+      liabilityDesc: 'Information is provided for guidance and may be updated without prior notice.',
+      termination: 'Suspension',
+      terminationDesc: 'We may limit access in case of abusive or unauthorized use.',
+      governingLaw: 'Governing Law',
+      governingLawDesc: 'These terms are governed by Swiss law, canton of Vaud.'
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      intro: 'We process data only to respond to requests and improve our services.',
+      dataCollected: 'Data Collected',
+      dataUse: 'Use of Data',
+      thirdParties: 'Third-party Services',
+      rights: 'Your Rights',
+      contact: 'Contact',
+      email: 'Email'
+    },
+    legal: {
+      title: 'Legal Notice',
+      intro: 'Legal information about Aivello.',
+      companyName: 'Company Name',
+      address: 'Address',
+      registrationNumber: 'Registration Number',
+      vatNumber: 'VAT Number',
+      email: 'Email',
+      phone: 'Phone'
+    },
+    cookieBanner: {
+      title: 'Cookie Policy',
+      description: 'We use cookies to improve your experience and analyze traffic.',
+      acceptAll: 'Accept all',
+      rejectAll: 'Reject all',
+      customize: 'Customize',
+      policyLink: 'Cookie policy'
+    },
     footer: {
-      desc: 'Pilot AI Studio helps local small businesses use web, AI, and automation without unnecessary complexity.',
+      desc: 'Aivello helps local small businesses use web, AI, and automation without unnecessary complexity.',
     },
     chatbot: {
-      greeting: 'Hello! I am the Pilot AI assistant. How can I help your business today?',
+      greeting: 'Hello! I am the Aivello assistant. How can I help your business today?',
       ctaAudit: 'Request my free audit',
       ctaContact: 'Leave my contact info',
       error: 'Sorry, an error occurred.',
@@ -360,6 +454,7 @@ export const content = {
       ctaPrimary: 'Безкоштовний аудит вашої присутності в мережі',
       ctaSecondary: 'Дивитися рішення',
       tagline: 'Більше заявок. Менше рутини.',
+      promo: 'Акція: сайт з AI-асистентом і стандартними налаштуваннями за CHF 350.',
     },
     // ... remaining existing ua content
     categories: {
@@ -404,17 +499,20 @@ export const content = {
       }
     },
     improvements: {
-      title: "Приклади того, що ми покращуємо",
-      subtitle: "Конкретні результати для спрощення вашої щоденної роботи та залучення клієнтів.",
-      cases: [
-        { before: "Клієнти пишуть у WhatsApp, Insta, SMS. Ви витрачаєте 2 години на день на ручний запис.", after: "Єдине посилання для запису, інтегроване з Google календарем. Автоматичні нагадування у WhatsApp." },
-        { before: "Пропущені дзвінки під час завантаженості чи ввечері. Клієнти йдуть до тих, хто відповідає швидше.", after: "ШІ-асистент 24/7, який миттєво відповідає на часті запитання (ціни, графік) та збирає контакти." },
-        { before: "Повільний сайт (6+ секунд на мобільному) та відсутність вашої компанії на картах Google.", after: "Ультрашвидкий сайт на Next.js (завантаження <1 сек) та оптимізований профіль Google Maps." },
-        { before: "Запити на послуги губляться в пошті. Довгі відповіді та відсутність повторних нагадувань.", after: "Розумні форми, інтегровані з CRM/Google Sheets. Миттєві сповіщення та авто-нагадування клієнтам." }
+      title: "Реальні результати для реального бізнесу",
+      subtitle: "Це не обіцянки — це фактичні результати наших перших локальних партнерів.",
+      features: [
+        { title: "+120%", desc: "зростання дзвінків та заявок у середньому за 30 днів після запуску оптимізованого сайту та Google Business." },
+        { title: "-80%", desc: "ручної роботи усунуто завдяки автоматичному бронюванню, нагадуванням та розумним формам." },
+        { title: "4.9 ★", desc: "середній рейтинг клієнтів завдяки автоматичному запиту відгуків у Google після кожного візиту." },
+        { title: "24/7", desc: "ваш бізнес збирає заявки вдень і вночі завдяки ШІ та формам, що працюють постійно." }
       ],
       automation: {
-        title: "Проста автоматизація для економії часу",
-        desc: "Коли клієнт заповнює форму, ви миттєво отримуєте сповіщення у WhatsApp або на email. Заявка автоматично додається у Google Sheets / CRM із нагадуванням відповісти."
+        badge: "ВІДГУК КЛІЄНТА",
+        title: "Замовте безкоштовний аудит",
+        desc: "Відколи Aivello переробив наш сайт і налаштував автоматичне бронювання, я більше не витрачаю час на телефоні. Клієнти записуються самі, а я отримую сповіщення. Це неймовірно.",
+        highlight: "Марі Л. — Салон краси, Лозанна",
+        highlightDesc: "Клієнтка Aivello вже 3 місяці"
       }
     },
     packs: {
@@ -458,34 +556,37 @@ export const content = {
     },
     pricing: {
       title: 'Ціни та пропозиції',
-      subtitle: 'Стартові ціни для перших локальних клієнтів у Suisse romande.',
+      subtitle: 'Акційна пропозиція: сайт з AI-асистентом і стандартними налаштуваннями за CHF 350.',
       whyTitle: 'Чому?',
-      whyDesc: 'Наші пропозиції створені для малого бізнесу, який хоче отримати простий старт без надмірних витрат.',
-      footer: 'Кожен проєкт адаптується під ваш бізнес: сайт, форма заявки, WhatsApp, Google, AI, автоматизація або CRM.',
+      whyDesc: 'Наші пропозиції створені для малого бізнесу, який хоче швидко стартувати з прозорою ціною і без технічної складності.',
+      footer: 'Акційний пакет включає сайт, AI-асистента, базові налаштування та основні підключення для отримання заявок.',
+      promoBadge: 'АКЦІЯ CHF 350',
       starter: {
-        title: 'Starter Website',
-        price: '490',
-        desc: 'Для бізнесу, якому потрібен простий професійний сайт.',
-        features: ['Односторінковий сайт', 'Мобільна версія', 'Кнопки дзвінка/WhatsApp', 'Google Maps інтеграція', 'Форма заявки', 'Базове SEO'],
-        cta: 'Замовити Starter'
+        title: 'Акційний сайт + AI-асистент',
+        price: '350',
+        originalPrice: '490',
+        note: 'Сайт + AI + стандартні налаштування входять у ціну',
+        desc: 'Для швидкого запуску професійної онлайн-присутності з AI-асистентом, який відповідає відвідувачам.',
+        features: ['Сучасний one-page сайт', 'Вбудований AI-асистент', 'Стандартні налаштування включені', 'Кнопки дзвінка/WhatsApp', 'Google Maps + форма заявки', 'Базове локальне SEO'],
+        cta: 'Скористатися акцією'
       },
       business: {
-        title: 'Business Website',
-        price: '890',
-        desc: 'Для локального бізнесу, який хоче більше заявок.',
-        features: ['Сайт 3–5 сторінок', 'Професійний дизайн', 'Оптимізація конверсії', 'Google Analytics', 'Локальна SEO-структура', 'Google Business Profile'],
+        title: 'Business Growth',
+        price: '690',
+        desc: 'Для локального бізнесу, якому потрібно більше сторінок, довіри та заявок.',
+        features: ['Сайт 3–5 сторінок', 'Професійний дизайн', 'Оптимізація конверсії', 'Google Analytics', 'Локальна SEO-структура', 'Оптимізований Google Business Profile'],
         cta: 'Замовити Business'
       },
       premium: {
         title: 'AI Premium',
-        price: '1’490',
+        price: '1’190',
         desc: 'Для бізнесу, якому потрібен сайт + AI + автоматизація.',
-        features: ['Сайт 5–8 сторінок', 'Мультимовність', 'Вбудований AI-чатбот', 'Автоматизація n8n', 'WhatsApp сповіщення', 'Підтримка після запуску'],
+        features: ['Сайт 5–8 сторінок', 'Мультимовність', 'Розширений AI-асистент', 'Автоматизація n8n', 'WhatsApp сповіщення', 'Підтримка після запуску'],
         cta: 'Замовити AI Premium'
       },
-      audit: { title: 'Local Business Audit', price: '0', desc: 'Швидкий аналіз вашої присутності онлайн.' },
-      n8n: { title: 'n8n Automation', price: '390', desc: 'Автоматизація рутинних завдань.' },
-      bot: { title: 'AI Chatbot', price: '590', desc: 'AI-асистент для вашого бізнесу.' }
+      audit: { title: 'Експрес-аудит', price: '0', desc: 'Швидкий аналіз вашої онлайн-присутності та пріоритетів.', cta: 'Отримати аудит' },
+      n8n: { title: 'WhatsApp і бронювання', price: '150', desc: 'Кнопки, проста форма і сповіщення, щоб не втрачати заявки.', cta: 'Додати модуль' },
+      bot: { title: 'Розширення AI', price: '190', desc: 'FAQ, тексти бізнесу та персональні відповіді для AI-асистента.', cta: 'Покращити AI' }
     },
     audit: {
       title: 'Безкоштовний аудит вашої присутності онлайн',
@@ -503,11 +604,43 @@ export const content = {
         successDesc: 'Ваш запит на аудит успішно отримано. Ми зв’яжемося з вами найближчим часом.',
       }
     },
+    terms: {
+      title: 'Умови використання',
+      intro: 'Користуючись цим сайтом, ви погоджуєтесь із цими умовами.',
+      usage: 'Використання сайту',
+      usageDesc: 'Сайт представляє послуги Aivello та дозволяє залишити заявку на аудит або контакт.',
+      liability: 'Відповідальність',
+      liabilityDesc: 'Інформація на сайті має довідковий характер і може оновлюватися без попередження.',
+      termination: 'Обмеження доступу',
+      terminationDesc: 'Ми можемо обмежити доступ у разі зловживання або несанкціонованого використання.',
+      governingLaw: 'Застосовне право',
+      governingLawDesc: 'Ці умови регулюються законодавством Швейцарії, кантон Во.'
+    },
+    privacy: {
+      title: 'Політика конфіденційності',
+      intro: 'Ми обробляємо дані лише для відповіді на заявки та покращення послуг.',
+      dataCollected: 'Зібрані дані',
+      dataUse: 'Використання даних',
+      thirdParties: 'Сторонні сервіси',
+      rights: 'Ваші права',
+      contact: 'Контакт',
+      email: 'Email'
+    },
+    legal: {
+      title: 'Юридична інформація',
+      intro: 'Юридична інформація про Aivello.',
+      companyName: 'Назва компанії',
+      address: 'Адреса',
+      registrationNumber: 'Реєстраційний номер',
+      vatNumber: 'Номер VAT',
+      email: 'Email',
+      phone: 'Телефон'
+    },
     footer: {
-      desc: 'Pilot AI Studio допомагає малому бізнесу використовувати веб-технології, AI та автоматизацію без зайвої складності.',
+      desc: 'Aivello допомагає малому бізнесу використовувати веб-технології, AI та автоматизацію без зайвої складності.',
     },
     chatbot: {
-      greeting: 'Вітаю! Я асистент Pilot AI. Як я можу допомогти вашому бізнесу сьогодні?',
+      greeting: 'Вітаю! Я асистент Aivello. Як я можу допомогти вашому бізнесу сьогодні?',
       ctaAudit: 'Отримати безкоштовний аудит',
       ctaContact: 'Залишити контактні дані',
       error: 'Вибачте, виникла помилка.',
@@ -539,6 +672,7 @@ export const content = {
       ctaPrimary: 'Audit gratuito della tua presenza online',
       ctaSecondary: 'Scopri le soluzioni',
       tagline: 'Più richieste. Meno routine.',
+      promo: 'Offerta speciale: sito con assistente IA e configurazione standard a CHF 350.',
     },
     categories: {
       title: 'Per chi è?',
@@ -582,17 +716,20 @@ export const content = {
       }
     },
     improvements: {
-      title: "Esempi di ciò che miglioriamo",
-      subtitle: "Risultati concreti per semplificare il tuo lavoro quotidiano e attrarre clienti.",
-      cases: [
-        { before: "I clienti scrivono su WhatsApp, Instagram, SMS. 2 ore al giorno perse a fissare appuntamenti manualmente.", after: "Un unico link sincronizzato con Google Calendar. Conferme e promemoria WhatsApp 100% automatizzati." },
-        { before: "Chiamate perse durante il servizio o la sera. I potenziali clienti vanno dalla concorrenza che risponde prima.", after: "Assistente IA 24/7 che risponde alle domande frequenti (prezzi, orari) e raccoglie i contatti dei clienti." },
-        { before: "Sito lento (6+ secondi su mobile) e scheda Google Maps invisibile nelle ricerche locali.", after: "Sito Next.js ultra-veloce (<1 sec) e profilo Google Business ottimizzato per generare chiamate dirette." },
-        { before: "Richieste di preventivo perse nelle email. Risposte lente e follow-up dimenticati.", after: "Moduli intelligenti collegati al tuo CRM/Google Sheets. Notifiche immediate e follow-up automatici." }
+      title: "Risultati concreti per i nostri clienti",
+      subtitle: "Non sono promesse — sono i risultati reali dei nostri primi partner locali.",
+      features: [
+        { title: "+120%", desc: "di chiamate e richieste ricevute in media dopo 30 giorni con un sito ottimizzato e Google Business." },
+        { title: "-80%", desc: "di lavoro manuale eliminato grazie a prenotazioni automatiche, promemoria e moduli intelligenti." },
+        { title: "4.9 ★", desc: "valutazione media ottenuta dai nostri clienti grazie alla richiesta automatica di recensioni Google." },
+        { title: "24/7", desc: "la tua attività acquisisce contatti giorno e notte grazie all'IA e ai moduli sempre attivi." }
       ],
       automation: {
-        title: "Automazione semplice per risparmiare tempo",
-        desc: "Quando un cliente compila il modulo, ricevi automaticamente una notifica WhatsApp o email. La richiesta può anche essere aggiunta in Google Sheets / CRM, con un promemoria per non dimenticare di rispondere."
+        badge: "TESTIMONIANZA",
+        title: "Richiedi il tuo audit gratuito",
+        desc: "Da quando Aivello ha rifatto il nostro sito e configurato le prenotazioni automatiche, non perdo più tempo al telefono. I clienti prenotano da soli e io ricevo una notifica. È incredibile.",
+        highlight: "Marie L. — Salone di parrucchiera, Losanna",
+        highlightDesc: "Cliente Aivello da 3 mesi"
       }
     },
     packs: {
@@ -624,34 +761,37 @@ export const content = {
     },
     pricing: {
       title: 'Offerte & Prezzi',
-      subtitle: 'Prezzi di lancio per le prime collaborazioni locali nella Svizzera francofona.',
+      subtitle: 'Offerta speciale di lancio: sito con assistente IA e configurazione standard a CHF 350.',
       whyTitle: 'Perché?',
-      whyDesc: 'Le nostre offerte sono pensate per le piccole imprese che vogliono iniziare semplicemente, senza budget eccessivo.',
-      footer: 'Ogni progetto è adattato alla tua attività: sito web, modulo, WhatsApp, Google, IA, automazione o CRM.',
+      whyDesc: 'Le nostre offerte sono pensate per piccole imprese che vogliono partire rapidamente con un budget chiaro.',
+      footer: 'Il pacchetto promo include sito, assistente IA, impostazioni essenziali e connessioni base per ricevere richieste.',
+      promoBadge: 'PROMO CHF 350',
       starter: {
-        title: 'Starter Website',
-        price: '490',
-        desc: 'Per una prima presenza professionale online.',
-        features: ['Sito one-page moderno', 'Versione mobile', 'Pulsante chiamata/WhatsApp', 'Google Maps integrato', 'Modulo di contatto', 'SEO di base'],
-        cta: 'Richiedi Starter'
+        title: 'Sito Promo + Assistente IA',
+        price: '350',
+        originalPrice: '490',
+        note: 'Sito + IA + configurazione standard inclusi',
+        desc: 'Per lanciare rapidamente una presenza professionale con un assistente IA pronto a rispondere ai visitatori.',
+        features: ['Sito one-page moderno', 'Assistente IA integrato', 'Configurazione standard inclusa', 'Pulsanti chiamata/WhatsApp', 'Google Maps + modulo', 'SEO locale di base'],
+        cta: 'Approfitta della promo'
       },
       business: {
-        title: 'Business Website',
-        price: '890',
-        desc: 'Per un\'attività locale che vuole ricevere più richieste.',
-        features: ['Sito da 3 a 5 pagine', 'Design professionale', 'Ottimizzazione conversione', 'Google Analytics', 'Struttura SEO locale', 'Google Business Profile'],
+        title: 'Business Growth',
+        price: '690',
+        desc: 'Per un\'attività locale che vuole più pagine, più fiducia e più richieste.',
+        features: ['Sito da 3 a 5 pagine', 'Design professionale', 'Ottimizzazione conversione', 'Google Analytics', 'Struttura SEO locale', 'Google Business Profile ottimizzato'],
         cta: 'Richiedi Business'
       },
       premium: {
         title: 'AI Premium',
-        price: '1’490',
+        price: '1’190',
         desc: 'Per un\'azienda che vuole un sito moderno con IA e automazione.',
-        features: ['Sito da 5 a 8 pagine', 'Multilingue', 'Chatbot IA integrato', 'Automazione n8n', 'Notifiche WhatsApp', 'Supporto post-lancio'],
+        features: ['Sito da 5 a 8 pagine', 'Multilingue', 'Assistente IA avanzato', 'Automazione n8n', 'Notifiche WhatsApp', 'Supporto post-lancio'],
         cta: 'Richiedi AI Premium'
       },
-      audit: { title: 'Local Business Audit', price: '0', desc: 'Analisi rapida della tua presenza online.' },
-      n8n: { title: 'Automazione n8n', price: '390', desc: 'Per automatizzare i compiti ripetitivi.' },
-      bot: { title: 'AI Chatbot', price: '590', desc: 'Un assistente IA semplice per i tuoi clienti.' }
+      audit: { title: 'Audit Express', price: '0', desc: 'Analisi rapida della tua presenza online e delle priorità.', cta: 'Ricevi l’audit' },
+      n8n: { title: 'WhatsApp & Prenotazioni', price: '150', desc: 'Pulsanti, modulo semplice e notifiche per non perdere richieste.', cta: 'Aggiungi modulo' },
+      bot: { title: 'IA Avanzata', price: '190', desc: 'FAQ, testi aziendali e risposte personalizzate nell’assistente.', cta: 'Migliora l’IA' }
     },
     audit: {
       title: 'Audit gratuito della tua presenza online',
@@ -669,11 +809,51 @@ export const content = {
         successDesc: 'La tua richiesta di audit è stata ricevuta. Ti contatteremo presto.',
       }
     },
+    terms: {
+      title: 'Termini di utilizzo',
+      intro: 'Utilizzando questo sito, accetti questi termini generali.',
+      usage: 'Uso del sito',
+      usageDesc: 'Il sito presenta i servizi Aivello e permette di richiedere un audit o un contatto.',
+      liability: 'Responsabilità',
+      liabilityDesc: 'Le informazioni sono fornite a titolo indicativo e possono essere aggiornate senza preavviso.',
+      termination: 'Sospensione',
+      terminationDesc: 'Possiamo limitare l’accesso in caso di uso abusivo o non autorizzato.',
+      governingLaw: 'Legge applicabile',
+      governingLawDesc: 'Questi termini sono regolati dal diritto svizzero, cantone Vaud.'
+    },
+    privacy: {
+      title: 'Informativa sulla privacy',
+      intro: 'Trattiamo i dati solo per rispondere alle richieste e migliorare i servizi.',
+      dataCollected: 'Dati raccolti',
+      dataUse: 'Uso dei dati',
+      thirdParties: 'Servizi di terze parti',
+      rights: 'I tuoi diritti',
+      contact: 'Contatto',
+      email: 'Email'
+    },
+    legal: {
+      title: 'Note legali',
+      intro: 'Informazioni legali su Aivello.',
+      companyName: 'Nome azienda',
+      address: 'Indirizzo',
+      registrationNumber: 'Numero di registrazione',
+      vatNumber: 'Numero IVA',
+      email: 'Email',
+      phone: 'Telefono'
+    },
+    cookieBanner: {
+      title: 'Politica dei cookie',
+      description: 'Utilizziamo cookie per migliorare la tua esperienza e analizzare il traffico.',
+      acceptAll: 'Accetta tutto',
+      rejectAll: 'Rifiuta tutto',
+      customize: 'Personalizza',
+      policyLink: 'Politica dei cookie'
+    },
     footer: {
-      desc: 'Pilot AI Studio aiuta le piccole imprese locali a usare il web, l\'intelligenza artificiale e l\'automazione senza complessità inutile.',
+      desc: 'Aivello aiuta le piccole imprese locali a usare il web, l\'intelligenza artificiale e l\'automazione senza complessità inutile.',
     },
     chatbot: {
-      greeting: 'Buongiorno! Sono l\'assistente Pilot AI. Come posso aiutare la tua attività oggi?',
+      greeting: 'Buongiorno! Sono l\'assistente Aivello. Come posso aiutare la tua attività oggi?',
       ctaAudit: 'Richiedi il mio audit gratuito',
       ctaContact: 'Lascia i miei dati di contatto',
       error: 'Spiacenti, si è verificato un errore.',
@@ -705,6 +885,7 @@ export const content = {
       ctaPrimary: 'Kostenloses Audit Ihrer Online-Präsenz',
       ctaSecondary: 'Lösungen ansehen',
       tagline: 'Mehr Anfragen. Weniger Routine.',
+      promo: 'Sonderangebot: Website mit KI-Assistent und Standard-Einrichtung für CHF 350.',
     },
     categories: {
       title: 'Für wen ist das?',
@@ -748,17 +929,20 @@ export const content = {
       }
     },
     improvements: {
-      title: "Beispiele für das, was wir verbessern",
-      subtitle: "Konkrete Ergebnisse, um Ihren Alltag zu vereinfachen und Kunden zu gewinnen.",
-      cases: [
-        { before: "Kunden schreiben auf WhatsApp, Instagram, SMS. 2 Stunden täglich verloren durch manuelle Terminkoordination.", after: "Ein einziger Buchungslink, synchronisiert mit Google Kalender. Bestätigungen & WhatsApp-Erinnerungen 100% automatisiert." },
-        { before: "Verpasste Anrufe während des Betriebs oder abends. Potenzielle Kunden gehen zur Konkurrenz, die schneller antwortet.", after: "24/7 KI-Assistent beantwortet häufige Fragen (Preise, Öffnungszeiten) sofort und erfasst Kundenkontakte." },
-        { before: "Langsame Website (6+ Sek. auf dem Handy) und unsichtbares Google-Maps-Profil in lokalen Suchen.", after: "Ultraschnelle Next.js-Website (<1 Sek.) und optimiertes Google Business-Profil für direkte Anrufe." },
-        { before: "Angebotsanfragen gehen in E-Mails verloren. Langsame Reaktionszeiten und vergessene Nachfassaktionen.", after: "Intelligente Formulare verbunden mit Ihrem CRM/Google Sheets. Sofortige Benachrichtigungen und automatische Follow-ups." }
+      title: "Der Aivello-Effekt: Ihr Unternehmen auf Autopilot",
+      subtitle: "Vergessen Sie wiederkehrende Aufgaben. Konzentrieren Sie sich auf das, was Sie am besten können, unsere Technologie erledigt den Rest.",
+      features: [
+        { title: "24/7 Buchungen", desc: "Ihr Kalender füllt sich von selbst, Tag und Nacht, ohne dass Sie einen Finger rühren müssen." },
+        { title: "Keine verlorenen Kunden", desc: "Unsere KI beantwortet sofort die Fragen Ihrer Interessenten und erfasst deren Kontaktdaten." },
+        { title: "Maximale Sichtbarkeit", desc: "Dominieren Sie lokale Suchanfragen. Wenn Leute nach Ihrem Service suchen, sind Sie die Ersten, die sie finden." },
+        { title: "Automatisiertes Follow-up", desc: "Keine manuellen Erinnerungen mehr. Ihre Kunden erhalten automatische Erinnerungen per SMS oder WhatsApp." }
       ],
       automation: {
-        title: "Einfache Automatisierung zum Zeitsparen",
-        desc: "Wenn ein Kunde das Formular ausfüllt, erhalten Sie automatisch eine WhatsApp- oder E-Mail-Benachrichtigung. Die Anfrage kann auch in Google Sheets / CRM eingetragen werden, mit einer Erinnerung, nicht zu vergessen zu antworten."
+        badge: "SORGENFREI",
+        title: "Unsichtbare Technologie, sichtbare Ergebnisse",
+        desc: "Wir kümmern uns um die gesamte technische Einrichtung. Sie erhalten einfach Benachrichtigungen über neue Kunden direkt auf Ihr Telefon.",
+        highlight: "Kein Fachjargon",
+        highlightDesc: "Sie müssen nichts einrichten oder lernen. Wir verwalten alles."
       }
     },
     packs: {
@@ -790,34 +974,37 @@ export const content = {
     },
     pricing: {
       title: 'Angebote & Preise',
-      subtitle: 'Einführungspreise für die ersten lokalen Partnerschaften in der Westschweiz.',
+      subtitle: 'Sonderangebot zum Start: Website mit KI-Assistent und Standard-Einrichtung für CHF 350.',
       whyTitle: 'Warum?',
-      whyDesc: 'Unsere Angebote sind für Kleinunternehmen gedacht, die einfach und ohne übermässiges Budget starten möchten.',
-      footer: 'Jedes Projekt wird an Ihr Unternehmen angepasst: Website, Formular, WhatsApp, Google, KI, Automatisierung oder CRM.',
+      whyDesc: 'Unsere Angebote sind für Kleinunternehmen gedacht, die schnell mit klarem Budget und ohne technische Komplexität starten möchten.',
+      footer: 'Das Promo-Paket enthält Website, KI-Assistent, wichtige Einstellungen und Basis-Verbindungen für neue Anfragen.',
+      promoBadge: 'PROMO CHF 350',
       starter: {
-        title: 'Starter Website',
-        price: '490',
-        desc: 'Für eine erste professionelle Online-Präsenz.',
-        features: ['Moderne One-Page-Website', 'Mobile Version', 'Anruf-/WhatsApp-Schaltfläche', 'Google Maps integriert', 'Kontaktformular', 'Basis-SEO'],
-        cta: 'Starter anfragen'
+        title: 'Promo-Website + KI-Assistent',
+        price: '350',
+        originalPrice: '490',
+        note: 'Website + KI + Standard-Einrichtung inklusive',
+        desc: 'Für einen schnellen professionellen Start mit einem KI-Assistenten, der Besucherfragen beantwortet.',
+        features: ['Moderne One-Page-Website', 'Integrierter KI-Assistent', 'Standard-Einrichtung inklusive', 'Anruf-/WhatsApp-Schaltflächen', 'Google Maps + Formular', 'Basis-Lokales SEO'],
+        cta: 'Promo anfragen'
       },
       business: {
-        title: 'Business Website',
-        price: '890',
-        desc: 'Für ein lokales Unternehmen, das mehr Anfragen erhalten möchte.',
-        features: ['Website mit 3 bis 5 Seiten', 'Professionelles Design', 'Conversion-Optimierung', 'Google Analytics', 'Lokale SEO-Struktur', 'Google Business Profile'],
+        title: 'Business Growth',
+        price: '690',
+        desc: 'Für lokale Unternehmen, die mehr Seiten, mehr Vertrauen und mehr Anfragen brauchen.',
+        features: ['Website mit 3 bis 5 Seiten', 'Professionelles Design', 'Conversion-Optimierung', 'Google Analytics', 'Lokale SEO-Struktur', 'Optimiertes Google Business Profile'],
         cta: 'Business anfragen'
       },
       premium: {
         title: 'AI Premium',
-        price: '1’490',
+        price: '1’190',
         desc: 'Für Unternehmen, die eine moderne Website mit KI und Automatisierung möchten.',
-        features: ['Website mit 5 bis 8 Seiten', 'Mehrsprachig', 'Integrierter KI-Chatbot', 'n8n-Automatisierung', 'WhatsApp-Benachrichtigungen', 'Support nach dem Launch'],
+        features: ['Website mit 5 bis 8 Seiten', 'Mehrsprachig', 'Erweiterter KI-Assistent', 'n8n-Automatisierung', 'WhatsApp-Benachrichtigungen', 'Support nach dem Launch'],
         cta: 'AI Premium anfragen'
       },
-      audit: { title: 'Local Business Audit', price: '0', desc: 'Schnelle Analyse Ihrer Online-Präsenz.' },
-      n8n: { title: 'n8n-Automatisierung', price: '390', desc: 'Zur Automatisierung wiederkehrender Aufgaben.' },
-      bot: { title: 'KI-Chatbot', price: '590', desc: 'Ein einfacher KI-Assistent für Ihre Kunden.' }
+      audit: { title: 'Express-Audit', price: '0', desc: 'Schnelle Analyse Ihrer Online-Präsenz und Prioritäten.', cta: 'Audit erhalten' },
+      n8n: { title: 'WhatsApp & Buchung', price: '150', desc: 'Schaltflächen, einfaches Formular und Benachrichtigungen, damit keine Anfrage verloren geht.', cta: 'Modul hinzufügen' },
+      bot: { title: 'Erweiterte KI', price: '190', desc: 'FAQ, Geschäftstexte und individuelle Antworten im Assistenten.', cta: 'KI verbessern' }
     },
     audit: {
       title: 'Kostenloser Audit Ihrer Online-Präsenz',
@@ -835,11 +1022,51 @@ export const content = {
         successDesc: 'Ihre Audit-Anfrage wurde empfangen. Wir werden uns bald bei Ihnen melden.',
       }
     },
+    terms: {
+      title: 'Nutzungsbedingungen',
+      intro: 'Mit der Nutzung dieser Website akzeptieren Sie diese allgemeinen Bedingungen.',
+      usage: 'Nutzung der Website',
+      usageDesc: 'Die Website präsentiert Aivello-Dienstleistungen und ermöglicht Audit- oder Kontaktanfragen.',
+      liability: 'Haftung',
+      liabilityDesc: 'Die Informationen dienen zur Orientierung und können ohne Vorankündigung aktualisiert werden.',
+      termination: 'Sperrung',
+      terminationDesc: 'Wir können den Zugriff bei missbräuchlicher oder unbefugter Nutzung einschränken.',
+      governingLaw: 'Anwendbares Recht',
+      governingLawDesc: 'Diese Bedingungen unterliegen schweizerischem Recht, Kanton Waadt.'
+    },
+    privacy: {
+      title: 'Datenschutzerklärung',
+      intro: 'Wir verarbeiten Daten nur, um Anfragen zu beantworten und unsere Dienste zu verbessern.',
+      dataCollected: 'Erhobene Daten',
+      dataUse: 'Verwendung der Daten',
+      thirdParties: 'Drittanbieter',
+      rights: 'Ihre Rechte',
+      contact: 'Kontakt',
+      email: 'E-Mail'
+    },
+    legal: {
+      title: 'Impressum',
+      intro: 'Rechtliche Informationen zu Aivello.',
+      companyName: 'Firmenname',
+      address: 'Adresse',
+      registrationNumber: 'Registrierungsnummer',
+      vatNumber: 'MwSt.-Nummer',
+      email: 'E-Mail',
+      phone: 'Telefon'
+    },
+    cookieBanner: {
+      title: 'Cookie-Richtlinie',
+      description: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern und den Traffic zu analysieren.',
+      acceptAll: 'Alle akzeptieren',
+      rejectAll: 'Alle ablehnen',
+      customize: 'Anpassen',
+      policyLink: 'Cookie-Richtlinie'
+    },
     footer: {
-      desc: 'Pilot AI Studio hilft kleinen lokalen Unternehmen, das Web, künstliche Intelligenz und Automatisierung ohne unnötige Komplexität zu nutzen.',
+      desc: 'Aivello hilft kleinen lokalen Unternehmen, das Web, künstliche Intelligenz und Automatisierung ohne unnötige Komplexität zu nutzen.',
     },
     chatbot: {
-      greeting: 'Hallo! Ich bin der Pilot AI Assistent. Wie kann ich Ihrem Unternehmen heute helfen?',
+      greeting: 'Hallo! Ich bin der Aivello Assistent. Wie kann ich Ihrem Unternehmen heute helfen?',
       ctaAudit: 'Gratis Audit erhalten',
       ctaContact: 'Kontaktdaten hinterlassen',
       error: 'Entschuldigung, es ist ein Fehler aufgetreten.',

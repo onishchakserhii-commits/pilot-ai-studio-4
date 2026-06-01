@@ -31,13 +31,15 @@ export function PricingSection({ t }: Props) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
+          <Card className="flex flex-col relative overflow-hidden border-2 border-accent shadow-xl md:scale-105 z-10">
+            <div className="absolute top-0 right-0 bg-accent text-white px-3 py-1 text-xs font-bold rounded-bl-lg">{t.pricing.promoBadge}</div>
             <CardHeader>
               <CardTitle className="font-headline">{t.pricing.starter.title}</CardTitle>
               <CardDescription>{t.pricing.starter.desc}</CardDescription>
               <div className="pt-4">
+                <div className="text-sm font-medium text-muted-foreground line-through">CHF {t.pricing.starter.originalPrice}</div>
                 <span className="text-4xl font-bold text-foreground">CHF {t.pricing.starter.price}</span>
-                <span className="text-muted-foreground ml-2 text-sm">+</span>
+                <p className="mt-1 text-sm font-semibold text-accent">{t.pricing.starter.note}</p>
               </div>
             </CardHeader>
             <CardContent className="flex-1">
@@ -57,8 +59,7 @@ export function PricingSection({ t }: Props) {
             </CardFooter>
           </Card>
 
-          <Card className="flex flex-col relative overflow-hidden border-2 border-accent shadow-xl scale-105 z-10">
-             <div className="absolute top-0 right-0 bg-accent text-white px-3 py-1 text-xs font-bold rounded-bl-lg">POPULAR</div>
+          <Card className="flex flex-col relative overflow-hidden border-2 border-transparent hover:border-primary/20 transition-all">
             <CardHeader>
               <CardTitle className="font-headline">{t.pricing.business.title}</CardTitle>
               <CardDescription>{t.pricing.business.desc}</CardDescription>
@@ -115,12 +116,12 @@ export function PricingSection({ t }: Props) {
            <Card className="bg-muted/30 border-none">
              <CardHeader className="pb-2">
                <CardTitle className="text-lg font-headline">{t.pricing.audit.title}</CardTitle>
-               <div className="text-xl font-bold text-accent">Gratuit</div>
+               <div className="text-xl font-bold text-accent">CHF {t.pricing.audit.price}</div>
              </CardHeader>
              <CardContent>
                <p className="text-xs text-muted-foreground">{t.pricing.audit.desc}</p>
                <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
-                  <Link href="#audit">Recevoir l'audit <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                  <Link href="#audit">{t.pricing.audit.cta} <ArrowRight className="w-3 h-3 ml-1"/></Link>
                </Button>
              </CardContent>
            </Card>
@@ -132,7 +133,7 @@ export function PricingSection({ t }: Props) {
              <CardContent>
                <p className="text-xs text-muted-foreground">{t.pricing.n8n.desc}</p>
                <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
-                  <Link href="#audit">Automatiser mon business <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                  <Link href="#audit">{t.pricing.n8n.cta} <ArrowRight className="w-3 h-3 ml-1"/></Link>
                </Button>
              </CardContent>
            </Card>
@@ -144,7 +145,7 @@ export function PricingSection({ t }: Props) {
              <CardContent>
                <p className="text-xs text-muted-foreground">{t.pricing.bot.desc}</p>
                <Button variant="link" className="p-0 h-auto text-accent text-xs mt-2" asChild>
-                  <Link href="#audit">Ajouter un assistant IA <ArrowRight className="w-3 h-3 ml-1"/></Link>
+                  <Link href="#audit">{t.pricing.bot.cta} <ArrowRight className="w-3 h-3 ml-1"/></Link>
                </Button>
              </CardContent>
            </Card>

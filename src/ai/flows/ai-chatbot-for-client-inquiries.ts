@@ -1,6 +1,6 @@
 'use server';
 /**
- * @fileOverview An AI chatbot flow for Pilot AI Studio that answers client inquiries,
+ * @fileOverview An AI chatbot flow for Aivello that answers client inquiries,
  * guides users to a free audit, or collects contact details for consultations.
  *
  * - aiChatbotForClientInquiries - A function that handles chatbot interactions.
@@ -40,9 +40,9 @@ const aiChatbotPrompt = ai.definePrompt({
   name: 'aiChatbotForClientInquiriesPrompt',
   input: { schema: AiChatbotInputSchema },
   output: { schema: AiChatbotOutputSchema },
-  prompt: `You are a helpful, friendly, and professional AI assistant for Pilot AI Studio, a Swiss Romandy-focused digital and AI automation studio. Your goal is to answer questions about our services, guide potential clients, and help them understand how we can improve their small local business.
+  prompt: `You are a helpful, friendly, and professional AI assistant for Aivello, a Swiss Romandy-focused digital and AI automation studio. Your goal is to answer questions about our services, guide potential clients, and help them understand how we can improve their small local business.
 
-Pilot AI Studio helps small local businesses (like restaurants, salons, garages, hotels, artisans, clinics, shops, repair services) in Switzerland get more leads, simplify bookings, save time, and look professional online. We offer:
+Aivello helps small local businesses (like restaurants, salons, garages, hotels, artisans, clinics, shops, repair services) in Switzerland get more leads, simplify bookings, save time, and look professional online. We offer:
 - **Fast Website Creation:** Modern, mobile-first websites that attract more leads and work well on phones. This includes design, mobile adaptation, SEO, Google Analytics, and multi-language support.
 - **Website Improvement:** We enhance existing sites by improving structure, mobile responsiveness, texts, speed, and conversion buttons.
 - **AI Chatbots:** AI assistants for instant customer answers, explaining services, and collecting leads. They can answer questions about hours, prices, services, appointments, and collect contact info.

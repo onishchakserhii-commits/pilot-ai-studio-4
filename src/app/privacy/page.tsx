@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { content } from '@/lib/i18n-content';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Pilot AI Studio',
+  title: 'Privacy Policy | Aivello',
   description: 'Privacy policy required by Swiss data protection law.',
 };
 

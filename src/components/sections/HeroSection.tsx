@@ -1,4 +1,4 @@
-import { Zap } from 'lucide-react';
+import { BadgePercent, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { content } from '@/lib/i18n-content';
@@ -21,6 +21,13 @@ export function HeroSection({ t }: Props) {
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-7 duration-1000">
           {t.hero.subtitle}
         </p>
+        <Link
+          href="#pricing"
+          className="mb-8 inline-flex max-w-3xl items-center justify-center gap-3 rounded-full border border-accent/20 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent shadow-sm transition-colors hover:bg-accent/15 md:text-base"
+        >
+          <BadgePercent className="h-5 w-5 shrink-0" />
+          <span>{t.hero.promo}</span>
+        </Link>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <Button size="lg" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center max-w-full sm:max-w-md" asChild>
             <Link href="#audit">{t.hero.ctaPrimary}</Link>

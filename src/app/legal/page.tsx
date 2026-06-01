@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { content } from '@/lib/i18n-content';
 
 export const metadata: Metadata = {
-  title: 'Legal Notice | Pilot AI Studio',
+  title: 'Legal Notice | Aivello',
   description: 'Legal information required by Swiss law (canton Vaud).',
 };
 

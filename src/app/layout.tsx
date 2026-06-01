@@ -9,7 +9,7 @@ import { Language } from '@/lib/i18n-content';
 import { ModelProvider } from '@/lib/ModelContext';
 
 export const metadata: Metadata = {
-  title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
+  title: 'Aivello | Plus de demandes. Moins de routine.',
   description: 'Sites web rapides, IA et automatisations simples pour les petites entreprises en Suisse romande.',
 };
 

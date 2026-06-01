@@ -4,8 +4,8 @@ import { LanguageProvider } from '@/components/LanguageContext';
 import { cookies } from 'next/headers';
 
 export const metadata: Metadata = {
-  title: 'Умови використання – Pilot AI Studio',
-  description: 'Офіційні умови використання сайту Pilot AI Studio, відповідно до законодавства Швейцарії (кантон Во Монтре).',
+  title: 'Умови використання – Aivello',
+  description: 'Офіційні умови використання сайту Aivello, відповідно до законодавства Швейцарії (кантон Во Монтре).',
 };
 
 export default async function TermsPage() {

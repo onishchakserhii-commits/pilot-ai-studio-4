@@ -12,10 +12,8 @@ export function FooterSection({ t }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-headline font-bold">P</span>
-              </div>
-              <span className="font-headline font-bold text-xl tracking-tight">Pilot AI <span className="text-accent">Studio</span></span>
+              <img src="/logo.png" alt="Aivello Logo" className="w-8 h-8 rounded-lg object-contain" />
+              <span className="font-headline font-bold text-xl tracking-tight">Aivello</span>
             </Link>
             <p className="text-muted-foreground max-sm">
               {t.footer.desc}
@@ -41,7 +39,7 @@ export function FooterSection({ t }: Props) {
           </div>
         </div>
         <div className="pt-8 border-t text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Pilot AI Studio. Built for Swiss local business.
+          © {new Date().getFullYear()} Aivello. Built for Swiss local business.
         </div>
       </div>
     </footer>

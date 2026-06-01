@@ -10,7 +10,7 @@ export function TrustSection({ t }: Props) {
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-headline text-center mb-16">Pourquoi travailler avec Pilot AI Studio ?</h2>
+        <h2 className="text-3xl font-headline text-center mb-16">Pourquoi travailler avec Aivello ?</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div className="space-y-4">
             <div className="mx-auto w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center text-accent">

@@ -81,7 +81,7 @@ export function Chatbot() {
           <CardHeader className="bg-primary text-white p-4 flex flex-row items-center justify-between">
             <div className="flex items-center gap-2">
               <Bot className="h-5 w-5" />
-              <CardTitle className="text-base font-headline">Pilot AI Assistant</CardTitle>
+              <CardTitle className="text-base font-headline">Aivello Assistant</CardTitle>
             </div>
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="text-white hover:bg-white/10 h-8 w-8">
               <X className="h-4 w-4" />

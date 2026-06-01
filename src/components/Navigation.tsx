@@ -13,10 +13,8 @@ export function Navigation() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-headline font-bold">P</span>
-          </div>
-          <span className="font-headline font-bold text-xl tracking-tight">Pilot AI <span className="text-accent">Studio</span></span>
+          <img src="/logo.png" alt="Aivello Logo" className="w-8 h-8 rounded-lg object-contain" />
+          <span className="font-headline font-bold text-xl tracking-tight">Aivello</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">

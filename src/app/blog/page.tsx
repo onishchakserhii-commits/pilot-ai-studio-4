@@ -90,7 +90,7 @@ export default function BlogListing() {
       {/* Simplified Footer */}
       <footer className="py-16 bg-white border-t mt-auto">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Pilot AI Studio. Built for Swiss local business.
+          © {new Date().getFullYear()} Aivello. Built for Swiss local business.
         </div>
       </footer>
     </div>

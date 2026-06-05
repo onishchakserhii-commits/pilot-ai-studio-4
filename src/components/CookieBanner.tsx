@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from '@/components/LanguageContext';
+import Link from 'next/link';
 
 const CookieBanner: React.FC = () => {
   const { t } = useTranslation();
@@ -31,7 +32,7 @@ const CookieBanner: React.FC = () => {
       <div className="flex-1 text-sm text-gray-800 dark:text-gray-200 mb-2 md:mb-0">
         <h2 className="font-semibold text-base mb-1">{t.cookieBanner.title}</h2>
         <p className="mb-1">{t.cookieBanner.description}</p>
-        <a href="#" className="underline hover:text-blue-600 dark:hover:text-blue-400">{t.cookieBanner.policyLink}</a>
+        <Link href="/privacy" className="underline hover:text-blue-600 dark:hover:text-blue-400">{t.cookieBanner.policyLink}</Link>
       </div>
       <div className="flex space-x-2">
         <button onClick={handleReject} className="px-4 py-2 bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200 rounded">

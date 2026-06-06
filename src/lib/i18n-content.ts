@@ -35,6 +35,7 @@ export const content = {
       salons: { title: 'Salons de Beauté', problem: 'Clients écrivent partout, planning papier.', solution: 'Site + Rappels WhatsApp + CRM.' },
       artisans: { title: 'Artisans & Rénovation', problem: 'Pas de visibilité, devis perdus.', solution: 'Site pro + Galerie + Formulaire intelligent.' },
       garages: { title: 'Garages / СТО', problem: 'Prise de RDV chaotique au téléphone.', solution: 'Site mobile + Agenda + Suivi client.' },
+      bakeries: { title: 'Boulangeries & Pâtisseries', problem: 'Commandes de gâteaux manuelles, questions récurrentes.', solution: 'Site + Commandes en ligne + Chatbot IA.' },
     },
     services: {
       title: 'Nos Services',
@@ -101,6 +102,10 @@ export const content = {
       garages: {
         title: "Pour garages & ateliers",
         features: ["Prise de rendez-vous en ligne", "Formulaire de signalement de panne", "Rappel automatique des révisions", "Fiche client simple intégrée", "Boutons Google Maps & Téléphone direct"]
+      },
+      bakeries: {
+        title: "Pour boulangeries & pâtisseries",
+        features: ["Vitrine des produits", "Formulaire de commande de gâteaux", "Bouton Click & Collect", "Chatbot IA pour questions", "Horaires Google toujours à jour"]
       }
     },
     steps: {
@@ -249,6 +254,7 @@ export const content = {
       salons: { title: 'Beauty Salons', problem: 'Clients message everywhere, paper schedules.', solution: 'Site + WhatsApp reminders + CRM.' },
       artisans: { title: 'Artisans & Renovation', problem: 'No visibility, lost quotes.', solution: 'Pro site + Gallery + Smart form.' },
       garages: { title: 'Garages / Repair', problem: 'Chaotic phone bookings.', solution: 'Mobile site + Calendar + Client tracking.' },
+      bakeries: { title: 'Bakeries & Pastry Shops', problem: 'Manual cake orders, repetitive questions.', solution: 'Site + Online Ordering + AI Chatbot.' },
     },
     services: {
       title: 'Our Services',
@@ -315,6 +321,10 @@ export const content = {
       garages: {
         title: "For garages & workshops",
         features: ["Online appointment scheduling", "Car issue reporting form", "Automatic service reminders", "Simple built-in customer card", "Direct Google Maps & Phone buttons"]
+      },
+      bakeries: {
+        title: "For bakeries & pastry shops",
+        features: ["Product showcase", "Cake order form", "Click & Collect button", "AI Chatbot for questions", "Always up-to-date Google hours"]
       }
     },
     steps: {
@@ -463,6 +473,7 @@ export const content = {
       salons: { title: 'Салони Краси', problem: 'Клієнти пишуть всюди, паперовий запис.', solution: 'Сайт + WhatsApp нагадування + CRM.' },
       artisans: { title: 'Майстри та Ремонт', problem: 'Відсутність у пошуку, втрачені замовлення.', solution: 'Професійний сайт + Галерея + Форма.' },
       garages: { title: 'Garages / СТО', problem: 'Хаотичні дзвінки для запису.', solution: 'Мобільний сайт + Календар + База клієнтів.' },
+      bakeries: { title: 'Пекарні та Кондитерські', problem: 'Замовлення тортів вручну, одні й ті самі питання.', solution: 'Сайт + Онлайн замовлення + AI Чатбот.' },
     },
     services: {
       title: 'Наші Послуги',
@@ -529,6 +540,10 @@ export const content = {
       garages: {
         title: "Для автосервісів / СТО",
         features: ["Онлайн-запис на обслуговування", "Форма опису проблеми з авто", "Автоматичні нагадування про ТО", "Проста база клієнтів", "Швидкий виклик карти Google Maps та телефону"]
+      },
+      bakeries: {
+        title: "Для пекарень та кондитерських",
+        features: ["Вітрина продукції", "Форма замовлення тортів", "Кнопка Click & Collect", "AI Чатбот для запитань", "Завжди актуальні години в Google"]
       }
     },
     cookieBanner: {
@@ -680,6 +695,7 @@ export const content = {
       salons: { title: 'Saloni di Bellezza', problem: 'I clienti scrivono ovunque, agenda cartacea.', solution: 'Sito + Promemoria WhatsApp + CRM.' },
       artisans: { title: 'Artigiani & Ristrutturazioni', problem: 'Nessuna visibilità, preventivi persi.', solution: 'Sito professionale + Galleria + Modulo intelligente.' },
       garages: { title: 'Officine / Autofficine', problem: 'Appuntamenti caotici al telefono.', solution: 'Sito mobile + Agenda + Gestione clienti.' },
+      bakeries: { title: 'Panetterie & Pasticcerie', problem: 'Ordini manuali, domande ripetitive.', solution: 'Sito + Ordini online + Chatbot IA.' },
     },
     services: {
       title: 'I Nostri Servizi',
@@ -746,6 +762,10 @@ export const content = {
       garages: {
         title: "Per officine & autofficine",
         features: ["Prenotazione appuntamenti online", "Modulo segnalazione problemi auto", "Promemoria automatico revisioni", "Scheda cliente semplice integrata", "Pulsanti Google Maps & Telefono diretto"]
+      },
+      bakeries: {
+        title: "Per panetterie & pasticcerie",
+        features: ["Vetrina dei prodotti", "Modulo ordine torte", "Pulsante Click & Collect", "Chatbot IA per domande", "Orari Google sempre aggiornati"]
       }
     },
     steps: {
@@ -893,6 +913,7 @@ export const content = {
       salons: { title: 'Schönheitssalons', problem: 'Kunden schreiben überall, Papierpläne.', solution: 'Website + WhatsApp-Erinnerungen + CRM.' },
       artisans: { title: 'Handwerker & Renovierung', problem: 'Keine Sichtbarkeit, verlorene Angebote.', solution: 'Profi-Website + Galerie + Smart-Formular.' },
       garages: { title: 'Garagen / Werkstätten', problem: 'Chaotische Terminvereinbarungen per Telefon.', solution: 'Mobile Website + Kalender + Kundenverwaltung.' },
+      bakeries: { title: 'Bäckereien & Konditoreien', problem: 'Manuelle Bestellungen, wiederkehrende Fragen.', solution: 'Website + Online-Bestellung + KI-Chatbot.' },
     },
     services: {
       title: 'Unsere Leistungen',
@@ -959,6 +980,10 @@ export const content = {
       garages: {
         title: "Für Garagen & Werkstätten",
         features: ["Online-Terminbuchung", "Fahrzeugproblem-Meldeformular", "Automatische Service-Erinnerungen", "Einfache integrierte Kundenkarte", "Direkte Google Maps & Telefonschaltflächen"]
+      },
+      bakeries: {
+        title: "Für Bäckereien & Konditoreien",
+        features: ["Produktpräsentation", "Bestellformular für Torten", "Click & Collect Button", "KI-Chatbot für Fragen", "Immer aktuelle Google-Öffnungszeiten"]
       }
     },
     steps: {

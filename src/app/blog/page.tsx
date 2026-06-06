@@ -14,6 +14,13 @@ import { getAllPosts } from '@/lib/markdown';
 // No, server components can't use `useTranslation`. We can pass data to a Client Component,
 // or just make `BlogListing` a Client Component that receives `posts` as a prop.
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog | Pilot AI Studio',
+  description: 'Découvrez nos articles sur l\'intelligence artificielle, l\'automatisation et la transformation numérique pour les PME en Suisse.',
+};
+
 export default async function BlogPage() {
   const postsFr = getAllPosts('fr');
   const postsUa = getAllPosts('ua');

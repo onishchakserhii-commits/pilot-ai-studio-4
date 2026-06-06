@@ -1,6 +1,7 @@
 
-import { initializeFirebase } from '@/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { initializeApp, getApps, getApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { firebaseConfig } from '@/firebase/config';
 import { NextResponse } from 'next/server';
 
 /**
@@ -10,7 +11,10 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { firestore } = initializeFirebase();
+    
+    // Initialize Firebase
+    const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+    const firestore = getFirestore(app);
 
     const {
       title,

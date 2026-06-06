@@ -6,6 +6,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import { useToast } from '@/hooks/use-toast';
 import { errorEmitter } from '@/firebase/error-emitter';
 import { FirestorePermissionError, type SecurityRuleContext } from '@/firebase/errors';
+import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -18,6 +19,7 @@ type Props = {
 export function AuditFormClient({ t }: Props) {
   const db = useFirestore();
   const { toast } = useToast();
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleAuditSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -46,6 +48,7 @@ export function AuditFormClient({ t }: Props) {
           description: t.audit.form.successDesc,
         });
         (e.target as HTMLFormElement).reset();
+        router.push('/success');
       })
       .catch(async (serverError) => {
         const permissionError = new FirestorePermissionError({

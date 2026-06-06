@@ -2,14 +2,12 @@
 
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
-import { useLanguage } from "@/components/LanguageContext";
-import { content } from "@/lib/i18n-content";
+import { useTranslation } from "@/components/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { ConstellationBackground } from "@/components/ConstellationBackground";
 
 export default function SuccessPage() {
-  const { lang } = useLanguage();
-  const t = content[lang];
+  const { t } = useTranslation();
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-950 text-white">

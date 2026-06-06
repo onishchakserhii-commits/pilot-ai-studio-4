@@ -3,6 +3,7 @@ import { cookies } from 'next/headers';
 import './globals.css';
 import { LanguageProvider } from '@/components/LanguageContext';
 import CookieBanner from '@/components/CookieBanner';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Language } from '@/lib/i18n-content';
@@ -33,6 +34,7 @@ export default async function RootLayout({
           <LanguageProvider initialLang={initialLang}>
             <ModelProvider>
               {children}
+              <WhatsAppButton />
               <Toaster />
               <CookieBanner />
             </ModelProvider>

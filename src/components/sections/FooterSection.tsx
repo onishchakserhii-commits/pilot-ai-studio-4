@@ -32,8 +32,8 @@ export function FooterSection({ t }: Props) {
             <h4 className="font-headline font-bold mb-6">{t.nav.contact}</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>Suisse Romande</li>
-              <li><a href="mailto:onishchakserhii@gmail.com" className="hover:text-accent transition-colors">onishchakserhii@gmail.com</a></li>
-              <li>WhatsApp: <a href="https://wa.me/41796186852" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
+              <li><a href="mailto:aivello.studio@gmail.com" className="hover:text-accent transition-colors">aivello.studio@gmail.com</a></li>
+              <li>WhatsApp: <a href="https://wa.me/message/N7Y67PXYRFUOI1" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
               <li>Telegram: <a href="https://t.me/PilotAiStudio" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">@PilotAiStudio</a></li>
             </ul>
           </div>

@@ -10,10 +10,9 @@ type Props = {
 
 export function HeroSection({ t }: Props) {
   return (
-    <>
+    <section className="relative pt-20 pb-32 overflow-hidden">
       <AmbientBackground />
-      <section className="relative pt-20 pb-32 overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500 relative z-10">
             <Zap className="w-4 h-4" />
             <span>{t.hero.tagline}</span>
@@ -40,7 +39,6 @@ export function HeroSection({ t }: Props) {
             </Button>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   );
 }

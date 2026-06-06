@@ -2,7 +2,7 @@ import { BadgePercent, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { content } from '@/lib/i18n-content';
-import { AuroraMouseGlow } from '@/components/AuroraMouseGlow';
+import { GlassmorphismBackground } from '@/components/GlassmorphismBackground';
 
 type Props = {
   t: typeof content.fr;
@@ -11,7 +11,7 @@ type Props = {
 export function HeroSection({ t }: Props) {
   return (
     <section className="relative pt-20 pb-32 overflow-hidden bg-slate-950 text-white">
-      <AuroraMouseGlow />
+      <GlassmorphismBackground />
       <div className="container mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-accent-foreground border border-accent/30 text-sm font-semibold mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500">
             <Zap className="w-4 h-4 text-accent" />

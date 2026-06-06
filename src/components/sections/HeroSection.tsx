@@ -36,7 +36,7 @@ export function HeroSection({ t }: Props) {
             <Button size="lg" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center max-w-full sm:max-w-md bg-accent text-white hover:bg-accent/90" asChild>
               <Link href="#audit">{t.hero.ctaPrimary}</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center border-slate-700 text-white hover:bg-slate-800" asChild>
+            <Button size="lg" variant="outline" className="h-auto min-h-12 py-3 px-8 text-base rounded-full whitespace-normal text-center border-slate-700 bg-transparent text-white hover:bg-slate-800 hover:text-white" asChild>
               <Link href="#services">{t.hero.ctaSecondary}</Link>
             </Button>
           </div>

@@ -61,14 +61,24 @@ export function FlockingDots() {
     const numBoids = window.innerWidth > 768 ? 80 : 40;
     const boids = Array.from({ length: numBoids }, () => new Boid(width, height));
 
-    const visualRange = 80;
-    const speedLimit = 1.8;
+    const visualRange = 300; // Increased to see each other from further away
+    const speedLimit = 2.5;
     const margin = 50;
 
     let animationFrameId: number;
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
+
+      // Find global center to pull everyone into one ball
+      let globalCenterX = 0;
+      let globalCenterY = 0;
+      for (let b of boids) {
+        globalCenterX += b.x;
+        globalCenterY += b.y;
+      }
+      globalCenterX /= numBoids;
+      globalCenterY /= numBoids;
 
       for (let boid of boids) {
         let centerX = 0, centerY = 0, numNeighbors = 0;
@@ -90,8 +100,8 @@ export function FlockingDots() {
             avgDY += otherBoid.vy;
             numNeighbors += 1;
 
-            // Separation
-            if (dist < 25) {
+            // Separation (reduced separation distance to allow a tighter cluster)
+            if (dist < 15) {
               moveX += dx;
               moveY += dy;
             }
@@ -101,14 +111,20 @@ export function FlockingDots() {
         if (numNeighbors > 0) {
           centerX = centerX / numNeighbors;
           centerY = centerY / numNeighbors;
-          boid.vx += (centerX - boid.x) * 0.005;
-          boid.vy += (centerY - boid.y) * 0.005;
+          
+          // Stronger cohesion for a tight ball
+          boid.vx += (centerX - boid.x) * 0.02;
+          boid.vy += (centerY - boid.y) * 0.02;
 
           avgDX = avgDX / numNeighbors;
           avgDY = avgDY / numNeighbors;
           boid.vx += (avgDX - boid.vx) * 0.05;
           boid.vy += (avgDY - boid.vy) * 0.05;
         }
+
+        // Pull gently towards the global center so they stay in one big cluster
+        boid.vx += (globalCenterX - boid.x) * 0.005;
+        boid.vy += (globalCenterY - boid.y) * 0.005;
 
         boid.vx += moveX * 0.05;
         boid.vy += moveY * 0.05;
@@ -117,13 +133,13 @@ export function FlockingDots() {
         const dxMouse = boid.x - mouseX;
         const dyMouse = boid.y - mouseY;
         const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-        if (distMouse < 150) {
-          boid.vx += (dxMouse / distMouse) * 0.5;
-          boid.vy += (dyMouse / distMouse) * 0.5;
+        if (distMouse < 200) {
+          boid.vx += (dxMouse / distMouse) * 0.8;
+          boid.vy += (dyMouse / distMouse) * 0.8;
         }
 
-        // Keep within bounds (soft bounce instead of hard wrap makes it feel more like birds in a confined area)
-        let turnFactor = 0.2;
+        // Keep within bounds
+        let turnFactor = 0.5;
         if (boid.x < margin) boid.vx += turnFactor;
         if (boid.x > width - margin) boid.vx -= turnFactor;
         if (boid.y < margin) boid.vy += turnFactor;
@@ -139,21 +155,13 @@ export function FlockingDots() {
         boid.x += boid.vx;
         boid.y += boid.vy;
 
-        // Draw particle
+        // Draw particle (larger size, no tails)
         ctx.beginPath();
-        ctx.arc(boid.x, boid.y, 2, 0, 2 * Math.PI);
-        ctx.fillStyle = "rgba(120, 119, 198, 0.7)";
-        ctx.shadowBlur = 8;
+        ctx.arc(boid.x, boid.y, 5, 0, 2 * Math.PI); // Radius 5 (larger)
+        ctx.fillStyle = "rgba(120, 119, 198, 0.9)";
+        ctx.shadowBlur = 12;
         ctx.shadowColor = "rgba(120, 119, 198, 1)";
         ctx.fill();
-        
-        // Draw tail (motion blur effect)
-        ctx.beginPath();
-        ctx.moveTo(boid.x, boid.y);
-        ctx.lineTo(boid.x - boid.vx * 3, boid.y - boid.vy * 3);
-        ctx.strokeStyle = "rgba(120, 119, 198, 0.4)";
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
       }
 
       animationFrameId = requestAnimationFrame(draw);

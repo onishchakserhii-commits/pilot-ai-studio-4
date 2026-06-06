@@ -58,7 +58,7 @@ export function FlockingDots() {
     window.addEventListener("mousemove", handleMouseMove);
     canvas.parentElement?.addEventListener("mouseleave", handleMouseLeave);
 
-    const numBoids = window.innerWidth > 768 ? 80 : 40;
+    const numBoids = window.innerWidth > 768 ? 240 : 120; // 3x more balls
     const boids = Array.from({ length: numBoids }, () => new Boid(width, height));
 
     const visualRange = 300; // Increased to see each other from further away

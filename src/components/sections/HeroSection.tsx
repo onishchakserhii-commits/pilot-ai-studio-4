@@ -2,7 +2,7 @@ import { BadgePercent, Zap } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { content } from '@/lib/i18n-content';
-import { MouseGlow } from '@/components/MouseGlow';
+import { AmbientBackground } from '@/components/AmbientBackground';
 
 type Props = {
   t: typeof content.fr;
@@ -11,7 +11,7 @@ type Props = {
 export function HeroSection({ t }: Props) {
   return (
     <>
-      <MouseGlow />
+      <AmbientBackground />
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-6 animate-in fade-in slide-in-from-bottom-3 duration-500 relative z-10">

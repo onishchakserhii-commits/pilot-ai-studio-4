@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import './globals.css';
+import Script from 'next/script';
 import { LanguageProvider } from '@/components/LanguageContext';
 import CookieBanner from '@/components/CookieBanner';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
@@ -30,6 +31,19 @@ export default async function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18186584530"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18186584530');
+          `}
+        </Script>
         <FirebaseClientProvider>
           <LanguageProvider initialLang={initialLang}>
             <ModelProvider>

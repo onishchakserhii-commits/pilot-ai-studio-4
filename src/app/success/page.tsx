@@ -5,12 +5,21 @@ import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "@/components/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { ConstellationBackground } from "@/components/ConstellationBackground";
+import Script from "next/script";
 
 export default function SuccessPage() {
   const { t } = useTranslation();
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-950 text-white">
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+              'send_to': 'AW-18186584530/pHhPCIem8bkcENKDheBD',
+              'transaction_id': ''
+          });
+        `}
+      </Script>
       <ConstellationBackground />
       
       <div className="relative z-10 container max-w-lg mx-auto px-4 text-center">

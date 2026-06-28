@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/markdown';
 
 const SITE_URL = 'https://pilot-ai-studio-6y843nul8-onserpet-7539s-projects.vercel.app'; // Can be an env variable in production
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Base static routes
   const routes = [
     '',
@@ -17,11 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Get all blog posts to generate their URLs
   const posts = [
-    ...getAllPosts('fr'),
-    ...getAllPosts('ua'),
-    ...getAllPosts('en'),
-    ...getAllPosts('it'),
-    ...getAllPosts('de'),
+    ...(await getAllPosts('fr')),
+    ...(await getAllPosts('ua')),
+    ...(await getAllPosts('en')),
+    ...(await getAllPosts('it')),
+    ...(await getAllPosts('de')),
   ];
 
   const postRoutes = posts.map((post) => ({

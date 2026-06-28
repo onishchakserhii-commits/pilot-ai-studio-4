@@ -1,16 +1,18 @@
 import { getPostBySlug } from '@/lib/markdown';
 import { BlogPostClient } from './BlogPostClient';
 import { notFound } from 'next/navigation';
-
-import { Metadata } from 'next';
+import { cookies } from 'next/headers';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const cookieStore = await cookies();
+  const savedLang = cookieStore.get('pilot-lang')?.value || 'fr';
+  const post = await getPostBySlug(slug, savedLang);
 
   if (!post) {
     return {
@@ -33,7 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const cookieStore = await cookies();
+  const savedLang = cookieStore.get('pilot-lang')?.value || 'fr';
+  const post = await getPostBySlug(slug, savedLang);
 
   if (!post) {
     notFound();

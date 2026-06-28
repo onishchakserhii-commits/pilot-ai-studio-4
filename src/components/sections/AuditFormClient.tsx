@@ -22,9 +22,9 @@ export function AuditFormClient({ t }: Props) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleAuditSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleAuditSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!db || isSubmitting) return;
+    if (isSubmitting) return;
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -34,33 +34,38 @@ export function AuditFormClient({ t }: Props) {
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
       message: formData.get('message') as string,
-      status: 'new',
-      createdAt: new Date().toISOString(),
     };
 
     setIsSubmitting(true);
 
-    const leadsRef = collection(db, 'leads');
-    addDoc(leadsRef, data)
-      .then(() => {
-        toast({
-          title: t.audit.form.successTitle,
-          description: t.audit.form.successDesc,
-        });
-        (e.target as HTMLFormElement).reset();
-        router.push('/success');
-      })
-      .catch(async (serverError) => {
-        const permissionError = new FirestorePermissionError({
-          path: leadsRef.path,
-          operation: 'create',
-          requestResourceData: data,
-        } satisfies SecurityRuleContext);
-        errorEmitter.emit('permission-error', permissionError);
-      })
-      .finally(() => {
-        setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+
+      toast({
+        title: t.audit.form.successTitle,
+        description: t.audit.form.successDesc,
+      });
+      (e.target as HTMLFormElement).reset();
+      router.push('/success');
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your request. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

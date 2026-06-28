@@ -11,8 +11,23 @@ import { Language } from '@/lib/i18n-content';
 import { ModelProvider } from '@/lib/ModelContext';
 
 export const metadata: Metadata = {
-  title: 'Aivello | Plus de demandes. Moins de routine.',
-  description: 'Sites web rapides, IA et automatisations simples pour les petites entreprises en Suisse romande.',
+  title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
+  description: 'Sites web rapides, IA et automatisations simples pour les petites entreprises en Suisse romande. Отримайте більше клієнтів за допомогою штучного інтелекту.',
+  openGraph: {
+    title: 'Pilot AI Studio',
+    description: 'Агенція автоматизації та ШІ для локального бізнесу.',
+    url: 'https://pilot-ai-studio.vercel.app',
+    siteName: 'Pilot AI Studio',
+    images: [
+      {
+        url: '/icon.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'fr_CH',
+    type: 'website',
+  },
 };
 
 export default async function RootLayout({

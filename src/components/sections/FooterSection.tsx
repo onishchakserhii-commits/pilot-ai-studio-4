@@ -22,19 +22,20 @@ export function FooterSection({ t }: Props) {
           <div>
             <h4 className="font-headline font-bold mb-6">Navigation</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="#services" className="hover:text-accent">{t.nav.services}</Link></li>
-              <li><Link href="#pricing" className="hover:text-accent">{t.nav.pricing}</Link></li>
-              <li><Link href="#audit" className="hover:text-accent">{t.nav.audit}</Link></li>
+              <li><Link href="/about" className="hover:text-accent">{t.nav.about}</Link></li>
+              <li><Link href="/#services" className="hover:text-accent">{t.nav.services}</Link></li>
+              <li><Link href="/#pricing" className="hover:text-accent">{t.nav.pricing}</Link></li>
+              <li><Link href="/#audit" className="hover:text-accent">{t.nav.audit}</Link></li>
               <li><Link href="/blog" className="hover:text-accent">{t.nav.blog}</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-headline font-bold mb-6">{t.nav.contact}</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>Suisse Romande</li>
+              <li>Montreux, Belmont 50, 1820</li>
               <li><a href="mailto:aivello.studio@gmail.com" className="hover:text-accent transition-colors">aivello.studio@gmail.com</a></li>
+              <li>Telegram: <a href="https://t.me/AivelloStudio" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">@AivelloStudio</a></li>
               <li>WhatsApp: <a href="https://wa.me/message/N7Y67PXYRFUOI1" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
-              <li>Telegram: <a href="https://t.me/PilotAiStudio" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">@PilotAiStudio</a></li>
             </ul>
           </div>
         </div>

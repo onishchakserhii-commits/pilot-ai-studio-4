@@ -41,7 +41,10 @@ export function Chatbot() {
     setIsLoading(true);
 
     try {
-      const response = await aiChatbotForClientInquiries({ message: userMsg });
+      const response = await aiChatbotForClientInquiries({ 
+        message: userMsg,
+        history: messages.map(m => ({ role: m.role, text: m.text }))
+      });
       setMessages(prev => [
         ...prev, 
         { 

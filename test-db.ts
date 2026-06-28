@@ -1,0 +1,1 @@
+import { db } from './src/lib/firebase-admin'; async function run() { const snapshot = await db.collection('blog_posts').limit(1).get(); snapshot.forEach(doc => console.log(doc.id, doc.data().content.substring(0, 300))); } run();

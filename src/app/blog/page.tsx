@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  const postsFr = getAllPosts('fr');
-  const postsUa = getAllPosts('ua');
-  const postsEn = getAllPosts('en');
-  const postsIt = getAllPosts('it');
-  const postsDe = getAllPosts('de');
+  const postsFr = await getAllPosts('fr');
+  const postsUa = await getAllPosts('ua');
+  const postsEn = await getAllPosts('en');
+  const postsIt = await getAllPosts('it');
+  const postsDe = await getAllPosts('de');
   
   // To keep it simple, we pass all posts to a client component that handles the current language
   return <BlogListingClient 

@@ -11,6 +11,7 @@ import { ProcessSection } from '@/components/sections/ProcessSection';
 import { AuditSection } from '@/components/sections/AuditSection';
 import { TrustSection } from '@/components/sections/TrustSection';
 import { FooterSection } from '@/components/sections/FooterSection';
+import { Scene } from '@/components/canvas/Scene';
 
 export default async function Home() {
   const cookieStore = await cookies();
@@ -20,18 +21,23 @@ export default async function Home() {
   const t = content[lang];
 
   return (
-    <div className="min-h-screen hero-gradient">
-      <Navigation />
-      <HeroSection t={t} />
-      <PacksSection t={t} />
-      <ServicesSection t={t} />
-      <ImprovementsSection t={t} />
-      <PricingSection t={t} />
-      <ProcessSection t={t} />
-      <AuditSection t={t} />
-      <TrustSection t={t} />
-      <FooterSection t={t} />
-      <Chatbot />
+    <div className="min-h-screen relative overflow-hidden text-foreground">
+      <Scene />
+      <div className="relative z-10 w-full">
+        <Navigation />
+        <main className="flex flex-col gap-0 w-full">
+          <HeroSection t={t} />
+          <PacksSection t={t} />
+          <ServicesSection t={t} />
+          <ImprovementsSection t={t} />
+          <PricingSection t={t} />
+          <ProcessSection t={t} />
+          <AuditSection t={t} />
+          <TrustSection t={t} />
+        </main>
+        <FooterSection t={t} />
+        <Chatbot />
+      </div>
     </div>
   );
 }

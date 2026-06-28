@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 210 10% 95%; /* #F0F3F4 */
-    --foreground: 210 20% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
-    --primary: 200 30% 40%; /* #477085 - Muted blue-grey */
+    --background: 220 30% 6%; /* Deep dark blue for 3D background */
+    --foreground: 210 20% 98%;
+    --card: 220 30% 8%;
+    --card-foreground: 210 20% 98%;
+    --popover: 220 30% 8%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 200 30% 40%;
     --primary-foreground: 210 10% 98%;
-    --secondary: 210 10% 90%;
-    --secondary-foreground: 210 20% 20%;
-    --muted: 210 10% 88%;
-    --muted-foreground: 210 15% 45%;
-    --accent: 220 70% 50%; /* #2662D9 - Vibrant blue */
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 220 70% 50%;
     --accent-foreground: 210 10% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 10% 98%;
-    --border: 210 15% 85%;
-    --input: 210 15% 85%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
     --ring: 220 70% 50%;
     --radius: 0.75rem;
   }
@@ -40,7 +40,7 @@
 }
 
 .glass-card {
-  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
 }
 
 .hero-gradient {

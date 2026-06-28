@@ -18,6 +18,7 @@ export function Navigation() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <Link href="/about" className="hover:text-accent transition-colors">{t.nav.about}</Link>
           <Link href="/#services" className="hover:text-accent transition-colors">{t.nav.services}</Link>
           <Link href="/blog" className="hover:text-accent transition-colors">{t.nav.blog}</Link>
           <Link href="/#pricing" className="hover:text-accent transition-colors">{t.nav.pricing}</Link>

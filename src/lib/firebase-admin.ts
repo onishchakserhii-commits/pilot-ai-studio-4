@@ -11,5 +11,5 @@ if (!getApps().length) {
   });
 }
 
-const db = getFirestore(getApp(), process.env.FIREBASE_DATABASE_ID);
+const db = getFirestore(getApp(), process.env.FIREBASE_DATABASE_ID || '(default)');
 export { db };

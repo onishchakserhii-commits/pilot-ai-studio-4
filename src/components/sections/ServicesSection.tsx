@@ -1,3 +1,5 @@
+'use client';
+
 import { FadeIn } from '@/components/FadeIn';
 import { CardHeader } from '@/components/ui/card';
 import { motion } from 'framer-motion';

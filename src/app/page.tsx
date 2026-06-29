@@ -11,7 +11,12 @@ import { ProcessSection } from '@/components/sections/ProcessSection';
 import { AuditSection } from '@/components/sections/AuditSection';
 import { TrustSection } from '@/components/sections/TrustSection';
 import { FooterSection } from '@/components/sections/FooterSection';
-import { Scene } from '@/components/canvas/Scene';
+import dynamic from 'next/dynamic';
+
+const Scene = dynamic(() => import('@/components/canvas/Scene').then(mod => mod.Scene), { 
+  ssr: false,
+  loading: () => <div className="fixed inset-0 bg-background/50" />
+});
 
 export default async function Home() {
   const cookieStore = await cookies();

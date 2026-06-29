@@ -49,33 +49,35 @@ export const content = {
       bakeries: { title: 'Boulangeries & Pâtisseries', problem: 'Commandes de gâteaux manuelles, questions récurrentes.', solution: 'Site + Commandes en ligne + Chatbot IA.' },
     },
     services: {
-      title: 'Nos Fonctionnalités',
+      title: 'Nos Services',
       categories: {
         web: {
-          title: 'Créateur de Chatbot',
+          title: 'Sites Web Modernes',
           items: [
-            { title: 'Chatbot IA sur mesure', desc: 'Créez un assistant IA entraîné sur vos propres données et documents.' },
-            { title: 'Réponses instantanées', desc: 'Votre chatbot répond aux questions de vos clients 24h/24 et 7j/7.' },
-            { title: 'Personnalisation', desc: 'Adaptez l\'apparence et le comportement du chatbot à votre marque.' },
-            { title: 'Multilingue', desc: 'Communiquez avec vos clients dans plus de 50 langues automatiquement.' }
+            { title: 'Landing Pages', desc: 'Pages de destination ultra-rapides conçues pour maximiser vos conversions.' },
+            { title: 'Sites Vitrines', desc: 'Présentez votre activité et vos réalisations de manière professionnelle.' },
+            { title: 'Design Mobile-First', desc: 'Une navigation fluide et rapide adaptée à tous les écrans de smartphones.' },
+            { title: 'SEO Local de Base', desc: 'Structure technique optimisée pour être visible dans votre région.' }
           ]
         },
         automation: {
-          title: 'Mini-CRM Intégré',
+          title: 'Automatisation & IA',
           items: [
-            { title: 'Gestion des prospects', desc: 'Capturez et organisez automatiquement les leads générés par votre chatbot.' },
-            { title: 'Historique des conversations', desc: 'Accédez à l\'historique complet des échanges avec vos clients.' },
-            { title: 'Segmentation', desc: 'Classez vos contacts par tags et créez des listes ciblées.' },
-            { title: 'Notifications en temps réel', desc: 'Soyez alerté par email ou WhatsApp lors d\'une demande importante.' }
+            { title: 'Assistant IA personnalisé', desc: 'Assistant connecté à vos informations, documents et FAQ pour aider vos clients et votre équipe.' },
+            { title: 'Chat IA pour site web', desc: 'Un chatbot moderne qui répond aux visiteurs et capture les demandes 24h/24.' },
+            { title: 'Réservations intelligentes', desc: 'Confirmations automatiques, rappels WhatsApp et synchronisation Google Agenda.' },
+            { title: 'Automatisation n8n', desc: 'Connexion de vos outils pour éliminer les tâches répétitives.' },
+            { title: 'Intégration CRM simple', desc: 'Suivi et centralisation facile de toutes vos demandes clients.' }
           ]
         },
         acquisition: {
-          title: 'Intégration Simple',
+          title: 'Acquisition Clients',
           items: [
-            { title: 'Widget pour site web', desc: 'Ajoutez le chatbot à votre site en copiant-collant une seule ligne de code.' },
-            { title: 'Lien partagé', desc: 'Partagez une page de chat dédiée avec vos clients via WhatsApp ou email.' },
-            { title: 'API & Webhooks', desc: 'Connectez facilement vos données à vos outils existants.' },
-            { title: 'Analytique', desc: 'Suivez les performances de votre chatbot et l\'engagement de vos utilisateurs.' }
+            { title: 'Optimisation Google Business', desc: 'Photos, référencement local Maps et posts automatiques pour attirer des appels.' },
+            { title: 'Formulaires intelligents', desc: 'Transformez les visiteurs en prospects avec des formulaires dynamiques et des CTAs WhatsApp.' },
+            { title: 'Création de contenu auto', desc: 'Publication automatique d\'articles SEO, de posts Instagram/Facebook et de newsletters.' },
+            { title: 'Tableau de bord & Analytics', desc: 'Visualisez vos demandes, réservations, appels et performances dans un espace simple.' },
+            { title: 'SEO Local Avancé', desc: 'Positionnement supérieur sur les mots-clés stratégiques de votre secteur.' }
           ]
         }
       }
@@ -277,33 +279,35 @@ export const content = {
       bakeries: { title: 'Bakeries & Pastry Shops', problem: 'Manual cake orders, repetitive questions.', solution: 'Site + Online Ordering + AI Chatbot.' },
     },
     services: {
-      title: 'Our Features',
+      title: 'Our Services',
       categories: {
         web: {
-          title: 'Chatbot Builder',
+          title: 'Modern Websites',
           items: [
-            { title: 'Custom AI Chatbot', desc: 'Create an AI assistant trained on your own data and documents.' },
-            { title: 'Instant answers', desc: 'Your chatbot answers your clients\' questions 24/7.' },
-            { title: 'Customization', desc: 'Adapt the look and feel of the chatbot to match your brand.' },
-            { title: 'Multilingual', desc: 'Communicate with your clients in over 50 languages automatically.' }
+            { title: 'Landing Pages', desc: 'Ultra-fast landing pages designed to maximize your conversions.' },
+            { title: 'Showcase Websites', desc: 'Present your business and achievements in a professional way.' },
+            { title: 'Mobile-First Design', desc: 'Fluid and fast navigation tailored to all smartphone screens.' },
+            { title: 'Basic Local SEO', desc: 'Optimized technical structure to be visible in your local area.' }
           ]
         },
         automation: {
-          title: 'Mini-CRM Integrated',
+          title: 'Automation & AI',
           items: [
-            { title: 'Lead management', desc: 'Automatically capture and organize leads generated by your chatbot.' },
-            { title: 'Conversation history', desc: 'Access the complete history of chats with your customers.' },
-            { title: 'Segmentation', desc: 'Categorize your contacts by tags and create targeted lists.' },
-            { title: 'Real-time notifications', desc: 'Get alerted via email or WhatsApp for important requests.' }
+            { title: 'Custom AI Assistant', desc: 'AI assistant connected to your info, documents, and FAQ to help your clients and team.' },
+            { title: 'AI Chatbot for Website', desc: 'A modern chatbot that answers visitors and captures inquiries 24/7.' },
+            { title: 'Smart Bookings', desc: 'Automated confirmations, WhatsApp reminders, and Google Calendar sync.' },
+            { title: 'n8n Automation', desc: 'Connecting your tools to eliminate repetitive manual tasks.' },
+            { title: 'Simple CRM Integration', desc: 'Easy tracking and centralization of all your customer requests.' }
           ]
         },
         acquisition: {
-          title: 'Easy Integration',
+          title: 'Client Acquisition',
           items: [
-            { title: 'Website Widget', desc: 'Embed the chatbot on your site by copying and pasting a single line of code.' },
-            { title: 'Shared link', desc: 'Share a dedicated chat page with your clients via WhatsApp or email.' },
-            { title: 'API & Webhooks', desc: 'Easily connect your data to your existing tools.' },
-            { title: 'Analytics', desc: 'Track your chatbot\'s performance and user engagement.' }
+            { title: 'Google Business Profile', desc: 'Photos, local Maps SEO, and automated posts to attract calls.' },
+            { title: 'Smart Forms & CTAs', desc: 'Turn visitors into prospects with dynamic forms and WhatsApp call-to-actions.' },
+            { title: 'AI Content Automation', desc: 'Automated publishing of SEO articles, Instagram/Facebook posts, and newsletters.' },
+            { title: 'Dashboard & Analytics', desc: 'Visualize your requests, bookings, calls, and performance in a simple space.' },
+            { title: 'Advanced Local SEO', desc: 'Top rankings on strategic search keywords for your business sector.' }
           ]
         }
       }
@@ -505,33 +509,35 @@ export const content = {
       bakeries: { title: 'Пекарні та Кондитерські', problem: 'Замовлення тортів вручну, одні й ті самі питання.', solution: 'Сайт + Онлайн замовлення + AI Чатбот.' },
     },
     services: {
-      title: 'Наші Можливості',
+      title: 'Наші Послуги',
       categories: {
         web: {
-          title: 'Конструктор Чатботів',
+          title: 'Сучасні Сайти',
           items: [
-            { title: 'Власний AI Чатбот', desc: 'Створіть ШІ-асистента, навченого на ваших власних даних та документах.' },
-            { title: 'Миттєві відповіді', desc: 'Ваш чатбот відповідає на запитання клієнтів 24/7.' },
-            { title: 'Персоналізація', desc: 'Адаптуйте зовнішній вигляд та поведінку чатбота під ваш бренд.' },
-            { title: 'Мультимовність', desc: 'Автоматично спілкуйтеся з клієнтами більш ніж 50 мовами.' }
+            { title: 'Landing Pages', desc: 'Ультрашвидкі цільові сторінки для максимальної конверсії ваших послуг.' },
+            { title: 'Сайти-візитки', desc: 'Професійне та елегантне представлення вашого бізнесу та портфоліо.' },
+            { title: 'Мобільна оптимізація', desc: 'Зручна навігація, адаптована під будь-які екрани смартфонів.' },
+            { title: 'Базове локальне SEO', desc: 'Оптимізована структура сайту для видимості у вашому місті.' }
           ]
         },
         automation: {
-          title: 'Вбудована Міні-CRM',
+          title: 'Автоматизація та AI',
           items: [
-            { title: 'Керування лідами', desc: 'Автоматично збирайте та впорядковуйте заявки, згенеровані вашим чатботом.' },
-            { title: 'Історія розмов', desc: 'Отримайте доступ до повної історії спілкування з вашими клієнтами.' },
-            { title: 'Сегментація', desc: 'Групуйте контакти за тегами та створюйте цільові списки.' },
-            { title: 'Сповіщення в реальному часі', desc: 'Отримуйте сповіщення на email або WhatsApp про важливі запити.' }
+            { title: 'Персональний AI-асистент', desc: 'ШІ-асистент, підключений до документів і FAQ для допомоги клієнтам та команді.' },
+            { title: 'AI-чатбот для сайту', desc: 'Сучасний чатбот, який відповідає відвідувачам та збирає заявки цілодобово.' },
+            { title: 'Розумне бронювання', desc: 'Автоматичне підтвердження, нагадування у WhatsApp та синхронізація з календарем.' },
+            { title: 'Автоматизація n8n', desc: 'Об\'єднання ваших інструментів для усунення рутинних ручних дій.' },
+            { title: 'Проста інтеграція CRM', desc: 'Зручний збір та відстеження всіх запитів клієнтів в одному місці.' }
           ]
         },
         acquisition: {
-          title: 'Проста Інтеграція',
+          title: 'Залучення Клієнтів',
           items: [
-            { title: 'Віджет для сайту', desc: 'Додайте чатбота на свій сайт, скопіювавши лише один рядок коду.' },
-            { title: 'Спільне посилання', desc: 'Діліться окремою сторінкою чату з клієнтами через WhatsApp або email.' },
-            { title: 'API та Webhooks', desc: 'Легко підключайте ваші дані до існуючих інструментів.' },
-            { title: 'Аналітика', desc: 'Відстежуйте ефективність чатбота та залученість користувачів.' }
+            { title: 'Оптимізація Google Business', desc: 'Фото, просування в картах Google та автопости для збільшення дзвінків.' },
+            { title: 'Розумні форми та CTAs', desc: 'Перетворення відвідувачів на лідів за допомогою динамічних форм та WhatsApp.' },
+            { title: 'Автоматичний контент', desc: 'Створення та автоматична публікація SEO-статей, постів у соцмережах та розсилок.' },
+            { title: 'Панель керування та аналітика', desc: 'Простий дашборд для відстеження дзвінків, заявок та бронювань у реальному часі.' },
+            { title: 'Просунуте локальне SEO', desc: 'Вихід на перші позиції в пошуку за ключовими запитами вашого бізнесу.' }
           ]
         }
       }
@@ -736,33 +742,35 @@ export const content = {
       bakeries: { title: 'Panetterie & Pasticcerie', problem: 'Ordini manuali, domande ripetitive.', solution: 'Sito + Ordini online + Chatbot IA.' },
     },
     services: {
-      title: 'Le Nostre Funzionalità',
+      title: 'I Nostri Servizi',
       categories: {
         web: {
-          title: 'Costruttore di Chatbot',
+          title: 'Siti Web Moderni',
           items: [
-            { title: 'Chatbot IA su misura', desc: 'Crea un assistente IA addestrato sui tuoi dati e documenti.' },
-            { title: 'Risposte immediate', desc: 'Il tuo chatbot risponde alle domande dei clienti 24/7.' },
-            { title: 'Personalizzazione', desc: 'Adatta l\'aspetto e il comportamento del chatbot al tuo marchio.' },
-            { title: 'Multilingua', desc: 'Comunica automaticamente con i tuoi clienti in oltre 50 lingue.' }
+            { title: 'Landing Pages', desc: 'Pagine di destinazione ultra-rapide progettate per massimizzare le conversioni.' },
+            { title: 'Siti Vetrina', desc: 'Presenta la tua attività e i tuoi progetti in modo professionale.' },
+            { title: 'Design Mobile-First', desc: 'Navigazione fluida e rapida adatta a tutti gli schermi degli smartphone.' },
+            { title: 'SEO Locale di Base', desc: 'Struttura tecnica ottimizzata per essere visibile nella tua zona.' }
           ]
         },
         automation: {
-          title: 'Mini-CRM Integrato',
+          title: 'Automazione & IA',
           items: [
-            { title: 'Gestione lead', desc: 'Acquisisci e organizza automaticamente i contatti generati dal tuo chatbot.' },
-            { title: 'Cronologia conversazioni', desc: 'Accedi alla cronologia completa delle chat con i tuoi clienti.' },
-            { title: 'Segmentazione', desc: 'Classifica i tuoi contatti tramite tag e crea elenchi mirati.' },
-            { title: 'Notifiche in tempo reale', desc: 'Ricevi avvisi via email o WhatsApp per richieste importanti.' }
+            { title: 'Assistente IA personalizzato', desc: 'Assistente connesso alle tue informazioni, documenti e FAQ per aiutare clienti e team.' },
+            { title: 'Chatbot IA per sito', desc: 'Un chatbot moderno che risponde ai visitatori e acquisisce lead 24 ore su 24.' },
+            { title: 'Prenotazioni intelligenti', desc: 'Conferme automatiche, promemoria WhatsApp e sincronizzazione Google Calendar.' },
+            { title: 'Automazione n8n', desc: 'Connessione dei tuoi strumenti per eliminare le attività ripetitive.' },
+            { title: 'CRM Semplice', desc: 'Monitoraggio e centralizzazione facile di tutte le richieste dei clienti.' }
           ]
         },
         acquisition: {
-          title: 'Integrazione Semplice',
+          title: 'Acquisizione Clienti',
           items: [
-            { title: 'Widget per sito web', desc: 'Aggiungi il chatbot al tuo sito copiando e incollando una sola riga di codice.' },
-            { title: 'Link condiviso', desc: 'Condividi una pagina di chat dedicata con i tuoi clienti tramite WhatsApp o email.' },
-            { title: 'API & Webhooks', desc: 'Collega facilmente i tuoi dati agli strumenti esistenti.' },
-            { title: 'Analitica', desc: 'Monitora le prestazioni del tuo chatbot e il coinvolgimento degli utenti.' }
+            { title: 'Ottimizzazione Google Business', desc: 'Foto, SEO locale Maps e post automatici per attirare chiamate.' },
+            { title: 'Moduli intelligenti', desc: 'Trasforma i visitatori in contatti qualificati con moduli dinamici e CTA WhatsApp.' },
+            { title: 'Contenuto automatico', desc: 'Generazione e pubblicazione automatica di articoli SEO, post social e newsletter.' },
+            { title: 'Dashboard & Analytics', desc: 'Visualizza le tue richieste, prenotazioni, chiamate e prestazioni in uno spazio semplice.' },
+            { title: 'SEO Locale Avanzato', desc: 'Posizionamento superiore sulle parole chiave strategiche del tuo settore.' }
           ]
         }
       }
@@ -963,33 +971,35 @@ export const content = {
       bakeries: { title: 'Bäckereien & Konditoreien', problem: 'Manuelle Bestellungen, wiederkehrende Fragen.', solution: 'Website + Online-Bestellung + KI-Chatbot.' },
     },
     services: {
-      title: 'Unsere Funktionen',
+      title: 'Unsere Leistungen',
       categories: {
         web: {
-          title: 'Chatbot Builder',
+          title: 'Moderne Websites',
           items: [
-            { title: 'Eigener KI-Chatbot', desc: 'Erstellen Sie einen KI-Assistenten, der mit Ihren eigenen Daten und Dokumenten trainiert wurde.' },
-            { title: 'Sofortige Antworten', desc: 'Ihr Chatbot beantwortet die Fragen Ihrer Kunden rund um die Uhr.' },
-            { title: 'Personalisierung', desc: 'Passen Sie das Aussehen und Verhalten des Chatbots an Ihre Marke an.' },
-            { title: 'Mehrsprachig', desc: 'Kommunizieren Sie automatisch in über 50 Sprachen mit Ihren Kunden.' }
+            { title: 'Landingpages', desc: 'Ultraschnelle Landingpages, um Ihre Conversions zu maximieren.' },
+            { title: 'Visitenkarten-Websites', desc: 'Präsentieren Sie Ihr Unternehmen und Ihre Projekte professionell.' },
+            { title: 'Mobile-First-Design', desc: 'Flüssige und schnelle Navigation für alle Smartphone-Bildschirme.' },
+            { title: 'Basis-Lokales SEO', desc: 'Optimierte technische Struktur für Sichtbarkeit in Ihrer Region.' }
           ]
         },
         automation: {
-          title: 'Integriertes Mini-CRM',
+          title: 'Automatisierung & KI',
           items: [
-            { title: 'Lead-Management', desc: 'Erfassen und organisieren Sie automatisch die von Ihrem Chatbot generierten Leads.' },
-            { title: 'Chat-Verlauf', desc: 'Greifen Sie auf den vollständigen Verlauf der Chats mit Ihren Kunden zu.' },
-            { title: 'Segmentierung', desc: 'Kategorisieren Sie Ihre Kontakte mit Tags und erstellen Sie zielgerichtete Listen.' },
-            { title: 'Echtzeit-Benachrichtigungen', desc: 'Erhalten Sie bei wichtigen Anfragen Benachrichtigungen per E-Mail oder WhatsApp.' }
+            { title: 'Eigener KI-Assistent', desc: 'Mit Ihren Informationen und FAQs verbundener Assistent für Kunden und Team.' },
+            { title: 'KI-Chatbot für Website', desc: 'Ein moderner Chatbot, der rund um die Uhr Fragen beantwortet und Leads erfasst.' },
+            { title: 'Intelligente Buchungen', desc: 'Automatische Bestätigungen, WhatsApp-Erinnerungen und Google Calendar-Abgleich.' },
+            { title: 'n8n-Automatisierung', desc: 'Verbindung Ihrer Tools zur Eliminierung wiederkehrender Aufgaben.' },
+            { title: 'Einfaches CRM', desc: 'Einfache Verfolgung und Zentralisierung aller Kundenanfragen.' }
           ]
         },
         acquisition: {
-          title: 'Einfache Integration',
+          title: 'Kundengewinnung',
           items: [
-            { title: 'Website-Widget', desc: 'Fügen Sie den Chatbot in Ihre Website ein, indem Sie nur eine Codezeile kopieren und einfügen.' },
-            { title: 'Geteilter Link', desc: 'Teilen Sie eine dedizierte Chat-Seite über WhatsApp oder E-Mail mit Ihren Kunden.' },
-            { title: 'API & Webhooks', desc: 'Verbinden Sie Ihre Daten einfach mit Ihren vorhandenen Tools.' },
-            { title: 'Analytik', desc: 'Verfolgen Sie die Leistung Ihres Chatbots und das Nutzerengagement.' }
+            { title: 'Google Business Profile', desc: 'Fotos, lokales Maps-SEO und automatische Beiträge für mehr Anrufe.' },
+            { title: 'Intelligente Formulare', desc: 'Gewinnen Sie Leads mit dynamischen Formulare und WhatsApp-CTAs.' },
+            { title: 'Automatische Inhalte', desc: 'Automatische Erstellung und Veröffentlichung von SEO-Artikeln, Social-Media-Posts und Newslettern.' },
+            { title: 'Dashboard & Analysen', desc: 'Visualisieren Sie Anfragen, Buchungen, Anrufe und Leistung in einem einfachen Dashboard.' },
+            { title: 'Erweitertes Lokales SEO', desc: 'Spitzenplatzierungen bei den strategischen Suchbegriffen Ihrer Branche.' }
           ]
         }
       }

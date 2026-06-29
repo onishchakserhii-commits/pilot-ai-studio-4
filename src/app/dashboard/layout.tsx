@@ -6,7 +6,6 @@ import { useAuth } from '@/firebase/provider';
 import { SidebarProvider, Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarHeader, SidebarFooter, SidebarTrigger } from '@/components/ui/sidebar';
 import { LayoutDashboard, MessageSquare, Users, Code, Settings, LogOut, Loader2 } from 'lucide-react';
 import { signOut } from 'firebase/auth';
-import { auth } from '@/firebase/config';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -21,6 +20,7 @@ import { useUser } from '@/firebase/auth/use-user';
 
 function DashboardLayoutInner({ children }: { children: ReactNode }) {
   const { user, loading } = useUser();
+  const auth = useAuth();
   const router = useRouter();
   const pathname = usePathname();
 

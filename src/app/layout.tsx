@@ -9,6 +9,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { FirebaseClientProvider } from '@/firebase/client-provider';
 import { Language } from '@/lib/i18n-content';
 import { ModelProvider } from '@/lib/ModelContext';
+import { Chatbot } from '@/components/Chatbot';
 
 export const metadata: Metadata = {
   title: 'Pilot AI Studio | Plus de demandes. Moins de routine.',
@@ -64,6 +65,7 @@ export default async function RootLayout({
             <ModelProvider>
               {children}
               <WhatsAppButton />
+              <Chatbot />
               <Toaster />
               <CookieBanner />
             </ModelProvider>

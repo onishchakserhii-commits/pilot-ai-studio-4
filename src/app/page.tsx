@@ -1,7 +1,6 @@
 import { cookies } from 'next/headers';
 import { content, Language } from '@/lib/i18n-content';
 import { Navigation } from '@/components/Navigation';
-import { Chatbot } from '@/components/Chatbot';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { PacksSection } from '@/components/sections/PacksSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
@@ -36,7 +35,6 @@ export default async function Home() {
           <TrustSection t={t} />
         </main>
         <FooterSection t={t} />
-        <Chatbot />
       </div>
     </div>
   );

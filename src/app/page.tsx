@@ -11,12 +11,7 @@ import { ProcessSection } from '@/components/sections/ProcessSection';
 import { AuditSection } from '@/components/sections/AuditSection';
 import { TrustSection } from '@/components/sections/TrustSection';
 import { FooterSection } from '@/components/sections/FooterSection';
-import dynamic from 'next/dynamic';
-
-const Scene = dynamic(() => import('@/components/canvas/Scene').then(mod => mod.Scene), { 
-  ssr: false,
-  loading: () => <div className="fixed inset-0 bg-background/50" />
-});
+import { SceneWrapper } from '@/components/canvas/SceneWrapper';
 
 export default async function Home() {
   const cookieStore = await cookies();
@@ -27,7 +22,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen relative overflow-hidden text-foreground">
-      <Scene />
+      <SceneWrapper />
       <div className="relative z-10 w-full">
         <Navigation />
         <main className="flex flex-col gap-0 w-full">

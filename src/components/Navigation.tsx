@@ -4,10 +4,12 @@
 import Link from 'next/link';
 import { useTranslation } from './LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { useUser } from '@/firebase/auth/use-user';
 import { Button } from '@/components/ui/button';
 
 export function Navigation() {
   const { t } = useTranslation();
+  const { user, loading } = useUser();
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
@@ -22,14 +24,24 @@ export function Navigation() {
           <Link href="/#services" className="hover:text-accent transition-colors">{t.nav.services}</Link>
           <Link href="/blog" className="hover:text-accent transition-colors">{t.nav.blog}</Link>
           <Link href="/#pricing" className="hover:text-accent transition-colors">{t.nav.pricing}</Link>
-          <Link href="/#audit" className="hover:text-accent transition-colors">{t.nav.audit}</Link>
         </div>
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
-          <Button asChild variant="default" className="hidden sm:flex">
-            <Link href="/#audit">{t.nav.audit}</Link>
-          </Button>
+          {!loading && user ? (
+            <Button asChild variant="default" className="hidden sm:flex">
+              <Link href="/dashboard">Dashboard</Link>
+            </Button>
+          ) : (
+            <div className="hidden sm:flex items-center gap-2">
+              <Button asChild variant="ghost">
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button asChild variant="default">
+                <Link href="/register">Get Started</Link>
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </nav>

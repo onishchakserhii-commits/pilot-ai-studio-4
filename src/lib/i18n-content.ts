@@ -6,11 +6,11 @@ export const content = {
       home: 'Accueil',
       about: 'À propos',
       services: 'Services',
-      audit: 'Audit Gratuit',
-      process: 'Processus',
       pricing: 'Tarifs',
       contact: 'Contact',
       blog: 'Blog',
+      login: 'Connexion',
+      dashboard: 'Tableau de bord',
     },
     about: {
       title: 'À propos de nous',
@@ -32,11 +32,11 @@ export const content = {
       noPosts: 'Aucun article trouvé.',
     },
     hero: {
-      title: 'Sites web rapides, IA et automatisations simples pour les petites entreprises en Suisse romande.',
-      subtitle: 'Nous aidons les restaurants, salons, artisans, garages et services locaux à recevoir plus de demandes, simplifier les réservations et automatiser les tâches répétitives — sans complexité technique.',
-      ctaPrimary: 'Audit gratuit de votre présence en ligne',
-      ctaSecondary: 'Voir les solutions',
-      tagline: 'Plus de demandes. Moins de routine.',
+      title: 'Créez votre propre Chatbot IA et Mini-CRM en quelques minutes.',
+      subtitle: 'La plateforme SaaS tout-en-un pour créer des chatbots intelligents, gérer vos clients et automatiser votre activité — sans coder.',
+      ctaPrimary: 'Commencer gratuitement',
+      ctaSecondary: 'Voir la démo',
+      tagline: 'L\'IA au service de votre croissance.',
       promo: '',
     },
     // ... remaining existing fr content
@@ -49,35 +49,33 @@ export const content = {
       bakeries: { title: 'Boulangeries & Pâtisseries', problem: 'Commandes de gâteaux manuelles, questions récurrentes.', solution: 'Site + Commandes en ligne + Chatbot IA.' },
     },
     services: {
-      title: 'Nos Services',
+      title: 'Nos Fonctionnalités',
       categories: {
         web: {
-          title: 'Sites Web Modernes',
+          title: 'Créateur de Chatbot',
           items: [
-            { title: 'Landing Pages', desc: 'Pages de destination ultra-rapides conçues pour maximiser vos conversions.' },
-            { title: 'Sites Vitrines', desc: 'Présentez votre activité et vos réalisations de manière professionnelle.' },
-            { title: 'Design Mobile-First', desc: 'Une navigation fluide et rapide adaptée à tous les écrans de smartphones.' },
-            { title: 'SEO Local de Base', desc: 'Structure technique optimisée pour être visible dans votre région.' }
+            { title: 'Chatbot IA sur mesure', desc: 'Créez un assistant IA entraîné sur vos propres données et documents.' },
+            { title: 'Réponses instantanées', desc: 'Votre chatbot répond aux questions de vos clients 24h/24 et 7j/7.' },
+            { title: 'Personnalisation', desc: 'Adaptez l\'apparence et le comportement du chatbot à votre marque.' },
+            { title: 'Multilingue', desc: 'Communiquez avec vos clients dans plus de 50 langues automatiquement.' }
           ]
         },
         automation: {
-          title: 'Automatisation & IA',
+          title: 'Mini-CRM Intégré',
           items: [
-            { title: 'Assistant IA personnalisé', desc: 'Assistant connecté à vos informations, documents et FAQ pour aider vos clients et votre équipe.' },
-            { title: 'Chat IA pour site web', desc: 'Un chatbot moderne qui répond aux visiteurs et capture les demandes 24h/24.' },
-            { title: 'Réservations intelligentes', desc: 'Confirmations automatiques, rappels WhatsApp et synchronisation Google Agenda.' },
-            { title: 'Automatisation n8n', desc: 'Connexion de vos outils pour éliminer les tâches répétitives.' },
-            { title: 'Intégration CRM simple', desc: 'Suivi et centralisation facile de toutes vos demandes clients.' }
+            { title: 'Gestion des prospects', desc: 'Capturez et organisez automatiquement les leads générés par votre chatbot.' },
+            { title: 'Historique des conversations', desc: 'Accédez à l\'historique complet des échanges avec vos clients.' },
+            { title: 'Segmentation', desc: 'Classez vos contacts par tags et créez des listes ciblées.' },
+            { title: 'Notifications en temps réel', desc: 'Soyez alerté par email ou WhatsApp lors d\'une demande importante.' }
           ]
         },
         acquisition: {
-          title: 'Acquisition Clients',
+          title: 'Intégration Simple',
           items: [
-            { title: 'Optimisation Google Business', desc: 'Photos, référencement local Maps et posts automatiques pour attirer des appels.' },
-            { title: 'Formulaires intelligents', desc: 'Transformez les visiteurs en prospects avec des formulaires dynamiques et des CTAs WhatsApp.' },
-            { title: 'Création de contenu auto', desc: 'Publication automatique d\'articles SEO, de posts Instagram/Facebook et de newsletters.' },
-            { title: 'Tableau de bord & Analytics', desc: 'Visualisez vos demandes, réservations, appels et performances dans un espace simple.' },
-            { title: 'SEO Local Avancé', desc: 'Positionnement supérieur sur les mots-clés stratégiques de votre secteur.' }
+            { title: 'Widget pour site web', desc: 'Ajoutez le chatbot à votre site en copiant-collant une seule ligne de code.' },
+            { title: 'Lien partagé', desc: 'Partagez une page de chat dédiée avec vos clients via WhatsApp ou email.' },
+            { title: 'API & Webhooks', desc: 'Connectez facilement vos données à vos outils existants.' },
+            { title: 'Analytique', desc: 'Suivez les performances de votre chatbot et l\'engagement de vos utilisateurs.' }
           ]
         }
       }
@@ -138,31 +136,31 @@ export const content = {
       footer: '',
       promoBadge: '',
       starter: {
-        title: 'Site + Assistant IA',
-        price: '690',
+        title: 'Gratuit',
+        price: '0',
         originalPrice: '',
-        note: 'Site + IA + réglages standard inclus',
-        desc: 'Pour lancer rapidement une présence professionnelle avec un assistant IA prêt à répondre aux visiteurs.',
-        features: ['Site one-page moderne', 'Assistant IA intégré', 'Configuration standard incluse', 'Boutons appel/WhatsApp', 'Google Maps + formulaire', 'SEO local de base'],
-        cta: 'Profiter de la promo'
+        note: 'Pour tester la plateforme',
+        desc: 'Créez votre premier chatbot gratuitement et découvrez la puissance de l\'IA.',
+        features: ['1 Chatbot IA', '100 messages / mois', 'Mini-CRM de base', 'Intégration site web', 'Support communautaire'],
+        cta: 'Commencer gratuitement'
       },
       business: {
-        title: 'Business Growth',
-        price: '690',
-        desc: 'Pour une entreprise locale qui veut plus de pages, plus de confiance et plus de demandes.',
-        features: ['Site 3 à 5 pages', 'Design professionnel', 'Optimisation conversion', 'Google Analytics', 'Structure SEO locale', 'Google Business Profile optimisé'],
-        cta: 'Demander Business'
+        title: 'Pro',
+        price: '49',
+        desc: 'Pour les professionnels qui souhaitent automatiser leur service client.',
+        features: ['3 Chatbots IA', '2 000 messages / mois', 'Mini-CRM avancé', 'Personnalisation complète', 'Export de données', 'Support prioritaire'],
+        cta: 'Passer en Pro'
       },
       premium: {
-        title: 'AI Premium',
-        price: '1’190',
-        desc: 'Pour une entreprise qui veut un site moderne avec IA et automatisation.',
-        features: ['Site 5 à 8 pages', 'Multilingue', 'Assistant IA enrichi', 'Automatisation n8n', 'Notifications WhatsApp', 'Support après lancement'],
-        cta: 'Demander AI Premium'
+        title: 'Enterprise',
+        price: '199',
+        desc: 'Pour les entreprises ayant des besoins complexes et un fort volume.',
+        features: ['Chatbots illimités', 'Messages illimités', 'Accès API & Webhooks', 'Marque blanche', 'Gestion d\'équipe', 'Gestionnaire de compte dédié'],
+        cta: 'Contacter les ventes'
       },
-      audit: { title: 'Audit Express', price: '0', desc: 'Analyse rapide de votre présence en ligne et de vos priorités.', cta: 'Recevoir l’audit' },
-      n8n: { title: 'WhatsApp & Réservation', price: '150', desc: 'Boutons, formulaire simple et notifications pour ne pas perdre de demandes.', cta: 'Ajouter ce module' },
-      bot: { title: 'IA enrichie', price: '190', desc: 'Ajout de FAQ, textes métier et réponses personnalisées dans l’assistant.', cta: 'Améliorer l’IA' }
+      audit: { title: '', price: '', desc: '', cta: '' },
+      n8n: { title: '', price: '', desc: '', cta: '' },
+      bot: { title: '', price: '', desc: '', cta: '' }
     },
     audit: {
       title: 'Audit gratuit de votre présence en ligne',
@@ -236,11 +234,11 @@ export const content = {
       home: 'Home',
       about: 'About Us',
       services: 'Services',
-      audit: 'Free Audit',
-      process: 'Process',
       pricing: 'Pricing',
       contact: 'Contact',
       blog: 'Blog',
+      login: 'Login',
+      dashboard: 'Dashboard',
     },
     about: {
       title: 'About Us',
@@ -262,11 +260,11 @@ export const content = {
       noPosts: 'No articles found.',
     },
     hero: {
-      title: 'Fast websites, AI and simple automations for small businesses in French-speaking Switzerland.',
-      subtitle: 'We help restaurants, salons, artisans, garages and local services get more leads, simplify bookings, and automate repetitive tasks — without technical complexity.',
-      ctaPrimary: 'Free audit of your online presence',
-      ctaSecondary: 'View solutions',
-      tagline: 'More leads. Less routine.',
+      title: 'Build your own AI Chatbot & CRM in minutes.',
+      subtitle: 'The all-in-one SaaS platform to create smart chatbots, manage your clients, and automate your business — without coding.',
+      ctaPrimary: 'Start for free',
+      ctaSecondary: 'Watch demo',
+      tagline: 'AI powering your growth.',
       promo: '',
     },
     // ... remaining existing en content
@@ -279,35 +277,33 @@ export const content = {
       bakeries: { title: 'Bakeries & Pastry Shops', problem: 'Manual cake orders, repetitive questions.', solution: 'Site + Online Ordering + AI Chatbot.' },
     },
     services: {
-      title: 'Our Services',
+      title: 'Our Features',
       categories: {
         web: {
-          title: 'Modern Websites',
+          title: 'Chatbot Builder',
           items: [
-            { title: 'Landing Pages', desc: 'Ultra-fast landing pages designed to maximize your conversions.' },
-            { title: 'Showcase Websites', desc: 'Present your business and achievements in a professional way.' },
-            { title: 'Mobile-First Design', desc: 'Fluid and fast navigation tailored to all smartphone screens.' },
-            { title: 'Basic Local SEO', desc: 'Optimized technical structure to be visible in your local area.' }
+            { title: 'Custom AI Chatbot', desc: 'Create an AI assistant trained on your own data and documents.' },
+            { title: 'Instant answers', desc: 'Your chatbot answers your clients\' questions 24/7.' },
+            { title: 'Customization', desc: 'Adapt the look and feel of the chatbot to match your brand.' },
+            { title: 'Multilingual', desc: 'Communicate with your clients in over 50 languages automatically.' }
           ]
         },
         automation: {
-          title: 'Automation & AI',
+          title: 'Mini-CRM Integrated',
           items: [
-            { title: 'Custom AI Assistant', desc: 'AI assistant connected to your info, documents, and FAQ to help your clients and team.' },
-            { title: 'AI Chatbot for Website', desc: 'A modern chatbot that answers visitors and captures inquiries 24/7.' },
-            { title: 'Smart Bookings', desc: 'Automated confirmations, WhatsApp reminders, and Google Calendar sync.' },
-            { title: 'n8n Automation', desc: 'Connecting your tools to eliminate repetitive manual tasks.' },
-            { title: 'Simple CRM Integration', desc: 'Easy tracking and centralization of all your customer requests.' }
+            { title: 'Lead management', desc: 'Automatically capture and organize leads generated by your chatbot.' },
+            { title: 'Conversation history', desc: 'Access the complete history of chats with your customers.' },
+            { title: 'Segmentation', desc: 'Categorize your contacts by tags and create targeted lists.' },
+            { title: 'Real-time notifications', desc: 'Get alerted via email or WhatsApp for important requests.' }
           ]
         },
         acquisition: {
-          title: 'Client Acquisition',
+          title: 'Easy Integration',
           items: [
-            { title: 'Google Business Profile', desc: 'Photos, local Maps SEO, and automated posts to attract calls.' },
-            { title: 'Smart Forms & CTAs', desc: 'Turn visitors into prospects with dynamic forms and WhatsApp call-to-actions.' },
-            { title: 'AI Content Automation', desc: 'Automated publishing of SEO articles, Instagram/Facebook posts, and newsletters.' },
-            { title: 'Dashboard & Analytics', desc: 'Visualize your requests, bookings, calls, and performance in a simple space.' },
-            { title: 'Advanced Local SEO', desc: 'Top rankings on strategic search keywords for your business sector.' }
+            { title: 'Website Widget', desc: 'Embed the chatbot on your site by copying and pasting a single line of code.' },
+            { title: 'Shared link', desc: 'Share a dedicated chat page with your clients via WhatsApp or email.' },
+            { title: 'API & Webhooks', desc: 'Easily connect your data to your existing tools.' },
+            { title: 'Analytics', desc: 'Track your chatbot\'s performance and user engagement.' }
           ]
         }
       }
@@ -361,38 +357,38 @@ export const content = {
       ]
     },
     pricing: {
-      title: 'Pricing & Offers',
+      title: 'Pricing Plans',
       subtitle: '',
-      whyTitle: 'Why?',
-      whyDesc: 'Our offers are designed for small businesses that want to launch quickly with a clear budget and no technical complexity.',
+      whyTitle: 'Simple pricing',
+      whyDesc: 'Our plans are designed for businesses of all sizes, with clear monthly subscriptions.',
       footer: '',
       promoBadge: '',
       starter: {
-        title: 'Website + AI Assistant',
-        price: '690',
+        title: 'Free',
+        price: '0',
         originalPrice: '',
-        note: 'Website + AI + standard setup included',
-        desc: 'For launching a professional presence quickly with an AI assistant ready to answer visitors.',
-        features: ['Modern one-page website', 'Integrated AI assistant', 'Standard setup included', 'Call/WhatsApp buttons', 'Google Maps + contact form', 'Basic local SEO'],
-        cta: 'Claim the offer'
+        note: 'To test the platform',
+        desc: 'Create your first chatbot for free and discover the power of AI.',
+        features: ['1 AI Chatbot', '100 messages / month', 'Basic Mini-CRM', 'Website integration', 'Community support'],
+        cta: 'Start for free'
       },
       business: {
-        title: 'Business Growth',
-        price: '690',
-        desc: 'For local businesses that need more pages, more trust, and more inquiries.',
-        features: ['3 to 5 pages site', 'Professional design', 'Conversion optimized', 'Google Analytics', 'Local SEO structure', 'Optimized Google Business Profile'],
-        cta: 'Request Business'
+        title: 'Pro',
+        price: '49',
+        desc: 'For professionals looking to automate their customer service.',
+        features: ['3 AI Chatbots', '2,000 messages / month', 'Advanced Mini-CRM', 'Full customization', 'Data export', 'Priority support'],
+        cta: 'Upgrade to Pro'
       },
       premium: {
-        title: 'AI Premium',
-        price: '1’190',
-        desc: 'For businesses wanting a modern site with AI and automation.',
-        features: ['5 to 8 pages site', 'Multi-language support', 'Enhanced AI assistant', 'n8n Automation', 'WhatsApp notifications', 'Post-launch support'],
-        cta: 'Request AI Premium'
+        title: 'Enterprise',
+        price: '199',
+        desc: 'For businesses with complex needs and high volume.',
+        features: ['Unlimited Chatbots', 'Unlimited messages', 'API & Webhooks access', 'White-label', 'Team management', 'Dedicated account manager'],
+        cta: 'Contact Sales'
       },
-      audit: { title: 'Express Audit', price: '0', desc: 'Quick review of your online presence and priorities.', cta: 'Get the audit' },
-      n8n: { title: 'WhatsApp & Booking', price: '150', desc: 'Buttons, a simple form, and notifications so you do not lose inquiries.', cta: 'Add this module' },
-      bot: { title: 'Enhanced AI', price: '190', desc: 'FAQ, business texts, and custom answers added to the assistant.', cta: 'Upgrade the AI' }
+      audit: { title: '', price: '', desc: '', cta: '' },
+      n8n: { title: '', price: '', desc: '', cta: '' },
+      bot: { title: '', price: '', desc: '', cta: '' }
     },
     audit: {
       title: 'Free Online Presence Audit',
@@ -466,11 +462,11 @@ export const content = {
       home: 'Головна',
       about: 'Про нас',
       services: 'Послуги',
-      audit: 'Безкоштовний Аудит',
-      process: 'Процес',
       pricing: 'Ціни',
       contact: 'Контакти',
       blog: 'Блог',
+      login: 'Увійти',
+      dashboard: 'Панель керування',
     },
     about: {
       title: 'Про нас',
@@ -492,11 +488,11 @@ export const content = {
       noPosts: 'Статей не знайдено.',
     },
     hero: {
-      title: 'Швидкі сайти, AI та проста автоматизація для малого бізнесу у франкомовній Швейцарії.',
-      subtitle: 'Ми допомагаємо ресторанам, салонам, майстрам, автосервісам та локальним службам отримувати більше заявок, спрощувати бронювання та автоматизувати рутину — без зайвої технічної складності.',
-      ctaPrimary: 'Безкоштовний аудит вашої присутності в мережі',
-      ctaSecondary: 'Дивитися рішення',
-      tagline: 'Більше заявок. Менше рутини.',
+      title: 'Створіть свій власний AI Чатбот та CRM за лічені хвилини.',
+      subtitle: 'Єдина SaaS-платформа для створення розумних чатботів, керування клієнтами та автоматизації бізнесу — без програмування.',
+      ctaPrimary: 'Почати безкоштовно',
+      ctaSecondary: 'Дивитись демо',
+      tagline: 'ШІ для вашого зростання.',
       promo: '',
     },
     // ... remaining existing ua content
@@ -509,35 +505,33 @@ export const content = {
       bakeries: { title: 'Пекарні та Кондитерські', problem: 'Замовлення тортів вручну, одні й ті самі питання.', solution: 'Сайт + Онлайн замовлення + AI Чатбот.' },
     },
     services: {
-      title: 'Наші Послуги',
+      title: 'Наші Можливості',
       categories: {
         web: {
-          title: 'Сучасні Сайти',
+          title: 'Конструктор Чатботів',
           items: [
-            { title: 'Landing Pages', desc: 'Ультрашвидкі сторінки для максимальної конверсії ваших послуг.' },
-            { title: 'Сайти-візитки', desc: 'Професійне та елегантне представлення вашого бізнесу та послуг.' },
-            { title: 'Мобільна оптимізація', desc: 'Зручна навігація, адаптована під будь-які екрани смартфонів.' },
-            { title: 'Базове локальне SEO', desc: 'Оптимізована структура сайту для видимості у вашому місті.' }
+            { title: 'Власний AI Чатбот', desc: 'Створіть ШІ-асистента, навченого на ваших власних даних та документах.' },
+            { title: 'Миттєві відповіді', desc: 'Ваш чатбот відповідає на запитання клієнтів 24/7.' },
+            { title: 'Персоналізація', desc: 'Адаптуйте зовнішній вигляд та поведінку чатбота під ваш бренд.' },
+            { title: 'Мультимовність', desc: 'Автоматично спілкуйтеся з клієнтами більш ніж 50 мовами.' }
           ]
         },
         automation: {
-          title: 'Автоматизація та AI',
+          title: 'Вбудована Міні-CRM',
           items: [
-            { title: 'Персональний AI-асистент', desc: 'ШІ-асистент, підключений до документів і FAQ для допомоги клієнтам та команді.' },
-            { title: 'AI-чатбот для сайту', desc: 'Сучасний чатбот, який відповідає відвідувачам та збирає заявки цілодобово.' },
-            { title: 'Розумне бронювання', desc: 'Автоматичні підтвердження, нагадування у WhatsApp та синхронізація з календарем.' },
-            { title: 'Автоматизація n8n', desc: 'Об\'єднання ваших інструментів для усунення рутинних ручних дій.' },
-            { title: 'Проста інтеграція CRM', desc: 'Зручний збір та відстеження всіх запитів клієнтів в одному місці.' }
+            { title: 'Керування лідами', desc: 'Автоматично збирайте та впорядковуйте заявки, згенеровані вашим чатботом.' },
+            { title: 'Історія розмов', desc: 'Отримайте доступ до повної історії спілкування з вашими клієнтами.' },
+            { title: 'Сегментація', desc: 'Групуйте контакти за тегами та створюйте цільові списки.' },
+            { title: 'Сповіщення в реальному часі', desc: 'Отримуйте сповіщення на email або WhatsApp про важливі запити.' }
           ]
         },
         acquisition: {
-          title: 'Залучення Клієнтів',
+          title: 'Проста Інтеграція',
           items: [
-            { title: 'Оптимізація Google Business', desc: 'Фото, просування в картах Google та автопости для збільшення дзвінків.' },
-            { title: 'Розумні форми та CTAs', desc: 'Перетворення відвідувачів на лідів за допомогою динамічних форм та WhatsApp.' },
-            { title: 'Автоматичний контент', desc: 'Створення та автоматична публікація SEO-статей, постів у соцмережах та розсилок.' },
-            { title: 'Панель керування та аналітика', desc: 'Простий дашборд для відстеження дзвінків, заявок та бронювань у реальному часі.' },
-            { title: 'Просунуте локальне SEO', desc: 'Вихід на перші позиції в пошуку за ключовими запитами вашого бізнесу.' }
+            { title: 'Віджет для сайту', desc: 'Додайте чатбота на свій сайт, скопіювавши лише один рядок коду.' },
+            { title: 'Спільне посилання', desc: 'Діліться окремою сторінкою чату з клієнтами через WhatsApp або email.' },
+            { title: 'API та Webhooks', desc: 'Легко підключайте ваші дані до існуючих інструментів.' },
+            { title: 'Аналітика', desc: 'Відстежуйте ефективність чатбота та залученість користувачів.' }
           ]
         }
       }
@@ -603,38 +597,38 @@ export const content = {
       ]
     },
     pricing: {
-      title: 'Ціни та пропозиції',
+      title: 'Тарифи',
       subtitle: '',
-      whyTitle: 'Чому?',
-      whyDesc: 'Наші пропозиції створені для малого бізнесу, який хоче швидко стартувати з прозорою ціною і без технічної складності.',
+      whyTitle: 'Прозорі ціни',
+      whyDesc: 'Наші тарифи створені для бізнесу будь-якого розміру зі зрозумілою щомісячною підпискою.',
       footer: '',
       promoBadge: '',
       starter: {
-        title: 'Сайт + AI-асистент',
-        price: '690',
+        title: 'Безкоштовний',
+        price: '0',
         originalPrice: '',
-        note: 'Сайт + AI + стандартні налаштування входять у ціну',
-        desc: 'Для швидкого запуску професійної онлайн-присутності з AI-асистентом, який відповідає відвідувачам.',
-        features: ['Сучасний one-page сайт', 'Вбудований AI-асистент', 'Стандартні налаштування включені', 'Кнопки дзвінка/WhatsApp', 'Google Maps + форма заявки', 'Базове локальне SEO'],
-        cta: 'Скористатися акцією'
+        note: 'Для тестування платформи',
+        desc: 'Створіть свій перший чатбот безкоштовно та відкрийте для себе силу ШІ.',
+        features: ['1 AI Чатбот', '100 повідомлень / місяць', 'Базова Міні-CRM', 'Інтеграція на сайт', 'Підтримка спільноти'],
+        cta: 'Почати безкоштовно'
       },
       business: {
-        title: 'Business Growth',
-        price: '690',
-        desc: 'Для локального бізнесу, якому потрібно більше сторінок, довіри та заявок.',
-        features: ['Сайт 3–5 сторінок', 'Професійний дизайн', 'Оптимізація конверсії', 'Google Analytics', 'Локальна SEO-структура', 'Оптимізований Google Business Profile'],
-        cta: 'Замовити Business'
+        title: 'Pro',
+        price: '49',
+        desc: 'Для професіоналів, які хочуть автоматизувати підтримку клієнтів.',
+        features: ['3 AI Чатботи', '2 000 повідомлень / місяць', 'Розширена Міні-CRM', 'Повна персоналізація', 'Експорт даних', 'Пріоритетна підтримка'],
+        cta: 'Перейти на Pro'
       },
       premium: {
-        title: 'AI Premium',
-        price: '1’190',
-        desc: 'Для бізнесу, якому потрібен сайт + AI + автоматизація.',
-        features: ['Сайт 5–8 сторінок', 'Мультимовність', 'Розширений AI-асистент', 'Автоматизація n8n', 'WhatsApp сповіщення', 'Підтримка після запуску'],
-        cta: 'Замовити AI Premium'
+        title: 'Enterprise',
+        price: '199',
+        desc: 'Для компаній зі складними потребами та великим обсягом.',
+        features: ['Необмежені Чатботи', 'Необмежені повідомлення', 'Доступ до API та Webhooks', 'White-label', 'Керування командою', 'Особистий менеджер'],
+        cta: 'Зв\'язатися з відділом продажу'
       },
-      audit: { title: 'Експрес-аудит', price: '0', desc: 'Швидкий аналіз вашої онлайн-присутності та пріоритетів.', cta: 'Отримати аудит' },
-      n8n: { title: 'WhatsApp і бронювання', price: '150', desc: 'Кнопки, проста форма і сповіщення, щоб не втрачати заявки.', cta: 'Додати модуль' },
-      bot: { title: 'Розширення AI', price: '190', desc: 'FAQ, тексти бізнесу та персональні відповіді для AI-асистента.', cta: 'Покращити AI' }
+      audit: { title: '', price: '', desc: '', cta: '' },
+      n8n: { title: '', price: '', desc: '', cta: '' },
+      bot: { title: '', price: '', desc: '', cta: '' }
     },
     audit: {
       title: 'Безкоштовний аудит вашої присутності онлайн',
@@ -700,11 +694,11 @@ export const content = {
       home: 'Home',
       about: 'Chi siamo',
       services: 'Servizi',
-      audit: 'Audit Gratuito',
-      process: 'Processo',
       pricing: 'Prezzi',
       contact: 'Contatti',
       blog: 'Blog',
+      login: 'Accedi',
+      dashboard: 'Dashboard',
     },
     about: {
       title: 'Chi siamo',
@@ -726,11 +720,11 @@ export const content = {
       noPosts: 'Nessun articolo trovato.',
     },
     hero: {
-      title: 'Siti web veloci, IA e automazioni semplici per le piccole imprese nella Svizzera francofona.',
-      subtitle: 'Aiutiamo ristoranti, saloni, artigiani, officine e servizi locali a ricevere più richieste, semplificare le prenotazioni e automatizzare le attività ripetitive — senza complessità tecnica.',
-      ctaPrimary: 'Audit gratuito della tua presenza online',
-      ctaSecondary: 'Scopri le soluzioni',
-      tagline: 'Più richieste. Meno routine.',
+      title: 'Crea il tuo Chatbot IA & CRM in pochi minuti.',
+      subtitle: 'La piattaforma SaaS all-in-one per creare chatbot intelligenti, gestire i clienti e automatizzare la tua attività — senza codice.',
+      ctaPrimary: 'Inizia gratuitamente',
+      ctaSecondary: 'Guarda la demo',
+      tagline: 'L\'IA per la tua crescita.',
       promo: '',
     },
     categories: {
@@ -742,35 +736,33 @@ export const content = {
       bakeries: { title: 'Panetterie & Pasticcerie', problem: 'Ordini manuali, domande ripetitive.', solution: 'Sito + Ordini online + Chatbot IA.' },
     },
     services: {
-      title: 'I Nostri Servizi',
+      title: 'Le Nostre Funzionalità',
       categories: {
         web: {
-          title: 'Siti Web Moderni',
+          title: 'Costruttore di Chatbot',
           items: [
-            { title: 'Landing Pages', desc: 'Pagine di destinazione ultra-rapide progettate per massimizzare le conversioni.' },
-            { title: 'Siti Vetrina', desc: 'Presenta la tua attività e i tuoi progetti in modo professionale.' },
-            { title: 'Design Mobile-First', desc: 'Navigazione fluida e rapida adatta a tutti gli schermi degli smartphone.' },
-            { title: 'SEO Locale di Base', desc: 'Struttura tecnica ottimizzata per essere visibile nella tua zona.' }
+            { title: 'Chatbot IA su misura', desc: 'Crea un assistente IA addestrato sui tuoi dati e documenti.' },
+            { title: 'Risposte immediate', desc: 'Il tuo chatbot risponde alle domande dei clienti 24/7.' },
+            { title: 'Personalizzazione', desc: 'Adatta l\'aspetto e il comportamento del chatbot al tuo marchio.' },
+            { title: 'Multilingua', desc: 'Comunica automaticamente con i tuoi clienti in oltre 50 lingue.' }
           ]
         },
         automation: {
-          title: 'Automazione & IA',
+          title: 'Mini-CRM Integrato',
           items: [
-            { title: 'Assistente IA personalizzato', desc: 'Assistente connesso alle tue informazioni, documenti e FAQ per aiutare clienti e team.' },
-            { title: 'Chatbot IA per sito', desc: 'Un chatbot moderno che risponde ai visitatori e acquisisce lead 24 ore su 24.' },
-            { title: 'Prenotazioni intelligenti', desc: 'Conferme automatiche, promemoria WhatsApp e sincronizzazione Google Calendar.' },
-            { title: 'Automazione n8n', desc: 'Connessione dei tuoi strumenti per eliminare le attività ripetitive.' },
-            { title: 'CRM Semplice', desc: 'Monitoraggio e centralizzazione facile di tutte le richieste dei clienti.' }
+            { title: 'Gestione lead', desc: 'Acquisisci e organizza automaticamente i contatti generati dal tuo chatbot.' },
+            { title: 'Cronologia conversazioni', desc: 'Accedi alla cronologia completa delle chat con i tuoi clienti.' },
+            { title: 'Segmentazione', desc: 'Classifica i tuoi contatti tramite tag e crea elenchi mirati.' },
+            { title: 'Notifiche in tempo reale', desc: 'Ricevi avvisi via email o WhatsApp per richieste importanti.' }
           ]
         },
         acquisition: {
-          title: 'Acquisizione Clienti',
+          title: 'Integrazione Semplice',
           items: [
-            { title: 'Ottimizzazione Google Business', desc: 'Foto, SEO locale Maps e post automatici per attirare chiamate.' },
-            { title: 'Moduli intelligenti', desc: 'Trasforma i visitatori in contatti qualificati con moduli dinamici e CTA WhatsApp.' },
-            { title: 'Contenuto automatico', desc: 'Generazione e pubblicazione automatica di articoli SEO, post social e newsletter.' },
-            { title: 'Dashboard & Analytics', desc: 'Visualizza le tue richieste, prenotazioni, chiamate e prestazioni in uno spazio semplice.' },
-            { title: 'SEO Locale Avanzato', desc: 'Posizionamento superiore sulle parole chiave strategiche del tuo settore.' }
+            { title: 'Widget per sito web', desc: 'Aggiungi il chatbot al tuo sito copiando e incollando una sola riga di codice.' },
+            { title: 'Link condiviso', desc: 'Condividi una pagina di chat dedicata con i tuoi clienti tramite WhatsApp o email.' },
+            { title: 'API & Webhooks', desc: 'Collega facilmente i tuoi dati agli strumenti esistenti.' },
+            { title: 'Analitica', desc: 'Monitora le prestazioni del tuo chatbot e il coinvolgimento degli utenti.' }
           ]
         }
       }
@@ -824,38 +816,38 @@ export const content = {
       ]
     },
     pricing: {
-      title: 'Offerte & Prezzi',
+      title: 'Piani Tariffari',
       subtitle: '',
-      whyTitle: 'Perché?',
-      whyDesc: 'Le nostre offerte sono pensate per piccole imprese che vogliono partire rapidamente con un budget chiaro.',
-      footer: 'Il pacchetto promo include sito, assistente IA, impostazioni essenziali e connessioni base per ricevere richieste.',
+      whyTitle: 'Prezzi semplici',
+      whyDesc: 'I nostri piani sono pensati per aziende di tutte le dimensioni, con abbonamenti mensili chiari.',
+      footer: '',
       promoBadge: '',
       starter: {
-        title: 'Sito + Assistente IA',
-        price: '690',
+        title: 'Gratuito',
+        price: '0',
         originalPrice: '',
-        note: 'Sito + IA + configurazione standard inclusi',
-        desc: 'Per lanciare rapidamente una presenza professionale con un assistente IA pronto a rispondere ai visitatori.',
-        features: ['Sito one-page moderno', 'Assistente IA integrato', 'Configurazione standard inclusa', 'Pulsanti chiamata/WhatsApp', 'Google Maps + modulo', 'SEO locale di base'],
-        cta: 'Approfitta della promo'
+        note: 'Per testare la piattaforma',
+        desc: 'Crea il tuo primo chatbot gratuitamente e scopri la potenza dell\'IA.',
+        features: ['1 Chatbot IA', '100 messaggi / mese', 'Mini-CRM di base', 'Integrazione sito web', 'Supporto community'],
+        cta: 'Inizia gratuitamente'
       },
       business: {
-        title: 'Business Growth',
-        price: '690',
-        desc: 'Per un\'attività locale che vuole più pagine, più fiducia e più richieste.',
-        features: ['Sito da 3 a 5 pagine', 'Design professionale', 'Ottimizzazione conversione', 'Google Analytics', 'Struttura SEO locale', 'Google Business Profile ottimizzato'],
-        cta: 'Richiedi Business'
+        title: 'Pro',
+        price: '49',
+        desc: 'Per i professionisti che desiderano automatizzare il servizio clienti.',
+        features: ['3 Chatbot IA', '2.000 messaggi / mese', 'Mini-CRM avanzato', 'Personalizzazione completa', 'Esportazione dati', 'Supporto prioritario'],
+        cta: 'Passa a Pro'
       },
       premium: {
-        title: 'AI Premium',
-        price: '1’190',
-        desc: 'Per un\'azienda che vuole un sito moderno con IA e automazione.',
-        features: ['Sito da 5 a 8 pagine', 'Multilingue', 'Assistente IA avanzato', 'Automazione n8n', 'Notifiche WhatsApp', 'Supporto post-lancio'],
-        cta: 'Richiedi AI Premium'
+        title: 'Enterprise',
+        price: '199',
+        desc: 'Per le aziende con esigenze complesse e volumi elevati.',
+        features: ['Chatbot illimitati', 'Messaggi illimitati', 'Accesso API & Webhooks', 'White-label', 'Gestione team', 'Account manager dedicato'],
+        cta: 'Contatta le vendite'
       },
-      audit: { title: 'Audit Express', price: '0', desc: 'Analisi rapida della tua presenza online e delle priorità.', cta: 'Ricevi l’audit' },
-      n8n: { title: 'WhatsApp & Prenotazioni', price: '150', desc: 'Pulsanti, modulo semplice e notifiche per non perdere richieste.', cta: 'Aggiungi modulo' },
-      bot: { title: 'IA Avanzata', price: '190', desc: 'FAQ, testi aziendali e risposte personalizzate nell’assistente.', cta: 'Migliora l’IA' }
+      audit: { title: '', price: '', desc: '', cta: '' },
+      n8n: { title: '', price: '', desc: '', cta: '' },
+      bot: { title: '', price: '', desc: '', cta: '' }
     },
     audit: {
       title: 'Audit gratuito della tua presenza online',
@@ -929,11 +921,11 @@ export const content = {
       home: 'Startseite',
       about: 'Über uns',
       services: 'Leistungen',
-      audit: 'Gratis Audit',
-      process: 'Ablauf',
       pricing: 'Preise',
       contact: 'Kontakt',
       blog: 'Blog',
+      login: 'Anmelden',
+      dashboard: 'Dashboard',
     },
     about: {
       title: 'Über uns',
@@ -955,11 +947,11 @@ export const content = {
       noPosts: 'Keine Artikel gefunden.',
     },
     hero: {
-      title: 'Schnelle Websites, KI und einfache Automatisierungen für Kleinunternehmen in der Westschweiz.',
-      subtitle: 'Wir helfen Restaurants, Salons, Handwerkern, Garagen und lokalen Dienstleistern, mehr Anfragen zu erhalten, Buchungen zu vereinfachen und wiederkehrende Aufgaben zu automatisieren — ohne technische Komplexität.',
-      ctaPrimary: 'Kostenloses Audit Ihrer Online-Präsenz',
-      ctaSecondary: 'Lösungen ansehen',
-      tagline: 'Mehr Anfragen. Weniger Routine.',
+      title: 'Erstellen Sie Ihren eigenen KI-Chatbot & CRM in wenigen Minuten.',
+      subtitle: 'Die All-in-One-SaaS-Plattform zur Erstellung intelligenter Chatbots, Verwaltung Ihrer Kunden und Automatisierung Ihres Unternehmens — ohne Programmieren.',
+      ctaPrimary: 'Kostenlos starten',
+      ctaSecondary: 'Demo ansehen',
+      tagline: 'KI für Ihr Wachstum.',
       promo: '',
     },
     categories: {
@@ -971,35 +963,33 @@ export const content = {
       bakeries: { title: 'Bäckereien & Konditoreien', problem: 'Manuelle Bestellungen, wiederkehrende Fragen.', solution: 'Website + Online-Bestellung + KI-Chatbot.' },
     },
     services: {
-      title: 'Unsere Leistungen',
+      title: 'Unsere Funktionen',
       categories: {
         web: {
-          title: 'Moderne Websites',
+          title: 'Chatbot Builder',
           items: [
-            { title: 'Landingpages', desc: 'Ultraschnelle Landingpages, um Ihre Conversions zu maximieren.' },
-            { title: 'Visitenkarten-Websites', desc: 'Präsentieren Sie Ihr Unternehmen und Ihre Projekte professionell.' },
-            { title: 'Mobile-First-Design', desc: 'Flüssige und schnelle Navigation für alle Smartphone-Bildschirme.' },
-            { title: 'Basis-Lokales SEO', desc: 'Optimierte technische Struktur für Sichtbarkeit in Ihrer Region.' }
+            { title: 'Eigener KI-Chatbot', desc: 'Erstellen Sie einen KI-Assistenten, der mit Ihren eigenen Daten und Dokumenten trainiert wurde.' },
+            { title: 'Sofortige Antworten', desc: 'Ihr Chatbot beantwortet die Fragen Ihrer Kunden rund um die Uhr.' },
+            { title: 'Personalisierung', desc: 'Passen Sie das Aussehen und Verhalten des Chatbots an Ihre Marke an.' },
+            { title: 'Mehrsprachig', desc: 'Kommunizieren Sie automatisch in über 50 Sprachen mit Ihren Kunden.' }
           ]
         },
         automation: {
-          title: 'Automatisierung & KI',
+          title: 'Integriertes Mini-CRM',
           items: [
-            { title: 'Eigener KI-Assistent', desc: 'Mit Ihren Informationen und FAQs verbundener Assistent für Kunden und Team.' },
-            { title: 'KI-Chatbot für Website', desc: 'Ein moderner Chatbot, der rund um die Uhr Fragen beantwortet und Leads erfasst.' },
-            { title: 'Intelligente Buchungen', desc: 'Automatische Bestätigungen, WhatsApp-Erinnerungen und Google Calendar-Abgleich.' },
-            { title: 'n8n-Automatisierung', desc: 'Verbindung Ihrer Tools zur Eliminierung wiederkehrender Aufgaben.' },
-            { title: 'Einfaches CRM', desc: 'Einfache Verfolgung und Zentralisierung aller Kundenanfragen.' }
+            { title: 'Lead-Management', desc: 'Erfassen und organisieren Sie automatisch die von Ihrem Chatbot generierten Leads.' },
+            { title: 'Chat-Verlauf', desc: 'Greifen Sie auf den vollständigen Verlauf der Chats mit Ihren Kunden zu.' },
+            { title: 'Segmentierung', desc: 'Kategorisieren Sie Ihre Kontakte mit Tags und erstellen Sie zielgerichtete Listen.' },
+            { title: 'Echtzeit-Benachrichtigungen', desc: 'Erhalten Sie bei wichtigen Anfragen Benachrichtigungen per E-Mail oder WhatsApp.' }
           ]
         },
         acquisition: {
-          title: 'Kundengewinnung',
+          title: 'Einfache Integration',
           items: [
-            { title: 'Google Business Profile', desc: 'Fotos, lokales Maps-SEO und automatische Beiträge für mehr Anrufe.' },
-            { title: 'Intelligente Formulare', desc: 'Gewinnen Sie Leads mit dynamischen Formulare und WhatsApp-CTAs.' },
-            { title: 'Automatische Inhalte', desc: 'Automatische Erstellung und Veröffentlichung von SEO-Artikeln, Social-Media-Posts und Newslettern.' },
-            { title: 'Dashboard & Analysen', desc: 'Visualisieren Sie Anfragen, Buchungen, Anrufe und Leistung in einem einfachen Dashboard.' },
-            { title: 'Erweitertes Lokales SEO', desc: 'Spitzenplatzierungen bei den strategischen Suchbegriffen Ihrer Branche.' }
+            { title: 'Website-Widget', desc: 'Fügen Sie den Chatbot in Ihre Website ein, indem Sie nur eine Codezeile kopieren und einfügen.' },
+            { title: 'Geteilter Link', desc: 'Teilen Sie eine dedizierte Chat-Seite über WhatsApp oder E-Mail mit Ihren Kunden.' },
+            { title: 'API & Webhooks', desc: 'Verbinden Sie Ihre Daten einfach mit Ihren vorhandenen Tools.' },
+            { title: 'Analytik', desc: 'Verfolgen Sie die Leistung Ihres Chatbots und das Nutzerengagement.' }
           ]
         }
       }
@@ -1053,38 +1043,38 @@ export const content = {
       ]
     },
     pricing: {
-      title: 'Angebote & Preise',
-      subtitle: 'Sonderangebot zum Start: Website mit KI-Assistent und Standard-Einrichtung für CHF 350.',
-      whyTitle: 'Warum?',
-      whyDesc: 'Unsere Angebote sind für Kleinunternehmen gedacht, die schnell mit klarem Budget und ohne technische Komplexität starten möchten.',
-      footer: 'Das Promo-Paket enthält Website, KI-Assistent, wichtige Einstellungen und Basis-Verbindungen für neue Anfragen.',
+      title: 'Preise & Angebote',
+      subtitle: '',
+      whyTitle: 'Einfache Preise',
+      whyDesc: 'Unsere Angebote sind für Unternehmen jeder Größe konzipiert, mit klaren monatlichen Abonnements.',
+      footer: '',
       promoBadge: '',
       starter: {
-        title: 'Website + KI-Assistent',
-        price: '690',
+        title: 'Kostenlos',
+        price: '0',
         originalPrice: '',
-        note: 'Website + KI + Standard-Einrichtung inklusive',
-        desc: 'Für einen schnellen professionellen Start mit einem KI-Assistenten, der Besucherfragen beantwortet.',
-        features: ['Moderne One-Page-Website', 'Integrierter KI-Assistent', 'Standard-Einrichtung inklusive', 'Anruf-/WhatsApp-Schaltflächen', 'Google Maps + Formular', 'Basis-Lokales SEO'],
-        cta: 'Promo anfragen'
+        note: 'Zum Testen der Plattform',
+        desc: 'Erstellen Sie Ihren ersten Chatbot kostenlos und entdecken Sie die Möglichkeiten der KI.',
+        features: ['1 KI-Chatbot', '100 Nachrichten / Monat', 'Basis Mini-CRM', 'Website-Integration', 'Community-Support'],
+        cta: 'Kostenlos starten'
       },
       business: {
-        title: 'Business Growth',
-        price: '690',
-        desc: 'Für lokale Unternehmen, die mehr Seiten, mehr Vertrauen und mehr Anfragen brauchen.',
-        features: ['Website mit 3 bis 5 Seiten', 'Professionelles Design', 'Conversion-Optimierung', 'Google Analytics', 'Lokale SEO-Struktur', 'Optimiertes Google Business Profile'],
-        cta: 'Business anfragen'
+        title: 'Pro',
+        price: '49',
+        desc: 'Für Profis, die ihren Kundenservice automatisieren möchten.',
+        features: ['3 KI-Chatbots', '2.000 Nachrichten / Monat', 'Erweitertes Mini-CRM', 'Volle Personalisierung', 'Datenexport', 'Priorisierter Support'],
+        cta: 'Auf Pro upgraden'
       },
       premium: {
-        title: 'AI Premium',
-        price: '1’190',
-        desc: 'Für Unternehmen, die eine moderne Website mit KI und Automatisierung möchten.',
-        features: ['Website mit 5 bis 8 Seiten', 'Mehrsprachig', 'Erweiterter KI-Assistent', 'n8n-Automatisierung', 'WhatsApp-Benachrichtigungen', 'Support nach dem Launch'],
-        cta: 'AI Premium anfragen'
+        title: 'Enterprise',
+        price: '199',
+        desc: 'Für Unternehmen mit komplexen Anforderungen und hohem Volumen.',
+        features: ['Unbegrenzte Chatbots', 'Unbegrenzte Nachrichten', 'API & Webhooks-Zugang', 'White-Label', 'Team-Management', 'Dedizierter Account-Manager'],
+        cta: 'Vertrieb kontaktieren'
       },
-      audit: { title: 'Express-Audit', price: '0', desc: 'Schnelle Analyse Ihrer Online-Präsenz und Prioritäten.', cta: 'Audit erhalten' },
-      n8n: { title: 'WhatsApp & Buchung', price: '150', desc: 'Schaltflächen, einfaches Formular und Benachrichtigungen, damit keine Anfrage verloren geht.', cta: 'Modul hinzufügen' },
-      bot: { title: 'Erweiterte KI', price: '190', desc: 'FAQ, Geschäftstexte und individuelle Antworten im Assistenten.', cta: 'KI verbessern' }
+      audit: { title: '', price: '', desc: '', cta: '' },
+      n8n: { title: '', price: '', desc: '', cta: '' },
+      bot: { title: '', price: '', desc: '', cta: '' }
     },
     audit: {
       title: 'Kostenloser Audit Ihrer Online-Präsenz',
